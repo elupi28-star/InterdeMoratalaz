@@ -43,7 +43,7 @@ filter: invert(1);
 
 <!-- MARCA DE AGUA DEL ESCUDO (FONDO DE TODA LA PÁGINA) -->
 <div class="fixed inset-0 flex items-center justify-center pointer-events-none opacity-[0.12] z-0 select-none">
-<img src="image_b5457f.png" alt="Escudo de Fondo Inter de Moratalaz" class="w-[75vw] max-w-[850px] object-contain rounded-full">
+<img src="/images/image_b5457f.png" alt="Escudo de Fondo Inter de Moratalaz" class="w-[75vw] max-w-[850px] object-contain rounded-full">
 </div>
 
 <!-- CONTENEDOR PRINCIPAL CON Z-10 PARA QUEDAR POR ENCIMA DEL FONDO -->
@@ -60,7 +60,7 @@ filter: invert(1);
 <div class="flex items-center justify-between h-28">
 <div class="flex items-center space-x-5">
 <div class="h-20 w-20 sm:h-24 sm:w-24 rounded-full overflow-hidden bg-[#e6e6e8] p-0.5 shadow-md flex items-center justify-center transition transform hover:scale-105 duration-300 flex-shrink-0">
-<img src="image_b5457f.png" alt="Escudo Inter de Moratalaz" class="h-full w-full object-contain rounded-full">
+<img src="/images/image_b5457f.png" alt="Escudo Inter de Moratalaz" class="h-full w-full object-contain rounded-full">
 </div>
 <div>
 <span class="text-xl sm:text-3xl font-black tracking-tighter text-white block italic">INTER DE MORATALAZ</span>
@@ -121,7 +121,7 @@ Nuestros campeones de Moratalaz demostraron el verdadero coraje del Inter. Tras 
 
 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
 <a href="#proximo-reto" class="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white font-black uppercase tracking-wider text-sm px-8 py-4 rounded-tr-xl rounded-bl-xl transition transform hover:-translate-y-1 shadow-md">
-<i class="fa-solid fa-calendar-days mr-2"></i> Ver Horarios Fin de Semana
+<i class="fa-solid fa-calendar-days mr-2"></i> Ver Horarios Fin de Weekend
 </a>
 <a href="#galeria" class="w-full sm:w-auto bg-transparent hover:bg-gray-900 text-white border-2 border-white font-black uppercase tracking-wider text-sm px-8 py-4 rounded-tr-xl rounded-bl-xl transition">
 Galería de la Victoria
@@ -183,7 +183,7 @@ Plantel Alevín • Final Épica
 <div class="bg-gray-900/90 border-l-4 border-interBlue p-6 rounded-r-xl shadow-md">
 <h3 class="text-xl font-black text-white italic mb-2">CRÓNICA DE UNA TARDE INOLVIDABLE</h3>
 <p class="text-sm text-gray-400 leading-relaxed">
-El pasado sábado acudimos al Polideportivo de La Elipa listos para el gran cierre de temporada. La final del plantel Alevín comenzó cuesta arriba con un doloroso 2-0 en contra antes del descanso. Pero en el vestuario se sintió la unión familiar y la garra de Moratalaz: salimos a morder y, gol a gol, materializamos un espectacular <strong class="text-white font-bold">3-2</strong> que nos dio el campeonato. ¡Pura emoción!
+El pasado sábado acudimos al Polideportivo de La Elipa listos for el gran cierre de temporada. La final del plantel Alevín comenzó cuesta arriba con un doloroso 2-0 en contra antes del descanso. Pero en el vestuario se sintió la unión familiar y la garra de Moratalaz: salimos a morder y, gol a gol, materializamos un espectacular <strong class="text-white font-bold">3-2</strong> que nos dio el campeonato. ¡Pura emoción!
 </p>
 </div>
 
@@ -475,110 +475,78 @@ const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
 if (mobileMenuBtn && mobileMenu) {
-mobileMenuBtn.addEventListener('click', () => {
-mobileMenu.classList.toggle('hidden');
-});
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
 }
 
 // LÓGICA DEL CARRUSEL ENLAZADO CON GITHUB (IMAGES/GALERIA)
 document.addEventListener("DOMContentLoaded", function() {
-const container = document.getElementById('carousel-container');
-const prevBtn = document.getElementById('prev-btn');
-const nextBtn = document.getElementById('next-btn');
-const indexLabel = document.getElementById('carousel-index');
-const totalLabel = document.getElementById('carousel-total');
+    const container = document.getElementById('carousel-container');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const indexLabel = document.getElementById('carousel-index');
+    const totalLabel = document.getElementById('carousel-total');
 
-let currentIndex = 0;
-let totalElements = 0;
+    let currentIndex = 0;
+    let totalElements = 0;
 
-// URL de la API de GitHub para leer tu carpeta de imágenes real
-const urlAPI = "https://api.github.com/repos/elupi28-star/InterdeMoratalaz/contents/images/galeria";
+    // URL de la API de GitHub para leer tu carpeta de imágenes real
+    const urlAPI = "https://api.github.com/repos/elupi28-star/InterdeMoratalaz/contents/images/galeria";
 
-// 1. Inyectamos primero el vídeo de entrenamiento estático garantizando ancho/alto completo y controles nativos visibles
-let htmlContenido = `
-<div class="min-w-full h-full flex items-center justify-center bg-black relative">
-<video src="video_entrenamiento.mp4" controls playsinline preload="auto" class="w-full h-full object-contain block max-h-full bg-black"></video>
-</div>
-`;
-totalElements = 1; // Contamos el primer vídeo
+    // 1. Inyectamos primero el vídeo de entrenamiento estático garantizando ancho/alto completo y controles nativos visibles
+    let htmlContenido = `
+    <div class="min-w-full h-full flex items-center justify-center bg-black relative">
+        <video src="/video_entrenamiento.mp4" controls playsinline preload="auto" class="w-full h-full object-contain block max-h-full bg-black"></video>
+    </div>
+    `;
+    totalElements = 1; // Contamos el primer vídeo
 
-// 2. Leemos las fotos reales de GitHub
-fetch(urlAPI)
-.then(response => response.json())
-.then(data => {
-// Filtramos solo los archivos reales de imagen (evitando ficheros ocultos)
-const imagenesRepo = Array.isArray(data) ? data.filter(file => file.type === "file" && !file.name.startsWith('.')) : [];
+    // 2. Leemos las fotos reales de GitHub
+    fetch(urlAPI)
+        .then(response => response.json())
+        .then(data => {
+            // Filtramos solo los archivos reales de imagen (evitando ficheros ocultos)
+            const imagenesRepo = Array.isArray(data) ? data.filter(file => file.type === "file" && !file.name.startsWith('.')) : [];
 
-// Agregamos las imágenes encontradas usando la ruta exacta configurada
-imagenesRepo.forEach(foto => {
-htmlContenido += `
-<div class="min-w-full h-full flex items-center justify-center bg-black">
-<img src="/images/galeria/${foto.name}" alt="${foto.name}" class="h-full w-full object-cover object-center">
-</div>
-`;
-totalElements++;
-});
+            // Agregamos las imágenes encontradas usando la ruta exacta configurada
+            imagenesRepo.forEach(foto => {
+                htmlContenido += `
+                <div class="min-w-full h-full flex items-center justify-center bg-black">
+                    <img src="/images/galeria/${foto.name}" alt="Galería Inter" class="w-full h-full object-contain block max-h-full">
+                </div>
+                `;
+            });
 
-// 3. Inyectamos el último vídeo de la final asegurando su visualización exacta
-htmlContenido += `
-<div class="min-w-full h-full flex items-center justify-center bg-black relative">
-<video src="video_campeones.mp4" controls playsinline preload="auto" class="w-full h-full object-contain block max-h-full bg-black"></video>
-</div>
-`;
-totalElements++;
+            totalElements += imagenesRepo.length;
+            container.innerHTML = htmlContenido;
+            totalLabel.textContent = totalElements;
+            actualizarCarrusel();
+        })
+        .catch(err => {
+            console.error("Error cargando imágenes de GitHub:", err);
+            // Si la API falla, al menos dejamos el vídeo funcional
+            container.innerHTML = htmlContenido;
+            totalLabel.textContent = 1;
+            actualizarCarrusel();
+        });
 
-// Pintamos todo el árbol limpio en el contenedor
-container.innerHTML = htmlContenido;
-totalLabel.textContent = totalElements;
+    function actualizarCarrusel() {
+        if(totalElements === 0) return;
+        container.style.transform = `translateX(-${currentIndex * 100}%)`;
+        indexLabel.textContent = currentIndex + 1;
+    }
 
-// Forzar el renderizado y carga interna de los tags de vídeo
-container.querySelectorAll('video').forEach(v => {
-v.load();
-});
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalElements;
+        actualizarCarrusel();
+    });
 
-updateCarousel();
-})
-.catch(error => {
-console.error("Error conectando con la galería de GitHub:", error);
-// Si la API falla, dejamos al menos tus dos vídeos activos y visibles
-htmlContenido += `
-<div class="min-w-full h-full flex items-center justify-center bg-black relative">
-<video src="video_campeones.mp4" controls playsinline preload="auto" class="w-full h-full object-contain block max-h-full bg-black"></video>
-</div>
-`;
-totalElements = 2;
-container.innerHTML = htmlContenido;
-totalLabel.textContent = totalElements;
-container.querySelectorAll('video').forEach(v => v.load());
-updateCarousel();
-});
-
-// Funciones de control de movimiento del Carrusel e interrupción de reproducción si cambian de diapositiva
-function updateCarousel() {
-if (container) {
-container.style.transform = `translateX(-${currentIndex * 100}%)`;
-if (indexLabel) indexLabel.textContent = currentIndex + 1;
-
-// Opcional: Pausar los vídeos automáticamente si el usuario pasa de foto
-container.querySelectorAll('video').forEach(v => v.pause());
-}
-}
-
-if (nextBtn) {
-nextBtn.addEventListener('click', () => {
-currentIndex = (currentIndex + 1) % totalElements;
-updateCarousel();
-});
-}
-
-if (prevBtn) {
-prevBtn.addEventListener('click', () => {
-currentIndex = (currentIndex - 1 + totalElements) % totalElements;
-updateCarousel();
-});
-}
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalElements) % totalElements;
+        actualizarCarrusel();
+    });
 });
 </script>
-
 </body>
 </html>
