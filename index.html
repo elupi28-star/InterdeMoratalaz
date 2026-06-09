@@ -494,10 +494,10 @@ let totalElements = 0;
 // URL de la API de GitHub para leer tu carpeta de imágenes real
 const urlAPI = "https://api.github.com/repos/elupi28-star/InterdeMoratalaz/contents/images/galeria";
 
-// 1. Inyectamos primero el vídeo de entrenamiento estático que tenías al inicio
+// 1. Inyectamos primero el vídeo de entrenamiento estático garantizando ancho/alto completo y controles nativos visibles
 let htmlContenido = `
 <div class="min-w-full h-full flex items-center justify-center bg-black relative">
-<video src="video_entrenamiento.mp4" controls playsinline preload="metadata" class="h-full w-full object-contain max-h-full"></video>
+<video src="video_entrenamiento.mp4" controls playsinline preload="auto" class="w-full h-full object-contain block max-h-full bg-black"></video>
 </div>
 `;
 totalElements = 1; // Contamos el primer vídeo
@@ -519,10 +519,10 @@ htmlContenido += `
 totalElements++;
 });
 
-// 3. Inyectamos el último vídeo de la final al cierre del carrusel
+// 3. Inyectamos el último vídeo de la final asegurando su visualización exacta
 htmlContenido += `
 <div class="min-w-full h-full flex items-center justify-center bg-black relative">
-<video src="video_campeones.mp4" controls playsinline preload="metadata" class="h-full w-full object-contain max-h-full"></video>
+<video src="video_campeones.mp4" controls playsinline preload="auto" class="w-full h-full object-contain block max-h-full bg-black"></video>
 </div>
 `;
 totalElements++;
@@ -530,27 +530,37 @@ totalElements++;
 // Pintamos todo el árbol limpio en el contenedor
 container.innerHTML = htmlContenido;
 totalLabel.textContent = totalElements;
+
+// Forzar el renderizado y carga interna de los tags de vídeo
+container.querySelectorAll('video').forEach(v => {
+v.load();
+});
+
 updateCarousel();
 })
 .catch(error => {
 console.error("Error conectando con la galería de GitHub:", error);
-// Si la API falla por rate-limit o caché, dejamos al menos tus dos vídeos activos
+// Si la API falla, dejamos al menos tus dos vídeos activos y visibles
 htmlContenido += `
 <div class="min-w-full h-full flex items-center justify-center bg-black relative">
-<video src="video_campeones.mp4" controls playsinline preload="metadata" class="h-full w-full object-contain max-h-full"></video>
+<video src="video_campeones.mp4" controls playsinline preload="auto" class="w-full h-full object-contain block max-h-full bg-black"></video>
 </div>
 `;
 totalElements = 2;
 container.innerHTML = htmlContenido;
 totalLabel.textContent = totalElements;
+container.querySelectorAll('video').forEach(v => v.load());
 updateCarousel();
 });
 
-// Funciones de control de movimiento del Carrusel
+// Funciones de control de movimiento del Carrusel e interrupción de reproducción si cambian de diapositiva
 function updateCarousel() {
 if (container) {
 container.style.transform = `translateX(-${currentIndex * 100}%)`;
 if (indexLabel) indexLabel.textContent = currentIndex + 1;
+
+// Opcional: Pausar los vídeos automáticamente si el usuario pasa de foto
+container.querySelectorAll('video').forEach(v => v.pause());
 }
 }
 
