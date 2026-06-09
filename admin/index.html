@@ -4,34 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panel de Administración - Inter de Moratalaz</title>
-    <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
-    
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link href="config.yml" type="text/yaml" rel="cms-config-url" />
   </head>
   <body>
-
-    <script>
-      // 1. Esperamos a que todo el HTML estático (incluido el body) esté listo
-      document.addEventListener("DOMContentLoaded", function() {
-        
-        // 2. Creamos y cargamos el script de Decap CMS de forma dinámica
-        const cmsScript = document.createElement("script");
-        cmsScript.src = "https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js";
-        
-        // 3. Lo inyectamos al final del body para garantizar que NUNCA lea propiedades de null
-        document.body.appendChild(cmsScript);
-
-        // 4. Control del widget de Login
-        if (window.netlifyIdentity) {
-          window.netlifyIdentity.on("init", user => {
-            if (!user) {
-              window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
-              });
-            }
-          });
-        }
-      });
-    </script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </body>
 </html>
