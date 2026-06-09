@@ -1,0 +1,15 @@
+backend:
+  name: git-gateway
+  branch: main # Cambia a "master" si tu rama principal se llama así
+
+media_folder: "images/galeria" # La carpeta de tu web donde se guardarán las fotos
+public_folder: "/images/galeria" # La ruta que usará el HTML para encontrarlas
+
+collections:
+  - name: "galeria"
+    label: "Galería de Fotos"
+    folder: "images/galeria" # Donde el CMS buscará los archivos
+    create: true
+    fields:
+      - { label: "Título de la foto", name: "title", widget: "string" }
+      - { label: "Imagen", name: "image", widget: "image" }
