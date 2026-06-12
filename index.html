@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
- <meta name="google-site-verification" content="NweSg_bjG3-xtuSWY7WIul33JG-o_EKx7u1ns4CxR4M" />   
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Club Inter de Moratalaz | Sitio Oficial</title>
@@ -52,7 +51,7 @@ filter: invert(1);
 
 <!-- BARRA DE ANUNCIO SUPERIOR -->
 <div class="bg-red-600 text-white text-center py-2 px-4 text-xs font-black tracking-widest uppercase animate-pulse relative z-50 shadow-md">
-<i class="fa-solid fa-calendar-days mr-2"></i> PRÓXIMO RETO: EL ALEVÍN DISPUTA EL PRESTIGIOSO TROFEO DEL CARMEN ESTE FIN DE SEMANA (13 Y 14 DE JUNIO) <i class="fa-solid fa-fire ml-2"></i>
+<i class="fa-solid fa-calendar-days mr-2"></i> ¡FIN DE SEMANA DE TORNEO! DISPUTAMOS EL PRESTIGIOSO TROFEO DEL CARMEN (13 Y 14 DE JUNIO) <i class="fa-solid fa-fire ml-2"></i>
 </div>
 
 <!-- NAVBAR FÚTBOL PREMIUM -->
@@ -122,7 +121,7 @@ Nuestros campeones de Moratalaz demostraron el verdadero coraje del Inter. Tras 
 
 <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
 <a href="#proximo-reto" class="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white font-black uppercase tracking-wider text-sm px-8 py-4 rounded-tr-xl rounded-bl-xl transition transform hover:-translate-y-1 shadow-md">
-<i class="fa-solid fa-calendar-days mr-2"></i> Ver Horarios Fin de Semana
+<i class="fa-solid fa-calendar-days mr-2"></i> Ver Horarios del Torneo
 </a>
 <a href="#galeria" class="w-full sm:w-auto bg-transparent hover:bg-gray-900 text-white border-2 border-white font-black uppercase tracking-wider text-sm px-8 py-4 rounded-tr-xl rounded-bl-xl transition">
 Galería de la Victoria
@@ -182,7 +181,7 @@ Plantel Alevín • Final Épica
 
 <div class="lg:col-span-7 space-y-6">
 <div class="bg-gray-900/90 border-l-4 border-interBlue p-6 rounded-r-xl shadow-md">
-<h3 class="text-xl font-black text-white italic mb-2">CRÓNICA DE UNA MAÑANA INOLVIDABLE</h3>
+<h3 class="text-xl font-black text-white italic mb-2">CRÓNICA DE UNA TARDE INOLVIDABLE</h3>
 <p class="text-sm text-gray-400 leading-relaxed">
 El pasado sábado acudimos al Polideportivo de La Elipa listos para el gran cierre de temporada. La final del plantel Alevín comenzó cuesta arriba con un doloroso 2-0 en contra antes del descanso. Pero en el vestuario se sintió la unión familiar y la garra de Moratalaz: salimos a morder y, gol a gol, materializamos un espectacular <strong class="text-white font-bold">3-2</strong> que nos dio el campeonato. ¡Pura emoción!
 </p>
@@ -224,71 +223,86 @@ El pasado sábado acudimos al Polideportivo de La Elipa listos para el gran cier
 </div>
 </section>
 
-<!-- CONVOCATORIA TROFEO DEL CARMEN -->
+<!-- SECCIÓN INTERACTIVA: TROFEO DEL CARMEN CON CARTELERÍA NUEVA -->
 <section id="proximo-reto" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
 <div class="bg-gradient-to-b from-gray-950 to-gray-900 border-2 border-red-600/30 rounded-3xl p-6 sm:p-10 shadow-2xl">
-<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 border-b border-gray-800 pb-6 mb-8">
-<div>
-<span class="bg-red-600 text-white text-[10px] font-black uppercase px-3 py-1 rounded-full tracking-wider mb-3 inline-block">¡A por el doblete!</span>
-<h2 class="text-3xl font-black text-white italic uppercase tracking-tight">ALEVÍN - TROFEO DEL CARMEN</h2>
-<p class="text-gray-400 text-xs mt-1">Sede oficial del torneo: <span class="text-white font-bold"><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Polideportivo Palomeras</span></p>
-</div>
-<div class="bg-red-600/10 border border-red-600/20 px-4 py-3 rounded-xl text-center min-w-[200px]">
-<span class="block text-[10px] font-black uppercase text-red-400 tracking-widest">GRUPO 2</span>
-<span class="text-sm font-black text-white block mt-1">INTER DE MORATALAZ</span>
-<span class="text-xs text-gray-400 block">Hortaleza C • Madrid Sur D</span>
-</div>
-</div>
+    
+    <div class="border-b border-gray-800 pb-6 mb-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div>
+            <span class="bg-red-600 text-white text-[10px] font-black uppercase px-3 py-1 rounded-full tracking-wider mb-3 inline-block">¡A por el doblete en Palomeras!</span>
+            <h2 class="text-3xl font-black text-white italic uppercase tracking-tight">PRÓXIMO RETO: TROFEO DEL CARMEN</h2>
+            <p class="text-gray-400 text-xs mt-1"><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Sede: Polideportivo Palomeras • 13 y 14 de Junio</p>
+        </div>
+        <!-- Selector de categorías estilo premium -->
+        <div class="flex bg-black p-1 rounded-xl border border-gray-800 text-xs font-black uppercase tracking-wider">
+            <button onclick="switchCategory('alevin')" id="btn-alevin" class="px-4 py-2.5 rounded-lg text-white bg-red-600 transition duration-200">Alevín</button>
+            <button onclick="switchCategory('benjamin')" id="btn-benjamin" class="px-4 py-2.5 rounded-lg text-gray-400 hover:text-white transition duration-200">Benjamín</button>
+            <button onclick="switchCategory('infantil')" id="btn-infantil" class="px-4 py-2.5 rounded-lg text-gray-400 hover:text-white transition duration-200">Infantil</button>
+        </div>
+    </div>
 
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-<!-- Tabla de Horarios -->
-<div class="lg:col-span-7 space-y-4">
-<h3 class="text-xs font-black tracking-widest uppercase text-gray-400 flex items-center gap-2"><i class="fa-solid fa-calendar-day text-red-500"></i> Fase de Grupos - Sábado 13 de Junio</h3>
+    <!-- BLOQUES DE CONTENIDO POR CATEGORÍA -->
+    
+    <!-- BLOQUE ALEVÍN -->
+    <div id="content-alevin" class="category-content grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-5 space-y-4">
+            <div class="bg-black/40 border border-gray-800 p-6 rounded-2xl">
+                <span class="text-red-400 font-black text-xs uppercase tracking-widest block mb-1">Fase de Grupos • Grupo 2</span>
+                <h3 class="text-xl font-black text-white italic mb-4 uppercase">CALENDARIO ALEVÍN</h3>
+                <ul class="space-y-3 text-xs">
+                    <li class="flex justify-between border-b border-gray-850 pb-2"><span class="text-gray-400">9:50h - Partido 1</span> <strong class="text-white">INTER vs Hortaleza C</strong></li>
+                    <li class="flex justify-between pb-2"><span class="text-gray-400">13:30h - Partido 2</span> <strong class="text-white">INTER vs Madrid Sur D</strong></li>
+                </ul>
+            </div>
+            <div class="bg-red-950/20 border border-red-900/40 p-5 rounded-2xl text-xs text-gray-400 leading-relaxed">
+                <strong class="text-white block mb-1">🏆 Sistema de Clasificación:</strong> Clasifican los dos mejores primeros de grupo a semifinales. El mejor primero restante irá mediante sorteo directo a la gran final del domingo.
+            </div>
+        </div>
+        <div class="lg:col-span-7 flex justify-center">
+            <img src="/images/galeria/image_927440.jpg" alt="Horarios Alevín Torneo del Carmen" class="rounded-xl shadow-2xl border border-gray-800 max-h-[450px] w-full object-contain bg-black">
+        </div>
+    </div>
 
-<div class="overflow-hidden border border-gray-800 rounded-xl bg-black/40">
-<table class="w-full text-left border-collapse">
-<thead>
-<tr class="bg-gray-900 border-b border-gray-800 text-[10px] font-black tracking-wider text-gray-400 uppercase">
-<th class="p-4">Partido</th>
-<th class="p-4 text-center">Hora</th>
-<th class="p-4 text-right">Terreno</th>
-</tr>
-</thead>
-<tbody class="text-xs font-medium text-gray-300 divide-y divide-gray-850">
-<tr class="hover:bg-gray-900/40 transition">
-<td class="p-4 flex items-center gap-3">
-<span class="font-bold text-white">INTER</span> <span class="text-red-500 font-bold">vs</span> <span class="text-gray-400">Hortaleza C</span>
-</td>
-<td class="p-4 text-center font-mono font-bold text-amber-400 bg-amber-500/5">09:50</td>
-<td class="p-4 text-right text-gray-400">Campo 2</td>
-</tr>
-<tr class="hover:bg-gray-900/40 transition">
-<td class="p-4 flex items-center gap-3">
-<span class="font-bold text-white">INTER</span> <span class="text-red-500 font-bold">vs</span> <span class="text-gray-400">Madrid Sur D</span>
-</td>
-<td class="p-4 text-center font-mono font-bold text-amber-400 bg-amber-500/5">13:30</td>
-<td class="p-4 text-right text-gray-400">Campo 2</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+    <!-- BLOQUE BENJAMÍN -->
+    <div id="content-benjamin" class="category-content hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-5 space-y-4">
+            <div class="bg-black/40 border border-gray-800 p-6 rounded-2xl">
+                <span class="text-red-400 font-black text-xs uppercase tracking-widest block mb-1">Fase de Grupos • Grupo 1</span>
+                <h3 class="text-xl font-black text-white italic mb-4 uppercase">CALENDARIO BENJAMÍN</h3>
+                <ul class="space-y-3 text-xs">
+                    <li class="flex justify-between border-b border-gray-850 pb-2"><span class="text-gray-400">9:50h - Partido 1</span> <strong class="text-white">INTER vs Hortaleza B</strong></li>
+                    <li class="flex justify-between pb-2"><span class="text-gray-400">11:40h - Partido 2</span> <strong class="text-white">INTER vs Vallecas CF</strong></li>
+                </ul>
+            </div>
+            <div class="bg-red-950/20 border border-red-900/40 p-5 rounded-2xl text-xs text-gray-400 leading-relaxed">
+                <strong class="text-white block mb-1">⚡ Concentración:</strong> Se solicita la máxima puntualidad a los jugadores convocados (citación 9:20h) para los ejercicios de calentamiento previos al debut de la jornada.
+            </div>
+        </div>
+        <div class="lg:col-span-7 flex justify-center">
+            <img src="/images/galeria/image_92749b.jpg" alt="Horarios Benjamín Torneo del Carmen" class="rounded-xl shadow-2xl border border-gray-800 max-h-[450px] w-full object-contain bg-black">
+        </div>
+    </div>
 
-<!-- Info de finales -->
-<div class="lg:col-span-5 space-y-4">
-<h3 class="text-xs font-black tracking-widest uppercase text-gray-400 flex items-center gap-2"><i class="fa-solid fa-circle-info text-red-500"></i> Sistema y Fase Final</h3>
-<div class="bg-black/30 border border-gray-800 rounded-xl p-5 space-y-4 text-xs leading-relaxed text-gray-400">
-<p>
-<strong class="text-white block mb-1">📋 Clasificación a Semifinales:</strong> 
-Al haber 3 grupos en el torneo, clasificarán los 2 mejores primeros a semifinales. ¡El restante pasará por sorteo directo a la gran final!
-</p>
-<p>
-<strong class="text-white block mb-1">🏆 Final y Premios (Domingo 14):</strong> 
-La gran final será el domingo a primera hora. Al concluir, se llevará a cabo la ceremonia oficial de entrega de trofeos de toda la temporada (Liga, Copa y Trofeo del Carmen).
-</p>
-</div>
-</div>
-</div>
+    <!-- BLOQUE INFANTIL -->
+    <div id="content-infantil" class="category-content hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-5 space-y-4">
+            <div class="bg-black/40 border border-gray-800 p-6 rounded-2xl">
+                <span class="text-red-400 font-black text-xs uppercase tracking-widest block mb-1">Fase de Grupos • Jornada Nocturna</span>
+                <h3 class="text-xl font-black text-white italic mb-4 uppercase">CALENDARIO INFANTIL</h3>
+                <ul class="space-y-3 text-xs">
+                    <li class="flex justify-between border-b border-gray-850 pb-2"><span class="text-gray-400">19:00h - Partido 1</span> <strong class="text-white">INTER vs EM Wilfred</strong></li>
+                    <li class="flex justify-between pb-2"><span class="text-gray-400">20:15h - Partido 2</span> <strong class="text-white">INTER vs Madrid Sur C</strong></li>
+                </ul>
+            </div>
+            <div class="bg-red-950/20 border border-red-900/40 p-5 rounded-2xl text-xs text-gray-400 leading-relaxed">
+                <strong class="text-white block mb-1">🌙 Turno de Tarde-Noche:</strong> Los partidos de nuestro infantil se disputarán bajo los focos de Palomeras. ¡Invitamos a toda la afición del barrio a quedarse a arroparlos!
+            </div>
+        </div>
+        <div class="lg:col-span-7 flex justify-center">
+            <img src="/images/galeria/image_92776c.jpg" alt="Horarios Infantil Torneo del Carmen" class="rounded-xl shadow-2xl border border-gray-800 max-h-[450px] w-full object-contain bg-black">
+        </div>
+    </div>
+
 </div>
 </section>
 
@@ -360,7 +374,7 @@ ELEMENTO <span id="carousel-index" class="text-interBlue">1</span> / <span id="c
 </div>
 </section>
 
-<!-- === SECCIÓN DE PRUEBAS DE ACCESO + FORMULARIO RECUPERADO === -->
+<!-- SECCIÓN DE PRUEBAS DE ACCESO + FORMULARIO RECUPERADO -->
 <section id="pruebas" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
 <div class="bg-gradient-to-r from-interBlue to-blue-900 rounded-3xl overflow-hidden shadow-neon-blue grid grid-cols-1 lg:grid-cols-12 backdrop-blur-sm">
     
@@ -394,7 +408,6 @@ ELEMENTO <span id="carousel-index" class="text-interBlue">1</span> / <span id="c
         <h3 class="text-xl font-black text-white italic mb-2 uppercase tracking-wide">SOLICITAR PRUEBA DE ACCESO</h3>
         <p class="text-xs text-gray-400 mb-6">Completa los datos del jugador/a y nos pondremos en contacto contigo para asignarte día y hora.</p>
         
-        <!-- Formulario integrado compatible con Netlify Forms y Decap -->
         <form name="inscripciones-inter" method="POST" data-netlify="true" class="space-y-4">
             <input type="hidden" name="form-name" value="inscripciones-inter">
             
@@ -436,7 +449,7 @@ ELEMENTO <span id="carousel-index" class="text-interBlue">1</span> / <span id="c
             </div>
 
             <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-gray-950 font-black uppercase tracking-wider text-xs py-4 rounded-xl transition transform hover:-translate-y-0.5 shadow-md">
-                Enviar Solicitude de Inscripción <i class="fa-solid fa-paper-plane ml-1"></i>
+                Enviar Solicitud de Inscripción <i class="fa-solid fa-paper-plane ml-1"></i>
             </button>
         </form>
     </div>
@@ -504,19 +517,69 @@ ELEMENTO <span id="carousel-index" class="text-interBlue">1</span> / <span id="c
 
 </div><!-- FIN CONTENEDOR PRINCIPAL -->
 
-<!-- SCRIPT DE NAVEGACIÓN Y CARRUSEL DINÁMICO -->
+<!-- REPRODUCTOR DE MÚSICA / HIMNO FLOTANTE -->
+<div class="fixed bottom-6 right-6 z-50 flex items-center bg-black/90 border border-interBlue/40 backdrop-blur-md text-white px-4 py-2.5 rounded-full shadow-neon-blue space-x-3 transition transform hover:scale-105">
+  <span class="text-[10px] font-black uppercase tracking-widest hidden sm:inline text-gray-300">Himno Inter</span>
+  <button id="music-btn" class="bg-interBlue hover:bg-blue-600 text-white w-9 h-9 rounded-full flex items-center justify-center transition active:scale-95">
+    <i id="music-icon" class="fa-solid fa-play text-xs pl-0.5"></i>
+  </button>
+  <audio id="bg-music" src="/audio/himno.mp3" loop></audio>
+</div>
+
+<!-- SCRIPTS DE NAVEGACIÓN, TABS Y CARRUSEL -->
 <script>
 // Lógica del Menú Móvil
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
-
 if (mobileMenuBtn && mobileMenu) {
     mobileMenuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
     });
 }
 
-// LÓGICA DEL CARRUSEL ENLAZADO CON GITHUB (IMAGES/GALERIA)
+// Lógica de Pestañas (Tabs) para los Carteles del Torneo del Carmen
+function switchCategory(category) {
+    // Esconder todos los contenidos
+    document.querySelectorAll('.category-content').forEach(el => el.classList.add('hidden'));
+    // Desactivar estilos de todos los botones
+    ['alevin', 'benjamin', 'infantil'].forEach(cat => {
+        const btn = document.getElementById(`btn-${cat}`);
+        if(btn) {
+            btn.className = "px-4 py-2.5 rounded-lg text-gray-400 hover:text-white transition duration-200";
+        }
+    });
+    
+    // Mostrar el contenido seleccionado
+    document.getElementById(`content-${category}`).classList.remove('hidden');
+    // Activar el botón seleccionado
+    document.getElementById(`btn-${category}`).className = "px-4 py-2.5 rounded-lg text-white bg-red-600 transition duration-200";
+}
+
+// Lógica del Reproductor de Música
+document.addEventListener("DOMContentLoaded", function() {
+    const musicBtn = document.getElementById('music-btn');
+    const musicIcon = document.getElementById('music-icon');
+    const bgMusic = document.getElementById('bg-music');
+
+    if (musicBtn && bgMusic) {
+        musicBtn.addEventListener('click', () => {
+            if (bgMusic.paused) {
+                bgMusic.play()
+                .then(() => {
+                    musicIcon.className = "fa-solid fa-pause text-xs";
+                    musicIcon.parentElement.classList.add("animate-pulse");
+                })
+                .catch(err => console.log("Reproducción bloqueada temporalmente por el navegador:", err));
+            } else {
+                bgMusic.pause();
+                musicIcon.className = "fa-solid fa-play text-xs pl-0.5";
+                musicIcon.parentElement.classList.remove("animate-pulse");
+            }
+        });
+    }
+});
+
+// LÓGICA DEL CARRUSEL DINÁMICO ENLAZADO CON GITHUB
 document.addEventListener("DOMContentLoaded", function() {
     const container = document.getElementById('carousel-container');
     const prevBtn = document.getElementById('prev-btn');
@@ -538,7 +601,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
             const archivos = Array.isArray(data) ? data : [];
 
-            // 1. Agregamos vídeos (.mp4) de esa carpeta primero
+            // 1. Vídeos (.mp4) primero
             const videos = archivos.filter(file => file.type === "file" && file.name.endsWith('.mp4'));
             videos.forEach(video => {
                 htmlContenido += `
@@ -549,7 +612,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 totalElements++;
             });
 
-            // 2. Agregamos las imágenes saltándonos el logo
+            // 2. Imágenes filtrando logotipos o archivos ocultos
             const imagenes = archivos.filter(file => 
                 file.type === "file" && 
                 !file.name.startsWith('.') && 
@@ -580,7 +643,7 @@ document.addEventListener("DOMContentLoaded", function() {
             actualizarCarrusel();
         })
         .catch(err => {
-            console.warn("Aviso: Error en API de GitHub, usando modo respaldo con el logo:", err);
+            console.warn("Aviso: Cargando modo respaldo:", err);
             container.innerHTML = `
             <div class="min-w-full h-full flex items-center justify-center bg-black">
                 <img src="/images/galeria/image_b5457f.png" alt="Galería Inter" class="w-full h-full object-contain block max-h-full">
