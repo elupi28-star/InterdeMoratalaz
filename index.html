@@ -318,7 +318,7 @@
                     </button>
 
                     <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/80 px-4 py-1.5 rounded-full border border-gray-880 text-[11px] font-black tracking-widest text-gray-300 z-30 select-none">
-                        ELEMENTO <span id="carousel-index" class="text-interBlue">1</span> / <span id="carousel-total">3</span>
+                        ELEMENTO <span id="carousel-index" class="text-interBlue">0</span> / <span id="carousel-total">0</span>
                     </div>
                 </div>
             </div>
@@ -489,15 +489,17 @@
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
-mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-});
-
-document.querySelectorAll('#mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
+if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
     });
-});
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+}
 
 // --- SELECTOR DE CATEGORÍAS (TROFEO DEL CARMEN) ---
 function switchCategory(category) {
@@ -506,67 +508,111 @@ function switchCategory(category) {
     const tabs = ['alevin', 'benjamin', 'infantil'];
     tabs.forEach(tab => {
         const btn = document.getElementById(`btn-${tab}`);
-        btn.className = "px-4 py-2.5 rounded-lg text-gray-400 hover:text-white transition duration-200";
+        if (btn) btn.className = "px-4 py-2.5 rounded-lg text-gray-400 hover:text-white transition duration-200";
     });
 
     const activeContent = document.getElementById(`content-${category}`);
-    activeContent.classList.remove('hidden');
-    activeContent.classList.add('grid');
+    if (activeContent) {
+        activeContent.classList.remove('hidden');
+        activeContent.classList.add('grid');
+    }
 
     const activeBtn = document.getElementById(`btn-${category}`);
-    activeBtn.className = "px-4 py-2.5 rounded-lg text-black bg-amber-500 font-black transition duration-200";
+    if (activeBtn) activeBtn.className = "px-4 py-2.5 rounded-lg text-black bg-amber-500 font-black transition duration-200";
 }
 
-// --- CARRUSEL DE IMÁGENES DE LA GALERÍA ---
-// Corregido: Ahora apunta a los archivos correctos de fotos reales de la galería
-const imagesData = [
-    { src: 'images/galeria/foto1.jpg', alt: 'Momentos del Equipo - Foto 1' },
-    { src: 'images/galeria/foto2.jpg', alt: 'Entrenamiento Inter de Moratalaz - Foto 2' },
-    { src: 'images/galeria/foto3.jpg', alt: 'Celebración en el Campo - Foto 3' }
-];
+// --- CARRUSEL DINÁMICO VIA GITHUB API ---
+const GITHUB_USER = "elupi28-star";
+const GITHUB_REPO = "InterdeMoratalaz";
 
-const container = document.getElementById('carousel-container');
-const indexEl = document.getElementById('carousel-index');
-const totalEl = document.getElementById('carousel-total');
+const CONTAINER = document.getElementById('carousel-container');
+const INDEX_EL = document.getElementById('carousel-index');
+const TOTAL_EL = document.getElementById('carousel-total');
+
+let carouselItems = [];
 let currentIndex = 0;
 
-function initCarousel() {
-    container.innerHTML = '';
-    totalEl.textContent = imagesData.length;
+const VALID_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.webp'];
+
+async function loadGalleryFromGitHub() {
+    const apiUrl = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/images/galeria`;
+
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) throw new Error(`Error API: ${response.status}`);
+        
+        const files = await response.json();
+        
+        // Filtramos para cargar únicamente archivos de tipo imagen válidos
+        // Excluimos explícitamente los carteles de horarios (image_927...) y otros recursos de la app
+        const images = files.filter(file => {
+            const fileName = file.name.toLowerCase();
+            const isImage = VALID_EXTENSIONS.some(ext => fileName.endsWith(ext));
+            const isTorneoOrEscudo = fileName.startsWith('image_') || fileName.startsWith('video_');
+            
+            return file.type === 'file' && isImage && !isTorneoOrEscudo;
+        });
+
+        if (images.length === 0) {
+            CONTAINER.innerHTML = `<p class="text-center w-full my-auto text-xs italic text-gray-400 py-10">No se encontraron imágenes de galería en el repositorio.</p>`;
+            return;
+        }
+
+        // Mapeamos las rutas relativas de los archivos para usarlas como origen
+        carouselItems = images.map((file, index) => ({
+            src: file.path, 
+            alt: `Galería Inter - Foto ${index + 1}`
+        }));
+
+        renderCarousel();
+
+    } catch (error) {
+        console.error("Error cargando la galería dinámica:", error);
+        CONTAINER.innerHTML = `<p class="text-center w-full my-auto text-xs text-red-400 py-10"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Error al sincronizar con las imágenes de GitHub.</p>`;
+    }
+}
+
+function renderCarousel() {
+    CONTAINER.innerHTML = '';
+    TOTAL_EL.textContent = carouselItems.length;
     
-    imagesData.forEach((img, i) => {
+    carouselItems.forEach((img) => {
         const slide = document.createElement('div');
-        // min-w-full asegura que las diapositivas flex no colapsen su ancho
         slide.className = 'w-full min-w-full h-full flex-shrink-0 relative';
         slide.innerHTML = `
-            <img src="${img.src}" alt="${img.alt}" class="w-full h-full object-cover">
+            <img src="${img.src}" alt="${img.alt}" class="w-full h-full object-cover" loading="lazy">
             <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/40 to-transparent p-6 pt-16 text-center">
                 <p class="text-xs sm:text-sm font-black uppercase tracking-wider text-amber-400 italic">${img.alt}</p>
             </div>
         `;
-        container.appendChild(slide);
+        CONTAINER.appendChild(slide);
     });
+    
     updateCarousel();
 }
 
 function updateCarousel() {
-    container.style.transform = `translateX(-${currentIndex * 100}%)`;
-    indexEl.textContent = currentIndex + 1;
+    if (carouselItems.length === 0) return;
+    CONTAINER.style.transform = `translateX(-${currentIndex * 100}%)`;
+    INDEX_EL.textContent = currentIndex + 1;
 }
 
+// Controles del carrusel
 document.getElementById('next-btn').addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % imagesData.length;
+    if (carouselItems.length === 0) return;
+    currentIndex = (currentIndex + 1) % carouselItems.length;
     updateCarousel();
 });
 
 document.getElementById('prev-btn').addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + imagesData.length) % imagesData.length;
+    if (carouselItems.length === 0) return;
+    currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
     updateCarousel();
 });
 
-// Inicializar elementos al cargar el DOM
+// Inicialización
 document.addEventListener('DOMContentLoaded', () => {
-    initCarousel();
+    loadGalleryFromGitHub();
 });
 </script>
 </body>
