@@ -173,7 +173,7 @@
                 <div class="bg-gray-900/90 border-l-4 border-interBlue p-6 rounded-r-xl shadow-md">
                     <h3 class="text-xl font-black text-white italic mb-2">CRÓNICA DE UNA TARDE INOLVIDABLE</h3>
                     <p class="text-sm text-gray-400 leading-relaxed">
-                        En el Polideportivo de La Elipa empezó a forjarse este año de ensueño. La final del plantel Alevín comenzó cuesta arriba con un doloroso 2-0 en contra antes del descanso. Pero en el vestuario se sintió la unión familiar y la garra de Moratalaz: salimos a morder y, gol a gol, materializamos un espectacular <strong class="text-white font-bold">3-2</strong> que abrió la veda de copas esta temporada.
+                        En el Polideportivo de La Elipa empezó a forjarse este año de en sueño. La final del plantel Alevín comenzó cuesta arriba con un doloroso 2-0 en contra antes del descanso. Pero en el vestuario se sintió la unión familiar y la garra de Moratalaz: salimos a morder y, gol a gol, materializamos un espectacular <strong class="text-white font-bold">3-2</strong> que abrió la veda de copas esta temporada.
                     </p>
                 </div>
 
@@ -475,6 +475,26 @@
         </div>
     </section>
 
+    <div class="fixed bottom-6 left-6 z-50 bg-black/90 backdrop-blur-md border border-interBlue/50 text-white px-4 py-3 rounded-2xl shadow-neon-blue flex items-center space-x-4 max-w-xs transition transform hover:scale-102 duration-300">
+        <audio id="club-anthem-audio" src="audio/himno.mp3" loop></audio>
+        
+        <button id="anthem-toggle-btn" class="bg-interBlue hover:bg-blue-700 text-white h-10 w-10 rounded-full flex items-center justify-center shadow-md transition transform active:scale-95 focus:outline-none" aria-label="Reproducir Himno">
+            <i id="anthem-icon" class="fa-solid fa-play text-sm pl-0.5"></i>
+        </button>
+
+        <div class="pr-2 select-none">
+            <p class="text-[10px] uppercase font-black tracking-widest text-interBlue leading-none mb-1">Himno Oficial</p>
+            <p class="text-xs font-black text-gray-200 tracking-tight whitespace-nowrap overflow-hidden text-ellipsis max-w-[140px]">Inter de Moratalaz</p>
+        </div>
+
+        <div id="anthem-eq" class="hidden flex items-end justify-between h-5 w-5 space-x-[2px]">
+            <span class="bg-amber-500 w-[3px] h-3 rounded-full animate-[bounce_0.8s_infinite_0.1s]"></span>
+            <span class="bg-amber-500 w-[3px] h-5 rounded-full animate-[bounce_0.5s_infinite_0.3s]"></span>
+            <span class="bg-amber-500 w-[3px] h-2 rounded-full animate-[bounce_0.7s_infinite_0s]"></span>
+            <span class="bg-amber-500 w-[3px] h-4 rounded-full animate-[bounce_0.6s_infinite_0.2s]"></span>
+        </div>
+    </div>
+
     <footer class="bg-black text-gray-500 text-xs py-8 border-t border-gray-900 relative z-20 text-center">
         <div class="max-w-7xl mx-auto px-4 space-y-4">
             <p class="font-black tracking-widest text-gray-400 uppercase">© 2026 CLUB INTER DE MORATALAZ. TODOS LOS DERECHOS RESERVADOS.</p>
@@ -519,6 +539,30 @@ function switchCategory(category) {
 
     const activeBtn = document.getElementById(`btn-${category}`);
     if (activeBtn) activeBtn.className = "px-4 py-2.5 rounded-lg text-black bg-amber-500 font-black transition duration-200";
+}
+
+// --- LÓGICA DEL REPRODUCTOR DEL HIMNO ---
+const anthemAudio = document.getElementById('club-anthem-audio');
+const anthemToggleBtn = document.getElementById('anthem-toggle-btn');
+const anthemIcon = document.getElementById('anthem-icon');
+const anthemEq = document.getElementById('anthem-eq');
+
+if (anthemAudio && anthemToggleBtn) {
+    anthemToggleBtn.addEventListener('click', () => {
+        if (anthemAudio.paused) {
+            anthemAudio.play();
+            // Cambiar icono a Pausa
+            anthemIcon.className = "fa-solid fa-pause text-sm";
+            // Mostrar barras animadas
+            anthemEq.classList.remove('hidden');
+        } else {
+            anthemAudio.pause();
+            // Cambiar icono a Play
+            anthemIcon.className = "fa-solid fa-play text-sm pl-0.5";
+            // Ocultar barras animadas
+            anthemEq.classList.add('hidden');
+        }
+    });
 }
 
 // --- CARRUSEL DINÁMICO VIA GITHUB API ---
