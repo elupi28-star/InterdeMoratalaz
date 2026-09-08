@@ -21,6 +21,7 @@ tailwind.config = {
       boxShadow: {
         'neon-blue': '0 0 25px rgba(0, 82, 204, 0.45)',
         'neon-gold': '0 0 25px rgba(245, 158, 11, 0.5)',
+        'insta-glow': '0 4px 15px rgba(236, 72, 153, 0.3)',
       }
     }
   }
@@ -35,7 +36,7 @@ tailwind.config = {
 </head>
 <body class="bg-interDark text-gray-100 font-sans antialiased overflow-x-hidden relative">
 
-<!-- MARCA DE AGUA DEL ESCUDO EN EL FONDO -->
+<!-- MARCA DE AGUA DEL ESCUDO (FONDO) -->
 <div class="fixed inset-0 flex items-center justify-center pointer-events-none opacity-[0.10] z-0 select-none">
   <img src="images/galeria/image_b5457f.png" alt="Escudo Inter de Moratalaz" class="w-[75vw] max-w-[850px] object-contain rounded-full">
 </div>
@@ -46,11 +47,11 @@ tailwind.config = {
   <!-- BARRA DE ANUNCIO SUPERIOR -->
   <div class="bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black text-center py-2 px-4 text-xs font-black tracking-widest uppercase relative z-50 shadow-md flex items-center justify-center gap-2">
     <i class="fa-solid fa-fire text-black animate-bounce"></i>
-    <span>¡INICIO DE ENTRENAMIENTOS! MIÉRCOLES 9 DE SEPTIEMBRE EN LA ELIPA Y MORATALAZ</span>
+    <span>¡NUEVA TEMPORADA 2026/2027! ENTRENAMIENTOS DESDE EL MIÉRCOLES 9 DE SEPTIEMBRE EN LA ELIPA</span>
     <i class="fa-solid fa-futbol text-black animate-spin"></i>
   </div>
 
-  <!-- NAVBAR -->
+  <!-- NAVBAR COMPLETA -->
   <nav class="bg-black/95 backdrop-blur-md sticky top-0 z-50 border-b-2 border-interBlue shadow-neon-blue">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-24">
@@ -60,17 +61,21 @@ tailwind.config = {
           </div>
           <div>
             <span class="text-xl sm:text-2xl font-black tracking-tighter text-white block italic">INTER DE MORATALAZ</span>
-            <span class="text-xs text-interBlue font-black tracking-widest uppercase block">Sitio Oficial</span>
+            <span class="text-xs text-interBlue font-black tracking-widest uppercase block">Sitio Oficial • Creciendo desde el barrio</span>
           </div>
         </div>
 
-        <div class="hidden lg:flex items-center space-x-6 text-xs font-black uppercase tracking-wider">
+        <div class="hidden xl:flex items-center space-x-5 text-xs font-black uppercase tracking-wider">
           <a href="#entrenamientos" class="text-interBlue hover:text-white transition"><i class="fa-solid fa-stopwatch mr-1"></i> Entrenamientos</a>
-          <a href="#partidos" class="text-amber-400 hover:text-amber-300 transition"><i class="fa-solid fa-calendar-days mr-1"></i> Partidos y Horarios</a>
-          <a href="#ubicaciones" class="text-gray-300 hover:text-white transition"><i class="fa-solid fa-location-dot mr-1"></i> Campos y Ubicaciones</a>
+          <a href="#partidos" class="text-amber-400 hover:text-amber-300 transition"><i class="fa-solid fa-calendar-days mr-1"></i> Partidos</a>
+          <a href="#himno" class="text-gray-300 hover:text-white transition"><i class="fa-solid fa-music mr-1"></i> Himno</a>
+          <a href="#galeria" class="text-gray-300 hover:text-white transition"><i class="fa-solid fa-images mr-1"></i> Galería</a>
+          <a href="#redes" class="text-pink-400 hover:text-pink-300 transition"><i class="fa-brands fa-instagram mr-1"></i> Redes</a>
+          <a href="#colegios" class="text-gray-300 hover:text-white transition"><i class="fa-solid fa-school mr-1"></i> Colegios</a>
+          <a href="#ubicaciones" class="text-gray-300 hover:text-white transition"><i class="fa-solid fa-location-dot mr-1"></i> Campos</a>
         </div>
 
-        <div class="lg:hidden">
+        <div class="xl:hidden">
           <button id="mobile-menu-btn" class="text-white hover:text-interBlue focus:outline-none p-2 rounded-md">
             <i class="fa-solid fa-bars text-2xl"></i>
           </button>
@@ -78,40 +83,49 @@ tailwind.config = {
       </div>
     </div>
 
-    <!-- MENÚ MÓVIL -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-black/95 border-t border-gray-900 px-4 py-4 space-y-3 text-xs font-black uppercase tracking-wider">
+    <!-- MENÚ MÓVIL DESPLEGABLE -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-black/95 border-t border-gray-900 px-4 py-4 space-y-3 text-xs font-black uppercase tracking-wider">
       <a href="#entrenamientos" class="block text-interBlue hover:text-white py-1"><i class="fa-solid fa-stopwatch mr-2"></i> Entrenamientos</a>
-      <a href="#partidos" class="block text-amber-400 hover:text-amber-300 py-1"><i class="fa-solid fa-calendar-days mr-2"></i> Partidos y Horarios</a>
+      <a href="#partidos" class="block text-amber-400 hover:text-amber-300 py-1"><i class="fa-solid fa-calendar-days mr-2"></i> Partidos</a>
+      <a href="#himno" class="block text-gray-300 hover:text-white py-1"><i class="fa-solid fa-music mr-2"></i> Himno</a>
+      <a href="#galeria" class="block text-gray-300 hover:text-white py-1"><i class="fa-solid fa-images mr-2"></i> Galería</a>
+      <a href="#redes" class="block text-pink-400 hover:text-pink-300 py-1"><i class="fa-brands fa-instagram mr-2"></i> Redes Sociales</a>
+      <a href="#colegios" class="block text-gray-300 hover:text-white py-1"><i class="fa-solid fa-school mr-2"></i> Colegios</a>
       <a href="#ubicaciones" class="block text-gray-300 hover:text-white py-1"><i class="fa-solid fa-location-dot mr-2"></i> Campos y Ubicaciones</a>
     </div>
   </nav>
 
-  <!-- SECCIÓN DE ENTRENAMIENTOS -->
+  <!-- HERO / ENTRENAMIENTOS -->
   <header id="entrenamientos" class="relative bg-black py-16 px-4 text-center border-b-4 border-black">
     <div class="max-w-5xl mx-auto">
       <div class="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/40 text-amber-400 text-xs font-black uppercase px-4 py-1.5 rounded-full mb-6">
-        <i class="fa-solid fa-bolt"></i> <span>TEMPORADA 2026 / 2027 • HORARIOS DE ENTRENAMIENTO</span>
+        <i class="fa-solid fa-bolt"></i> <span>TEMPORADA 2026 / 2027 • PLANIFICACIÓN DE ENTRENAMIENTOS</span>
       </div>
 
-      <h1 class="text-3xl sm:text-5xl font-black text-white italic tracking-tighter uppercase mb-6">
-        HORARIOS DE <span class="text-amber-400">ENTRENAMIENTO</span>
+      <h1 class="text-4xl sm:text-6xl font-black text-white italic tracking-tighter uppercase mb-6">
+        CALENDARIO Y <span class="text-amber-400">ENTRENAMIENTOS</span>
       </h1>
 
+      <p class="text-gray-300 max-w-2xl mx-auto mb-8 text-sm sm:text-base">
+        Horarios, ubicaciones y convocatorias para todas las categorías del Club Inter de Moratalaz.
+      </p>
+
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
-        <!-- Fútbol 7 -->
+        <!-- F7 -->
         <div class="bg-gray-900/90 border-2 border-interBlue/60 rounded-2xl p-6 shadow-neon-blue">
           <div class="flex items-center justify-between mb-4">
             <span class="bg-interBlue text-white text-xs font-black px-3 py-1 rounded-full uppercase">Fútbol 7</span>
             <span class="text-amber-400 font-bold text-xs"><i class="fa-solid fa-users mr-1"></i> Benjamín y Alevín</span>
           </div>
-          <p class="text-white font-black text-lg mb-2"><i class="fa-solid fa-location-dot text-red-500 mr-2"></i> Polideportivo de La Elipa</p>
+          <p class="text-white font-black text-lg mb-2"><i class="fa-solid fa-location-dot text-red-500 mr-2"></i> Polideportivo Municipal de La Elipa</p>
           <div class="bg-black/60 p-4 rounded-xl border border-gray-800 text-xs space-y-2">
-            <p><strong class="text-gray-400">Días:</strong> <span class="text-white font-bold">Miércoles y Viernes</span></p>
-            <p><strong class="text-gray-400">Horario:</strong> <span class="text-amber-400 font-bold">16:30h - 17:30h</span></p>
+            <p><strong class="text-gray-400">Días Fijos:</strong> <span class="text-white font-bold">Miércoles y Viernes</span></p>
+            <p><strong class="text-gray-400">Horario Habitual:</strong> <span class="text-amber-400 font-bold">16:30h - 17:30h</span></p>
+            <p><strong class="text-gray-400">Inicio de Entrenamientos:</strong> <span class="text-white font-bold">Miércoles 9 de Septiembre</span></p>
           </div>
         </div>
 
-        <!-- Fútbol 11 -->
+        <!-- F11 -->
         <div class="bg-gray-900/90 border-2 border-amber-500/60 rounded-2xl p-6 shadow-neon-gold">
           <div class="flex items-center justify-between mb-4">
             <span class="bg-amber-500 text-black text-xs font-black px-3 py-1 rounded-full uppercase">Fútbol 11</span>
@@ -119,28 +133,29 @@ tailwind.config = {
           </div>
           <p class="text-white font-black text-lg mb-2"><i class="fa-solid fa-location-dot text-red-500 mr-2"></i> Polideportivo de Moratalaz</p>
           <div class="bg-black/60 p-4 rounded-xl border border-gray-800 text-xs space-y-2">
-            <p><strong class="text-gray-400">Días:</strong> <span class="text-white font-bold">Según convocatoria de equipo</span></p>
-            <p><strong class="text-gray-400">Horario habitual:</strong> <span class="text-amber-400 font-bold">Consultar con cuerpo técnico</span></p>
+            <p><strong class="text-gray-400">Días de Entrenamiento:</strong> <span class="text-white font-bold">Según convocatoria de equipo</span></p>
+            <p><strong class="text-gray-400">Horarios de Sesión:</strong> <span class="text-amber-400 font-bold">Consultar con el cuerpo técnico</span></p>
+            <p><strong class="text-gray-400">Estado:</strong> <span class="text-emerald-400 font-bold">Convocatorias Abiertas</span></p>
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- FRANJA SEPARADORA -->
+  <!-- FRANJA DE FRANJAS -->
   <div class="h-3 inter-stripes"></div>
 
-  <!-- SECCIÓN DE PARTIDOS Y PRETEMPORADA -->
+  <!-- SECCIÓN DE PARTIDOS Y PRETEMPORADA CON HORARIOS Y UBICACIONES -->
   <section id="partidos" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="text-center max-w-3xl mx-auto mb-10">
       <span class="bg-interBlue/20 text-interBlue border border-interBlue/40 font-black text-xs uppercase px-4 py-1.5 rounded-full inline-block mb-3">
-        <i class="fa-solid fa-trophy mr-1"></i> CALENDARIO DE ENCUENTROS
+        <i class="fa-solid fa-trophy mr-1"></i> AMISTOSOS Y LIGA
       </span>
-      <h2 class="text-3xl sm:text-4xl font-black text-white italic uppercase">PRÓXIMOS PARTIDOS Y HORARIOS</h2>
-      <p class="text-gray-400 text-xs mt-2">Fechas, horas exactas y rivales confirmados para todas las categorías.</p>
+      <h2 class="text-3xl sm:text-4xl font-black text-white italic uppercase">CALENDARIO DE PARTIDOS</h2>
+      <p class="text-gray-400 text-xs mt-2">Consulta rivales, horarios confirmados y campos de juego por categoría.</p>
     </div>
 
-    <!-- SELECTOR DE CATEGORÍA DE PARTIDOS -->
+    <!-- SELECTOR DE CATEGORÍAS -->
     <div class="flex flex-wrap justify-center gap-2 mb-8">
       <button onclick="switchCategory('alevin')" id="btn-alevin" class="px-5 py-2.5 rounded-xl text-black bg-amber-500 font-black text-xs uppercase transition">
         Alevín
@@ -152,15 +167,12 @@ tailwind.config = {
         Cadete
       </button>
       <button onclick="switchCategory('benjamin')" id="btn-benjamin" class="px-5 py-2.5 rounded-xl text-gray-400 bg-black border border-gray-800 font-black text-xs uppercase hover:text-white transition">
-        Benjamín B
+        Benjamín
       </button>
     </div>
 
-    <!-- TARJETAS DE PARTIDOS -->
-
     <!-- ALEVÍN -->
     <div id="cat-alevin" class="category-block grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-      <!-- Partido 1 -->
       <div class="bg-gradient-to-b from-gray-900 to-black border border-interBlue/50 rounded-2xl p-6 shadow-xl">
         <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
           <span class="bg-interBlue text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">ALEVÍN • AMISTOSO</span>
@@ -176,11 +188,10 @@ tailwind.config = {
           </div>
         </div>
         <div class="bg-black/70 p-3 rounded-xl border border-gray-800 text-xs">
-          <p class="text-gray-300 font-medium"><i class="fa-solid fa-location-dot text-red-500 mr-1.5"></i> <strong>Polideportivo Santiago del Pino</strong> (San Fernando)</p>
+          <p class="text-gray-300 font-medium"><i class="fa-solid fa-location-dot text-red-500 mr-1.5"></i> <strong>Polideportivo Santiago del Pino</strong> (San Fernando de Henares)</p>
         </div>
       </div>
 
-      <!-- Partido 2 -->
       <div class="bg-gradient-to-b from-gray-900 to-black border border-gray-800 rounded-2xl p-6 shadow-xl">
         <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
           <span class="bg-interBlue text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">ALEVÍN • AMISTOSO</span>
@@ -196,7 +207,7 @@ tailwind.config = {
           </div>
         </div>
         <div class="bg-black/70 p-3 rounded-xl border border-gray-800 text-xs">
-          <p class="text-amber-400 font-bold"><i class="fa-solid fa-circle-info mr-1.5"></i> Hora y campo exacto por confirmar</p>
+          <p class="text-amber-400 font-bold"><i class="fa-solid fa-circle-info mr-1.5"></i> Hora y ubicación exacta pendiente de confirmación</p>
         </div>
       </div>
     </div>
@@ -218,7 +229,7 @@ tailwind.config = {
           </div>
         </div>
         <div class="bg-black/70 p-3 rounded-xl border border-gray-800 text-xs">
-          <p class="text-gray-300 font-medium"><i class="fa-solid fa-location-dot text-red-500 mr-1.5"></i> <strong>Polideportivo Santiago del Pino</strong> (San Fernando)</p>
+          <p class="text-gray-300 font-medium"><i class="fa-solid fa-location-dot text-red-500 mr-1.5"></i> <strong>Polideportivo Santiago del Pino</strong> (San Fernando de Henares)</p>
         </div>
       </div>
     </div>
@@ -230,7 +241,7 @@ tailwind.config = {
           <span class="bg-purple-600 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">CADETE • TORNEO CARRANQUE</span>
           <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-trophy mr-1"></i> Sábado, 12 Septiembre</span>
         </div>
-        <p class="text-xs text-gray-300 mb-3"><i class="fa-solid fa-location-dot text-red-500 mr-1.5"></i> <strong>Instalaciones de Carranque</strong></p>
+        <p class="text-xs text-gray-300 mb-3"><i class="fa-solid fa-location-dot text-red-500 mr-1.5"></i> <strong>Instalaciones Deportivas de Carranque</strong></p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 bg-black/70 p-3 rounded-xl border border-gray-800 text-xs">
           <div>
             <span class="text-gray-500 block">Partido 1:</span>
@@ -284,10 +295,154 @@ tailwind.config = {
         </div>
       </div>
     </div>
-
   </section>
 
-  <!-- FRANJA SEPARADORA -->
+  <!-- FRANJA DE FRANJAS -->
+  <div class="h-3 inter-stripes"></div>
+
+  <!-- SECCIÓN HIMNO DEL CLUB -->
+  <section id="himno" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="bg-gradient-to-r from-gray-900 via-black to-gray-900 border-2 border-interBlue/50 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10">
+        <div>
+          <span class="bg-amber-500/10 border border-amber-500/40 text-amber-400 text-xs font-black uppercase px-4 py-1 rounded-full inline-block mb-3">
+            <i class="fa-solid fa-music mr-1"></i> NUESTRO ORGULLO
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black text-white italic uppercase tracking-tight mb-4">HIMNO DEL INTER DE MORATALAZ</h2>
+          <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6">
+            La voz de nuestro barrio y los valores de nuestra cantera unidos en una sola canción. ¡Escúchalo y canta con nosotros en la grada!
+          </p>
+
+          <!-- Reproductor de Audio -->
+          <div class="bg-black/80 border border-gray-800 p-4 rounded-2xl shadow-inner">
+            <audio controls class="w-full">
+              <source src="audio/himno.mp3" type="audio/mpeg">
+              Tu navegador no soporta el reproductor de audio.
+            </audio>
+          </div>
+        </div>
+
+        <!-- Letra del Himno -->
+        <div class="bg-black/60 p-6 rounded-2xl border border-gray-800 max-h-72 overflow-y-auto text-xs sm:text-sm leading-relaxed text-gray-300 space-y-3 shadow-inner">
+          <h3 class="text-amber-400 font-black uppercase tracking-wider text-center text-sm border-b border-gray-800 pb-2">Letra Oficial</h3>
+          <p class="italic text-center">
+            En Moratalaz nace la pasión,<br>
+            azules y negros en el corazón.<br>
+            Con garra, esfuerzo y deportividad,<br>
+            jugamos unidos por la ciudad.
+          </p>
+          <p class="italic text-center font-bold text-white">
+            ¡Inter de Moratalaz, a ganar!<br>
+            ¡Juntos luchamos hasta el final!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRANJA DE FRANJAS -->
+  <div class="h-3 inter-stripes"></div>
+
+  <!-- SECCIÓN GALERÍA DE FOTOS Y VÍDEOS -->
+  <section id="galeria" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <span class="bg-interBlue/20 text-interBlue border border-interBlue/40 font-black text-xs uppercase px-4 py-1.5 rounded-full inline-block mb-3">
+        <i class="fa-solid fa-images mr-1"></i> FOTOTECA
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-black text-white italic uppercase">GALERÍA MULTIMEDIA</h2>
+      <p class="text-gray-400 text-xs mt-2">Momentos destacados de los entrenamientos, torneos y celebraciones del club.</p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div class="group relative aspect-square bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-interBlue transition duration-300">
+        <img src="images/galeria/foto1.jpg" alt="Galeria Inter 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='images/galeria/image_b5457f.png'; this.className='w-full h-full object-contain p-4 bg-gray-900';">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+          <span class="text-xs font-bold text-white">Entrenamientos 2026</span>
+        </div>
+      </div>
+
+      <div class="group relative aspect-square bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-interBlue transition duration-300">
+        <img src="images/galeria/foto2.jpg" alt="Galeria Inter 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='images/galeria/image_b5457f.png'; this.className='w-full h-full object-contain p-4 bg-gray-900';">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+          <span class="text-xs font-bold text-white">Torneo de Verano</span>
+        </div>
+      </div>
+
+      <div class="group relative aspect-square bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-interBlue transition duration-300">
+        <img src="images/galeria/foto3.jpg" alt="Galeria Inter 3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='images/galeria/image_b5457f.png'; this.className='w-full h-full object-contain p-4 bg-gray-900';">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+          <span class="text-xs font-bold text-white">Categoría Alevín</span>
+        </div>
+      </div>
+
+      <div class="group relative aspect-square bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-interBlue transition duration-300">
+        <img src="images/galeria/foto4.jpg" alt="Galeria Inter 4" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='images/galeria/image_b5457f.png'; this.className='w-full h-full object-contain p-4 bg-gray-900';">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+          <span class="text-xs font-bold text-white">Equipo Benjamín</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRANJA DE FRANJAS -->
+  <div class="h-3 inter-stripes"></div>
+
+  <!-- SECCIÓN REDES SOCIALES -->
+  <section id="redes" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="bg-gradient-to-br from-pink-950/40 via-black to-purple-950/40 border-2 border-pink-500/40 rounded-3xl p-8 text-center shadow-insta-glow">
+      <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-amber-500 via-pink-500 to-purple-600 flex items-center justify-center text-white text-3xl mx-auto mb-4 shadow-lg">
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+
+      <h2 class="text-3xl sm:text-4xl font-black text-white italic uppercase tracking-tight mb-2">¡SÍGUENOS EN REDES SOCIALES!</h2>
+      <p class="text-gray-300 text-xs sm:text-sm max-w-xl mx-auto mb-6">
+        Publicamos fotos diarias, vídeos de los mejores goles, resultados al minuto y novedades del club en nuestro perfil de Instagram.
+      </p>
+
+      <a href="https://www.instagram.com/interdemoratalaz" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-black text-xs uppercase px-6 py-3 rounded-xl hover:scale-105 transition duration-300 shadow-lg">
+        <i class="fa-brands fa-instagram text-lg"></i>
+        <span>@interdemoratalaz en Instagram</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FRANJA DE FRANJAS -->
+  <div class="h-3 inter-stripes"></div>
+
+  <!-- SECCIÓN COLEGIOS VINCULADOS -->
+  <section id="colegios" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <span class="bg-interBlue/20 text-interBlue border border-interBlue/40 font-black text-xs uppercase px-4 py-1.5 rounded-full inline-block mb-3">
+        <i class="fa-solid fa-school mr-1"></i> DEPORTE ESCOLAR
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-black text-white italic uppercase">COLEGIOS VINCULADOS</h2>
+      <p class="text-gray-400 text-xs mt-2">Promovemos el fútbol base colaborando activamente con los centros educativos del distrito.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 flex items-center space-x-4">
+        <div class="w-12 h-12 rounded-xl bg-interBlue/20 border border-interBlue/40 flex items-center justify-center text-interBlue text-xl flex-shrink-0">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-black text-white">CEIP Conde de Arruga</h3>
+          <p class="text-xs text-gray-400">Escuela vinculada y grupos extraescolares de fútbol.</p>
+        </div>
+      </div>
+
+      <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 flex items-center space-x-4">
+        <div class="w-12 h-12 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 text-xl flex-shrink-0">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-black text-white">CEIP Real Armada</h3>
+          <p class="text-xs text-gray-400">Formación deportiva y captación de cantera municipal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRANJA DE FRANJAS -->
   <div class="h-3 inter-stripes"></div>
 
   <!-- SECCIÓN DE CAMPOS Y UBICACIONES -->
@@ -297,11 +452,10 @@ tailwind.config = {
         <i class="fa-solid fa-map-location-dot mr-1"></i> INSTALACIONES Y CAMPOS
       </span>
       <h2 class="text-3xl sm:text-4xl font-black text-white italic uppercase">¿DÓNDE JUGAMOS Y ENTRENAMOS?</h2>
-      <p class="text-gray-400 text-xs mt-2">Consulta la dirección e información de los recintos deportivos del club.</p>
+      <p class="text-gray-400 text-xs mt-2">Consulta las direcciones exactas de nuestros terrenos de juego.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Campo 1 -->
       <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
         <div class="w-10 h-10 rounded-xl bg-interBlue/20 border border-interBlue/40 flex items-center justify-center text-interBlue text-lg mb-4">
           <i class="fa-solid fa-location-dot"></i>
@@ -311,7 +465,6 @@ tailwind.config = {
         <p class="text-xs text-gray-400 leading-relaxed">C/ Alcalde Garrido Juaristi, s/n, Moratalaz, Madrid.</p>
       </div>
 
-      <!-- Campo 2 -->
       <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
         <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 text-lg mb-4">
           <i class="fa-solid fa-location-dot"></i>
@@ -321,7 +474,6 @@ tailwind.config = {
         <p class="text-xs text-gray-400 leading-relaxed">C/ Valdebernardo, s/n, Moratalaz, Madrid.</p>
       </div>
 
-      <!-- Campo 3 -->
       <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
         <div class="w-10 h-10 rounded-xl bg-purple-500/20 border border-purple-500/40 flex items-center justify-center text-purple-400 text-lg mb-4">
           <i class="fa-solid fa-location-dot"></i>
@@ -333,11 +485,20 @@ tailwind.config = {
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-black border-t border-gray-900 py-8 text-center text-xs text-gray-500">
-    <div class="max-w-7xl mx-auto px-4">
-      <p class="font-bold text-gray-400 mb-1">Club Inter de Moratalaz © 2026/2027</p>
-      <p>Página oficial - Entrenamientos, partidos, horarios y ubicaciones.</p>
+  <!-- FOOTER GENERAL -->
+  <footer class="bg-black border-t border-gray-900 py-12 text-center text-xs text-gray-500">
+    <div class="max-w-7xl mx-auto px-4 space-y-4">
+      <div class="flex justify-center items-center space-x-3 mb-4">
+        <img src="images/galeria/image_b5457f.png" alt="Escudo Inter de Moratalaz" class="w-8 h-8 object-contain">
+        <span class="text-white font-black text-sm tracking-wider">CLUB INTER DE MORATALAZ</span>
+      </div>
+      <p class="font-bold text-gray-400">Sitio Web Oficial • Temporada 2026 / 2027</p>
+      <div class="flex justify-center space-x-6 text-base text-gray-400 pt-2">
+        <a href="https://www.instagram.com/interdemoratalaz" target="_blank" class="hover:text-pink-400 transition"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#himno" class="hover:text-amber-400 transition"><i class="fa-solid fa-music"></i></a>
+        <a href="#partidos" class="hover:text-interBlue transition"><i class="fa-solid fa-futbol"></i></a>
+      </div>
+      <p class="text-[10px] text-gray-600">© 2026 Inter de Moratalaz. Todos los derechos reservados.</p>
     </div>
   </footer>
 
