@@ -47,11 +47,11 @@ tailwind.config = {
   <!-- BARRA DE ANUNCIO SUPERIOR -->
   <div class="bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black text-center py-2 px-4 text-xs font-black tracking-widest uppercase relative z-50 shadow-md flex items-center justify-center gap-2">
     <i class="fa-solid fa-fire text-black animate-bounce"></i>
-    <span>¡NUEVA TEMPORADA 2026/2027! ENTRENAMIENTOS DESDE EL MIÉRCOLES 9 DE SEPTIEMBRE EN LA ELIPA</span>
+    <span>¡TEMPORADA 2026/2027! CONSULTA LOS ENTRENAMIENTOS Y AMISTOSOS DE PRETEMPORADA</span>
     <i class="fa-solid fa-futbol text-black animate-spin"></i>
   </div>
 
-  <!-- NAVBAR COMPLETA -->
+  <!-- NAVBAR COMPLETA ORIGINAL -->
   <nav class="bg-black/95 backdrop-blur-md sticky top-0 z-50 border-b-2 border-interBlue shadow-neon-blue">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-24">
@@ -65,14 +65,15 @@ tailwind.config = {
           </div>
         </div>
 
-        <div class="hidden xl:flex items-center space-x-5 text-xs font-black uppercase tracking-wider">
+        <div class="hidden xl:flex items-center space-x-4 text-xs font-black uppercase tracking-wider">
           <a href="#entrenamientos" class="text-interBlue hover:text-white transition"><i class="fa-solid fa-stopwatch mr-1"></i> Entrenamientos</a>
           <a href="#partidos" class="text-amber-400 hover:text-amber-300 transition"><i class="fa-solid fa-calendar-days mr-1"></i> Partidos</a>
           <a href="#himno" class="text-gray-300 hover:text-white transition"><i class="fa-solid fa-music mr-1"></i> Himno</a>
           <a href="#galeria" class="text-gray-300 hover:text-white transition"><i class="fa-solid fa-images mr-1"></i> Galería</a>
           <a href="#redes" class="text-pink-400 hover:text-pink-300 transition"><i class="fa-brands fa-instagram mr-1"></i> Redes</a>
           <a href="#colegios" class="text-gray-300 hover:text-white transition"><i class="fa-solid fa-school mr-1"></i> Colegios</a>
-          <a href="#ubicaciones" class="text-gray-300 hover:text-white transition"><i class="fa-solid fa-location-dot mr-1"></i> Campos</a>
+          <a href="#tarifas" class="text-gray-300 hover:text-white transition"><i class="fa-solid fa-id-card mr-1"></i> Inscripciones</a>
+          <a href="#tienda" class="text-amber-400 hover:text-amber-300 transition"><i class="fa-solid fa-shirt mr-1"></i> Tienda</a>
         </div>
 
         <div class="xl:hidden">
@@ -90,42 +91,43 @@ tailwind.config = {
       <a href="#himno" class="block text-gray-300 hover:text-white py-1"><i class="fa-solid fa-music mr-2"></i> Himno</a>
       <a href="#galeria" class="block text-gray-300 hover:text-white py-1"><i class="fa-solid fa-images mr-2"></i> Galería</a>
       <a href="#redes" class="block text-pink-400 hover:text-pink-300 py-1"><i class="fa-brands fa-instagram mr-2"></i> Redes Sociales</a>
-      <a href="#colegios" class="block text-gray-300 hover:text-white py-1"><i class="fa-solid fa-school mr-2"></i> Colegios</a>
-      <a href="#ubicaciones" class="block text-gray-300 hover:text-white py-1"><i class="fa-solid fa-location-dot mr-2"></i> Campos y Ubicaciones</a>
+      <a href="#colegios" class="block text-gray-300 hover:text-white py-1"><i class="fa-solid fa-school mr-2"></i> Colegios Vinculados</a>
+      <a href="#tarifas" class="block text-gray-300 hover:text-white py-1"><i class="fa-solid fa-id-card mr-2"></i> Inscripciones</a>
+      <a href="#tienda" class="block text-amber-400 hover:text-amber-300 py-1"><i class="fa-solid fa-shirt mr-2"></i> Tienda / Kromex</a>
     </div>
   </nav>
 
-  <!-- HERO / ENTRENAMIENTOS -->
+  <!-- SECCIÓN ENTRENAMIENTOS POR SEDE Y MODALIDAD -->
   <header id="entrenamientos" class="relative bg-black py-16 px-4 text-center border-b-4 border-black">
     <div class="max-w-5xl mx-auto">
       <div class="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/40 text-amber-400 text-xs font-black uppercase px-4 py-1.5 rounded-full mb-6">
-        <i class="fa-solid fa-bolt"></i> <span>TEMPORADA 2026 / 2027 • PLANIFICACIÓN DE ENTRENAMIENTOS</span>
+        <i class="fa-solid fa-bolt"></i> <span>TEMPORADA 2026 / 2027 • SEDES DE ENTRENAMIENTO</span>
       </div>
 
       <h1 class="text-4xl sm:text-6xl font-black text-white italic tracking-tighter uppercase mb-6">
-        CALENDARIO Y <span class="text-amber-400">ENTRENAMIENTOS</span>
+        HORARIOS Y <span class="text-amber-400">ENTRENAMIENTOS</span>
       </h1>
 
       <p class="text-gray-300 max-w-2xl mx-auto mb-8 text-sm sm:text-base">
-        Horarios, ubicaciones y convocatorias para todas las categorías del Club Inter de Moratalaz.
+        Distribución oficial de instalaciones y modalidades de juego para las categorías del club.
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
-        <!-- F7 -->
+        <!-- FÚTBOL 7: LA ELIPA -->
         <div class="bg-gray-900/90 border-2 border-interBlue/60 rounded-2xl p-6 shadow-neon-blue">
           <div class="flex items-center justify-between mb-4">
             <span class="bg-interBlue text-white text-xs font-black px-3 py-1 rounded-full uppercase">Fútbol 7</span>
             <span class="text-amber-400 font-bold text-xs"><i class="fa-solid fa-users mr-1"></i> Benjamín y Alevín</span>
           </div>
-          <p class="text-white font-black text-lg mb-2"><i class="fa-solid fa-location-dot text-red-500 mr-2"></i> Polideportivo Municipal de La Elipa</p>
+          <p class="text-white font-black text-lg mb-2"><i class="fa-solid fa-location-dot text-red-500 mr-2"></i> Polideportivo de La Elipa</p>
           <div class="bg-black/60 p-4 rounded-xl border border-gray-800 text-xs space-y-2">
-            <p><strong class="text-gray-400">Días Fijos:</strong> <span class="text-white font-bold">Miércoles y Viernes</span></p>
-            <p><strong class="text-gray-400">Horario Habitual:</strong> <span class="text-amber-400 font-bold">16:30h - 17:30h</span></p>
-            <p><strong class="text-gray-400">Inicio de Entrenamientos:</strong> <span class="text-white font-bold">Miércoles 9 de Septiembre</span></p>
+            <p><strong class="text-gray-400">Sede:</strong> <span class="text-white font-bold">Polideportivo Municipal de La Elipa</span></p>
+            <p><strong class="text-gray-400">Categorías:</strong> <span class="text-amber-400 font-bold">Benjamín y Alevín</span></p>
+            <p><strong class="text-gray-400">Modalidad:</strong> <span class="text-emerald-400 font-bold">Fútbol 7</span></p>
           </div>
         </div>
 
-        <!-- F11 -->
+        <!-- FÚTBOL 11: MORATALAZ -->
         <div class="bg-gray-900/90 border-2 border-amber-500/60 rounded-2xl p-6 shadow-neon-gold">
           <div class="flex items-center justify-between mb-4">
             <span class="bg-amber-500 text-black text-xs font-black px-3 py-1 rounded-full uppercase">Fútbol 11</span>
@@ -133,9 +135,9 @@ tailwind.config = {
           </div>
           <p class="text-white font-black text-lg mb-2"><i class="fa-solid fa-location-dot text-red-500 mr-2"></i> Polideportivo de Moratalaz</p>
           <div class="bg-black/60 p-4 rounded-xl border border-gray-800 text-xs space-y-2">
-            <p><strong class="text-gray-400">Días de Entrenamiento:</strong> <span class="text-white font-bold">Según convocatoria de equipo</span></p>
-            <p><strong class="text-gray-400">Horarios de Sesión:</strong> <span class="text-amber-400 font-bold">Consultar con el cuerpo técnico</span></p>
-            <p><strong class="text-gray-400">Estado:</strong> <span class="text-emerald-400 font-bold">Convocatorias Abiertas</span></p>
+            <p><strong class="text-gray-400">Sede:</strong> <span class="text-white font-bold">Polideportivo de Moratalaz</span></p>
+            <p><strong class="text-gray-400">Categorías:</strong> <span class="text-amber-400 font-bold">Infantil y Cadete</span></p>
+            <p><strong class="text-gray-400">Modalidad:</strong> <span class="text-emerald-400 font-bold">Fútbol 11</span></p>
           </div>
         </div>
       </div>
@@ -145,154 +147,128 @@ tailwind.config = {
   <!-- FRANJA DE FRANJAS -->
   <div class="h-3 inter-stripes"></div>
 
-  <!-- SECCIÓN DE PARTIDOS Y PRETEMPORADA CON HORARIOS Y UBICACIONES -->
+  <!-- SECCIÓN DE PARTIDOS Y AMISTOSOS REVISADOS -->
   <section id="partidos" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="text-center max-w-3xl mx-auto mb-10">
       <span class="bg-interBlue/20 text-interBlue border border-interBlue/40 font-black text-xs uppercase px-4 py-1.5 rounded-full inline-block mb-3">
-        <i class="fa-solid fa-trophy mr-1"></i> AMISTOSOS Y LIGA
+        <i class="fa-solid fa-trophy mr-1"></i> PARTIDOS Y AMISTOSOS
       </span>
-      <h2 class="text-3xl sm:text-4xl font-black text-white italic uppercase">CALENDARIO DE PARTIDOS</h2>
-      <p class="text-gray-400 text-xs mt-2">Consulta rivales, horarios confirmados y campos de juego por categoría.</p>
+      <h2 class="text-3xl sm:text-4xl font-black text-white italic uppercase">CALENDARIO DE COMPETICIÓN</h2>
+      <p class="text-gray-400 text-xs mt-2">Próximos compromisos confirmados para todas las categorías del club.</p>
     </div>
 
     <!-- SELECTOR DE CATEGORÍAS -->
     <div class="flex flex-wrap justify-center gap-2 mb-8">
-      <button onclick="switchCategory('alevin')" id="btn-alevin" class="px-5 py-2.5 rounded-xl text-black bg-amber-500 font-black text-xs uppercase transition">
-        Alevín
-      </button>
-      <button onclick="switchCategory('infantil')" id="btn-infantil" class="px-5 py-2.5 rounded-xl text-gray-400 bg-black border border-gray-800 font-black text-xs uppercase hover:text-white transition">
+      <button onclick="switchCategory('infantil')" id="btn-infantil" class="px-5 py-2.5 rounded-xl text-black bg-amber-500 font-black text-xs uppercase transition">
         Infantil
+      </button>
+      <button onclick="switchCategory('alevin')" id="btn-alevin" class="px-5 py-2.5 rounded-xl text-gray-400 bg-black border border-gray-800 font-black text-xs uppercase hover:text-white transition">
+        Alevín
       </button>
       <button onclick="switchCategory('cadete')" id="btn-cadete" class="px-5 py-2.5 rounded-xl text-gray-400 bg-black border border-gray-800 font-black text-xs uppercase hover:text-white transition">
         Cadete
       </button>
       <button onclick="switchCategory('benjamin')" id="btn-benjamin" class="px-5 py-2.5 rounded-xl text-gray-400 bg-black border border-gray-800 font-black text-xs uppercase hover:text-white transition">
-        Benjamín
+        Benjamines
       </button>
     </div>
 
-    <!-- ALEVÍN -->
-    <div id="cat-alevin" class="category-block grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+    <!-- INFANTIL (12/09) -->
+    <div id="cat-infantil" class="category-block grid grid-cols-1 gap-6 max-w-3xl mx-auto">
+      <div class="bg-gradient-to-b from-gray-900 to-black border border-interBlue/50 rounded-2xl p-6 shadow-xl">
+        <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
+          <span class="bg-interBlue text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">INFANTIL • AMISTOSO</span>
+          <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-clock mr-1"></i> Sábado, 12/09 • 12:00h</span>
+        </div>
+        <div class="flex items-center justify-between my-4 text-center">
+          <div class="w-2/5">
+            <span class="text-sm font-black text-white block">INTER</span>
+          </div>
+          <div class="w-1/5 font-black text-gray-500 text-lg">VS</div>
+          <div class="w-2/5">
+            <span class="text-sm font-black text-amber-400 block">SPORTING SAN FERNANDO B</span>
+          </div>
+        </div>
+        <div class="bg-black/70 p-3 rounded-xl border border-gray-800 text-xs">
+          <p class="text-gray-300 font-medium"><i class="fa-solid fa-location-dot text-red-500 mr-1.5"></i> <strong>Polideportivo Santiago del Pino</strong> (San Fernando)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ALEVÍN (12/09) -->
+    <div id="cat-alevin" class="category-block hidden grid grid-cols-1 gap-6 max-w-3xl mx-auto">
       <div class="bg-gradient-to-b from-gray-900 to-black border border-interBlue/50 rounded-2xl p-6 shadow-xl">
         <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
           <span class="bg-interBlue text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">ALEVÍN • AMISTOSO</span>
-          <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-clock mr-1"></i> Sábado, 12 Sept • 13:30h</span>
+          <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-clock mr-1"></i> Sábado, 12/09 • 13:30h</span>
         </div>
         <div class="flex items-center justify-between my-4 text-center">
-          <div class="w-1/3">
-            <span class="text-xs font-black text-white block">INTER MORATALAZ</span>
+          <div class="w-2/5">
+            <span class="text-sm font-black text-white block">INTER</span>
           </div>
-          <div class="w-1/3 font-black text-gray-500 text-lg">VS</div>
-          <div class="w-1/3">
-            <span class="text-xs font-black text-gray-300 block">SAN FERNANDO</span>
+          <div class="w-1/5 font-black text-gray-500 text-lg">VS</div>
+          <div class="w-2/5">
+            <span class="text-sm font-black text-amber-400 block">SPORTING SAN FERNANDO ALEVÍN B</span>
           </div>
         </div>
         <div class="bg-black/70 p-3 rounded-xl border border-gray-800 text-xs">
-          <p class="text-gray-300 font-medium"><i class="fa-solid fa-location-dot text-red-500 mr-1.5"></i> <strong>Polideportivo Santiago del Pino</strong> (San Fernando de Henares)</p>
-        </div>
-      </div>
-
-      <div class="bg-gradient-to-b from-gray-900 to-black border border-gray-800 rounded-2xl p-6 shadow-xl">
-        <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
-          <span class="bg-interBlue text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">ALEVÍN • AMISTOSO</span>
-          <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-calendar mr-1"></i> 26 / 27 de Septiembre</span>
-        </div>
-        <div class="flex items-center justify-between my-4 text-center">
-          <div class="w-1/3">
-            <span class="text-xs font-black text-white block">INTER MORATALAZ</span>
-          </div>
-          <div class="w-1/3 font-black text-gray-500 text-lg">VS</div>
-          <div class="w-1/3">
-            <span class="text-xs font-black text-gray-300 block">PARLA</span>
-          </div>
-        </div>
-        <div class="bg-black/70 p-3 rounded-xl border border-gray-800 text-xs">
-          <p class="text-amber-400 font-bold"><i class="fa-solid fa-circle-info mr-1.5"></i> Hora y ubicación exacta pendiente de confirmación</p>
+          <p class="text-gray-300 font-medium"><i class="fa-solid fa-location-dot text-red-500 mr-1.5"></i> <strong>Polideportivo Santiago del Pino</strong> (San Fernando)</p>
         </div>
       </div>
     </div>
 
-    <!-- INFANTIL -->
-    <div id="cat-infantil" class="category-block hidden grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-      <div class="bg-gradient-to-b from-gray-900 to-black border border-amber-500/50 rounded-2xl p-6 shadow-xl col-span-1 md:col-span-2">
-        <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
-          <span class="bg-amber-500 text-black text-[10px] font-black uppercase px-2.5 py-1 rounded-full">INFANTIL • AMISTOSO</span>
-          <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-clock mr-1"></i> Sábado, 12 Sept • 12:00h</span>
-        </div>
-        <div class="flex items-center justify-between my-4 text-center">
-          <div class="w-1/3">
-            <span class="text-xs font-black text-white block">INTER MORATALAZ</span>
-          </div>
-          <div class="w-1/3 font-black text-gray-500 text-lg">VS</div>
-          <div class="w-1/3">
-            <span class="text-xs font-black text-gray-300 block">SAN FERNANDO</span>
-          </div>
-        </div>
-        <div class="bg-black/70 p-3 rounded-xl border border-gray-800 text-xs">
-          <p class="text-gray-300 font-medium"><i class="fa-solid fa-location-dot text-red-500 mr-1.5"></i> <strong>Polideportivo Santiago del Pino</strong> (San Fernando de Henares)</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- CADETE -->
+    <!-- CADETE (TORNEO CARRANQUE 12/09) -->
     <div id="cat-cadete" class="category-block hidden grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-      <div class="bg-gradient-to-b from-gray-900 to-black border border-purple-500/50 rounded-2xl p-6 shadow-xl col-span-1 md:col-span-2">
+      <!-- Partido 1 -->
+      <div class="bg-gradient-to-b from-gray-900 to-black border border-purple-500/50 rounded-2xl p-6 shadow-xl">
         <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
           <span class="bg-purple-600 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">CADETE • TORNEO CARRANQUE</span>
-          <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-trophy mr-1"></i> Sábado, 12 Septiembre</span>
+          <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-clock mr-1"></i> Sábado, 12/09 • 15:00h</span>
         </div>
-        <p class="text-xs text-gray-300 mb-3"><i class="fa-solid fa-location-dot text-red-500 mr-1.5"></i> <strong>Instalaciones Deportivas de Carranque</strong></p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 bg-black/70 p-3 rounded-xl border border-gray-800 text-xs">
-          <div>
-            <span class="text-gray-500 block">Partido 1:</span>
-            <strong class="text-amber-400">15:00h</strong>
+        <div class="flex items-center justify-between my-4 text-center">
+          <div class="w-2/5">
+            <span class="text-sm font-black text-white block">CADETE INTER</span>
           </div>
-          <div>
-            <span class="text-gray-500 block">Partido 2:</span>
-            <strong class="text-amber-400">16:00h</strong>
+          <div class="w-1/5 font-black text-gray-500 text-lg">VS</div>
+          <div class="w-2/5">
+            <span class="text-sm font-black text-purple-300 block">CF NUEVO PINTO B</span>
           </div>
+        </div>
+        <div class="bg-black/70 p-3 rounded-xl border border-gray-800 text-xs">
+          <p class="text-gray-300 font-medium"><i class="fa-solid fa-location-dot text-red-500 mr-1.5"></i> <strong>Instalaciones de Carranque</strong></p>
+        </div>
+      </div>
+
+      <!-- Partido 2 -->
+      <div class="bg-gradient-to-b from-gray-900 to-black border border-purple-500/50 rounded-2xl p-6 shadow-xl">
+        <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
+          <span class="bg-purple-600 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded-full">CADETE • TORNEO CARRANQUE</span>
+          <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-clock mr-1"></i> Sábado, 12/09 • 16:00h</span>
+        </div>
+        <div class="flex items-center justify-between my-4 text-center">
+          <div class="w-2/5">
+            <span class="text-sm font-black text-white block">CADETE INTER</span>
+          </div>
+          <div class="w-1/5 font-black text-gray-500 text-lg">VS</div>
+          <div class="w-2/5">
+            <span class="text-sm font-black text-purple-300 block">NAVALCARNERO CF H</span>
+          </div>
+        </div>
+        <div class="bg-black/70 p-3 rounded-xl border border-gray-800 text-xs">
+          <p class="text-gray-300 font-medium"><i class="fa-solid fa-location-dot text-red-500 mr-1.5"></i> <strong>Instalaciones de Carranque</strong></p>
         </div>
       </div>
     </div>
 
-    <!-- BENJAMÍN B -->
-    <div id="cat-benjamin" class="category-block hidden grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-      <div class="bg-gradient-to-b from-gray-900 to-black border border-gray-800 rounded-2xl p-6 shadow-xl">
-        <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
-          <span class="bg-amber-500 text-black text-[10px] font-black uppercase px-2.5 py-1 rounded-full">BENJAMÍN B</span>
-          <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-calendar mr-1"></i> 20 de Septiembre</span>
+    <!-- BENJAMINES -->
+    <div id="cat-benjamin" class="category-block hidden grid grid-cols-1 max-w-3xl mx-auto">
+      <div class="bg-gradient-to-b from-gray-900 to-black border border-gray-800 rounded-2xl p-6 shadow-xl text-center">
+        <div class="flex items-center justify-center mb-4 border-b border-gray-800 pb-3">
+          <span class="bg-amber-500 text-black text-[10px] font-black uppercase px-2.5 py-1 rounded-full">BENJAMINES</span>
         </div>
-        <div class="flex items-center justify-between my-4 text-center">
-          <div class="w-1/3">
-            <span class="text-xs font-black text-white block">INTER MORATALAZ B</span>
-          </div>
-          <div class="w-1/3 font-black text-gray-500 text-lg">VS</div>
-          <div class="w-1/3">
-            <span class="text-xs font-black text-gray-300 block">MORALEJA ENMEDIO</span>
-          </div>
-        </div>
-        <div class="bg-black/70 p-3 rounded-xl border border-gray-800 text-xs">
-          <p class="text-amber-400 font-bold"><i class="fa-solid fa-circle-info mr-1.5"></i> Hora pendiente de confirmación</p>
-        </div>
-      </div>
-
-      <div class="bg-gradient-to-b from-gray-900 to-black border border-gray-800 rounded-2xl p-6 shadow-xl">
-        <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
-          <span class="bg-amber-500 text-black text-[10px] font-black uppercase px-2.5 py-1 rounded-full">BENJAMÍN B</span>
-          <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-calendar mr-1"></i> 26 / 27 de Septiembre</span>
-        </div>
-        <div class="flex items-center justify-between my-4 text-center">
-          <div class="w-1/3">
-            <span class="text-xs font-black text-white block">INTER MORATALAZ B</span>
-          </div>
-          <div class="w-1/3 font-black text-gray-500 text-lg">VS</div>
-          <div class="w-1/3">
-            <span class="text-xs font-black text-gray-300 block">PARLA ESCUELAS</span>
-          </div>
-        </div>
-        <div class="bg-black/70 p-3 rounded-xl border border-gray-800 text-xs">
-          <p class="text-amber-400 font-bold"><i class="fa-solid fa-circle-info mr-1.5"></i> Hora pendiente de confirmación</p>
-        </div>
+        <i class="fa-solid fa-clock text-amber-400 text-3xl mb-3"></i>
+        <h3 class="text-white font-black text-base uppercase mb-1">Horarios y Ubicaciones Pendientes</h3>
+        <p class="text-gray-400 text-xs">Aún no se disponen de las ubicaciones concretas ni de los horarios confirmados para la categoría Benjamín. Se actualizarán próximamente.</p>
       </div>
     </div>
   </section>
@@ -300,7 +276,7 @@ tailwind.config = {
   <!-- FRANJA DE FRANJAS -->
   <div class="h-3 inter-stripes"></div>
 
-  <!-- SECCIÓN HIMNO DEL CLUB -->
+  <!-- SECCIÓN HIMNO DEL CLUB ORIGINAL -->
   <section id="himno" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="bg-gradient-to-r from-gray-900 via-black to-gray-900 border-2 border-interBlue/50 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10">
@@ -343,7 +319,7 @@ tailwind.config = {
   <!-- FRANJA DE FRANJAS -->
   <div class="h-3 inter-stripes"></div>
 
-  <!-- SECCIÓN GALERÍA DE FOTOS Y VÍDEOS -->
+  <!-- SECCIÓN GALERÍA DE FOTOS Y VÍDEOS ORIGINAL -->
   <section id="galeria" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="text-center max-w-3xl mx-auto mb-10">
       <span class="bg-interBlue/20 text-interBlue border border-interBlue/40 font-black text-xs uppercase px-4 py-1.5 rounded-full inline-block mb-3">
@@ -357,28 +333,28 @@ tailwind.config = {
       <div class="group relative aspect-square bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-interBlue transition duration-300">
         <img src="images/galeria/foto1.jpg" alt="Galeria Inter 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='images/galeria/image_b5457f.png'; this.className='w-full h-full object-contain p-4 bg-gray-900';">
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
-          <span class="text-xs font-bold text-white">Entrenamientos 2026</span>
+          <span class="text-xs font-bold text-white">Entrenamientos Inter</span>
         </div>
       </div>
 
       <div class="group relative aspect-square bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-interBlue transition duration-300">
         <img src="images/galeria/foto2.jpg" alt="Galeria Inter 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='images/galeria/image_b5457f.png'; this.className='w-full h-full object-contain p-4 bg-gray-900';">
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
-          <span class="text-xs font-bold text-white">Torneo de Verano</span>
+          <span class="text-xs font-bold text-white">Pretemporada</span>
         </div>
       </div>
 
       <div class="group relative aspect-square bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-interBlue transition duration-300">
         <img src="images/galeria/foto3.jpg" alt="Galeria Inter 3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='images/galeria/image_b5457f.png'; this.className='w-full h-full object-contain p-4 bg-gray-900';">
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
-          <span class="text-xs font-bold text-white">Categoría Alevín</span>
+          <span class="text-xs font-bold text-white">Partidos Amistosos</span>
         </div>
       </div>
 
       <div class="group relative aspect-square bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-interBlue transition duration-300">
         <img src="images/galeria/foto4.jpg" alt="Galeria Inter 4" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='images/galeria/image_b5457f.png'; this.className='w-full h-full object-contain p-4 bg-gray-900';">
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
-          <span class="text-xs font-bold text-white">Equipo Benjamín</span>
+          <span class="text-xs font-bold text-white">Cantera del Barrio</span>
         </div>
       </div>
     </div>
@@ -387,7 +363,7 @@ tailwind.config = {
   <!-- FRANJA DE FRANJAS -->
   <div class="h-3 inter-stripes"></div>
 
-  <!-- SECCIÓN REDES SOCIALES -->
+  <!-- SECCIÓN REDES SOCIALES ORIGINAL -->
   <section id="redes" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="bg-gradient-to-br from-pink-950/40 via-black to-purple-950/40 border-2 border-pink-500/40 rounded-3xl p-8 text-center shadow-insta-glow">
       <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-amber-500 via-pink-500 to-purple-600 flex items-center justify-center text-white text-3xl mx-auto mb-4 shadow-lg">
@@ -396,7 +372,7 @@ tailwind.config = {
 
       <h2 class="text-3xl sm:text-4xl font-black text-white italic uppercase tracking-tight mb-2">¡SÍGUENOS EN REDES SOCIALES!</h2>
       <p class="text-gray-300 text-xs sm:text-sm max-w-xl mx-auto mb-6">
-        Publicamos fotos diarias, vídeos de los mejores goles, resultados al minuto y novedades del club en nuestro perfil de Instagram.
+        Publicamos fotos diarias, convocatorias, resultados al minuto y las mejores jugadas de cada categoría en Instagram.
       </p>
 
       <a href="https://www.instagram.com/interdemoratalaz" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-black text-xs uppercase px-6 py-3 rounded-xl hover:scale-105 transition duration-300 shadow-lg">
@@ -409,7 +385,7 @@ tailwind.config = {
   <!-- FRANJA DE FRANJAS -->
   <div class="h-3 inter-stripes"></div>
 
-  <!-- SECCIÓN COLEGIOS VINCULADOS -->
+  <!-- SECCIÓN COLEGIOS VINCULADOS ORIGINAL -->
   <section id="colegios" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="text-center max-w-3xl mx-auto mb-10">
       <span class="bg-interBlue/20 text-interBlue border border-interBlue/40 font-black text-xs uppercase px-4 py-1.5 rounded-full inline-block mb-3">
@@ -426,7 +402,7 @@ tailwind.config = {
         </div>
         <div>
           <h3 class="text-lg font-black text-white">CEIP Conde de Arruga</h3>
-          <p class="text-xs text-gray-400">Escuela vinculada y grupos extraescolares de fútbol.</p>
+          <p class="text-xs text-gray-400">Escuela vinculada y formación extraescolar deportiva.</p>
         </div>
       </div>
 
@@ -436,7 +412,7 @@ tailwind.config = {
         </div>
         <div>
           <h3 class="text-lg font-black text-white">CEIP Real Armada</h3>
-          <p class="text-xs text-gray-400">Formación deportiva y captación de cantera municipal.</p>
+          <p class="text-xs text-gray-400">Desarrollo del fútbol base y promoción de cantera.</p>
         </div>
       </div>
     </div>
@@ -445,47 +421,49 @@ tailwind.config = {
   <!-- FRANJA DE FRANJAS -->
   <div class="h-3 inter-stripes"></div>
 
-  <!-- SECCIÓN DE CAMPOS Y UBICACIONES -->
-  <section id="ubicaciones" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <!-- SECCIÓN TARIFAS E INSCRIPCIONES ORIGINAL -->
+  <section id="tarifas" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="text-center max-w-3xl mx-auto mb-10">
       <span class="bg-interBlue/20 text-interBlue border border-interBlue/40 font-black text-xs uppercase px-4 py-1.5 rounded-full inline-block mb-3">
-        <i class="fa-solid fa-map-location-dot mr-1"></i> INSTALACIONES Y CAMPOS
+        <i class="fa-solid fa-id-card mr-1"></i> INSCRIPCIONES Y CUOTAS
       </span>
-      <h2 class="text-3xl sm:text-4xl font-black text-white italic uppercase">¿DÓNDE JUGAMOS Y ENTRENAMOS?</h2>
-      <p class="text-gray-400 text-xs mt-2">Consulta las direcciones exactas de nuestros terrenos de juego.</p>
+      <h2 class="text-3xl sm:text-4xl font-black text-white italic uppercase">FORMACIÓN Y TARIFAS</h2>
+      <p class="text-gray-400 text-xs mt-2">Infórmate sobre los trámites de alta y cuotas para la nueva temporada.</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
-        <div class="w-10 h-10 rounded-xl bg-interBlue/20 border border-interBlue/40 flex items-center justify-center text-interBlue text-lg mb-4">
-          <i class="fa-solid fa-location-dot"></i>
-        </div>
-        <h3 class="text-lg font-black text-white mb-1">Polideportivo La Elipa</h3>
-        <p class="text-xs text-amber-400 font-bold mb-3">Entrenamientos Fútbol 7 (Benjamín / Alevín)</p>
-        <p class="text-xs text-gray-400 leading-relaxed">C/ Alcalde Garrido Juaristi, s/n, Moratalaz, Madrid.</p>
-      </div>
+    <div class="bg-gray-900 border border-gray-800 rounded-3xl p-8 max-w-3xl mx-auto text-center shadow-xl">
+      <i class="fa-solid fa-file-pen text-amber-400 text-4xl mb-4"></i>
+      <h3 class="text-2xl font-black text-white uppercase mb-2">Inscripciones Abiertas</h3>
+      <p class="text-gray-300 text-xs sm:text-sm mb-6 leading-relaxed">
+        Ponte en contacto con la directiva del club o con los coordinadores para solicitar tu plaza o consultar los métodos de pago.
+      </p>
+      <a href="#redes" class="bg-interBlue hover:bg-blue-600 text-white font-black text-xs uppercase px-6 py-3 rounded-xl transition inline-block">
+        Contactar por Instagram
+      </a>
+    </div>
+  </section>
 
-      <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
-        <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 text-lg mb-4">
-          <i class="fa-solid fa-location-dot"></i>
-        </div>
-        <h3 class="text-lg font-black text-white mb-1">Polideportivo de Moratalaz</h3>
-        <p class="text-xs text-amber-400 font-bold mb-3">Entrenamientos Fútbol 11 (Infantil / Cadete)</p>
-        <p class="text-xs text-gray-400 leading-relaxed">C/ Valdebernardo, s/n, Moratalaz, Madrid.</p>
-      </div>
+  <!-- FRANJA DE FRANJAS -->
+  <div class="h-3 inter-stripes"></div>
 
-      <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6">
-        <div class="w-10 h-10 rounded-xl bg-purple-500/20 border border-purple-500/40 flex items-center justify-center text-purple-400 text-lg mb-4">
-          <i class="fa-solid fa-location-dot"></i>
-        </div>
-        <h3 class="text-lg font-black text-white mb-1">Poli. Santiago del Pino</h3>
-        <p class="text-xs text-amber-400 font-bold mb-3">Partidos Amistosos (San Fernando de Henares)</p>
-        <p class="text-xs text-gray-400 leading-relaxed">Paseo de Churruca, s/n, San Fernando de Henares, Madrid.</p>
+  <!-- SECCIÓN TIENDA / KROMEX ORIGINAL -->
+  <section id="tienda" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="bg-gradient-to-r from-gray-900 via-black to-gray-900 border border-amber-500/40 rounded-3xl p-8 text-center max-w-4xl mx-auto shadow-neon-gold">
+      <div class="inline-block bg-amber-500 text-black font-black text-[10px] uppercase px-3 py-1 rounded-full mb-3">
+        EQUIPACIONES OFICIALES
+      </div>
+      <h2 class="text-3xl font-black text-white italic uppercase mb-3">TIENDA / KROMEX</h2>
+      <p class="text-gray-300 text-xs sm:text-sm max-w-xl mx-auto mb-6">
+        Adquiere la ropa oficial de entrenamiento, chándal y camisetas de juego de la firma Kromex.
+      </p>
+      <div class="inline-flex items-center space-x-2 bg-black/80 border border-gray-800 px-5 py-2.5 rounded-xl text-xs font-bold text-amber-400">
+        <i class="fa-solid fa-shirt"></i>
+        <span>Proveedor Oficial: Kromex Sportwear</span>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER GENERAL -->
+  <!-- FOOTER GENERAL ORIGINAL -->
   <footer class="bg-black border-t border-gray-900 py-12 text-center text-xs text-gray-500">
     <div class="max-w-7xl mx-auto px-4 space-y-4">
       <div class="flex justify-center items-center space-x-3 mb-4">
@@ -524,7 +502,7 @@ function switchCategory(cat) {
   const activeBlock = document.getElementById('cat-' + cat);
   if (activeBlock) activeBlock.classList.remove('hidden');
 
-  const buttons = ['alevin', 'infantil', 'cadete', 'benjamin'];
+  const buttons = ['infantil', 'alevin', 'cadete', 'benjamin'];
   buttons.forEach(b => {
     const btn = document.getElementById('btn-' + b);
     if (btn) {
