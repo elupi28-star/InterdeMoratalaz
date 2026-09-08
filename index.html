@@ -52,7 +52,7 @@
     <!-- BARRA DE ANUNCIO SUPERIOR -->
     <div class="bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black text-center py-2 px-4 text-xs font-black tracking-widest uppercase relative z-50 shadow-md flex items-center justify-center gap-2">
         <i class="fa-solid fa-fire text-black animate-bounce"></i>
-        <span>¡VUELVEN LOS ENTRENAMIENTOS! MIÉRCOLES 9 DE SEPTIEMBRE A LAS 16:30H EN LA ELIPA</span>
+        <span>¡CONSULTA LOS NUEVOS HORARIOS DE ENTRENAMIENTO Y PRÓXIMOS PARTIDOS AMISTOSOS!</span>
         <i class="fa-solid fa-futbol text-black animate-spin"></i>
     </div>
 
@@ -72,7 +72,7 @@
 
                 <div class="hidden lg:flex items-center space-x-8 text-xs font-black uppercase tracking-wider">
                     <a href="#inicio" class="text-interBlue hover:text-white transition">Inicio</a>
-                    <a href="#pretemporada" class="text-amber-400 hover:text-amber-300 transition flex items-center"><i class="fa-solid fa-calendar-days mr-1"></i> Pretemporada</a>
+                    <a href="#horarios" class="text-amber-400 hover:text-amber-300 transition flex items-center"><i class="fa-solid fa-calendar-days mr-1"></i> Entrenamientos & Partidos</a>
                     <a href="#torneo" class="hover:text-interBlue transition flex items-center"><i class="fa-solid fa-star mr-1"></i> Palmarés</a>
                     <a href="#galeria" class="hover:text-interBlue transition"><i class="fa-solid fa-images mr-1"></i> Galería</a>
                     <a href="#el-club" class="hover:text-interBlue transition">El Club</a>
@@ -90,7 +90,7 @@
 
         <div id="mobile-menu" class="hidden lg:hidden bg-black/95 border-t border-gray-900 px-4 py-6 space-y-4 text-xs font-black uppercase tracking-wider transition-all duration-300 shadow-inner">
             <a href="#inicio" class="block text-interBlue hover:text-white py-2 border-b border-gray-900">Inicio</a>
-            <a href="#pretemporada" class="block text-amber-400 hover:text-amber-300 py-2 border-b border-gray-900 flex items-center"><i class="fa-solid fa-calendar-days mr-2"></i> Pretemporada & Amistosos</a>
+            <a href="#horarios" class="block text-amber-400 hover:text-amber-300 py-2 border-b border-gray-900 flex items-center"><i class="fa-solid fa-calendar-days mr-2"></i> Entrenamientos & Partidos</a>
             <a href="#torneo" class="block text-gray-300 hover:text-interBlue py-2 border-b border-gray-900 flex items-center"><i class="fa-solid fa-star mr-2"></i> Palmarés y Éxitos</a>
             <a href="#galeria" class="block text-gray-300 hover:text-interBlue py-2 border-b border-gray-900"><i class="fa-solid fa-images mr-2"></i> Galería</a>
             <a href="#el-club" class="block text-gray-300 hover:text-interBlue py-2 border-b border-gray-900">El Club</a>
@@ -125,37 +125,33 @@
                 Volvemos al césped con más ganas que nunca. Tras un año lleno de copas y triunfos, arrancamos la pretemporada preparados para hacer historia.
             </p>
 
-            <!-- CAJA DESTACADA DE INICIO DE ENTRENAMIENTOS -->
+            <!-- CAJA DESTACADA DE UBICACIONES PRINCIPALES -->
             <div class="bg-gradient-to-br from-gray-900/90 via-black to-blue-950/80 border-2 border-interBlue/60 rounded-3xl p-6 sm:p-8 max-w-2xl mx-auto mb-10 shadow-neon-blue backdrop-blur-md">
                 <div class="flex items-center justify-center space-x-3 text-amber-400 font-black text-xs uppercase tracking-widest mb-3">
-                    <i class="fa-solid fa-stopwatch text-lg"></i>
-                    <span>PRIMERA CITA DE PRETEMPORADA</span>
+                    <i class="fa-solid fa-location-dot text-lg"></i>
+                    <span>SEDES DE ENTRENAMIENTO</span>
                 </div>
                 
-                <div class="text-2xl sm:text-3xl font-black text-white italic uppercase tracking-tight mb-2">
-                    Miércoles, 9 de Septiembre • 16:30h
+                <div class="text-2xl sm:text-3xl font-black text-white italic uppercase tracking-tight mb-4">
+                    Instalaciones del Club
                 </div>
-                
-                <p class="text-xs text-gray-400 font-bold mb-4">
-                    <i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Polideportivo Municipal de La Elipa
-                </p>
 
-                <div class="grid grid-cols-2 gap-3 text-left bg-black/60 p-4 rounded-xl border border-gray-800 text-xs">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left bg-black/60 p-4 rounded-xl border border-gray-800 text-xs">
                     <div>
-                        <span class="text-gray-500 font-bold block uppercase text-[10px]">Días Fijos:</span>
-                        <strong class="text-white">Miércoles y Viernes</strong>
+                        <span class="text-amber-400 font-bold block uppercase text-[10px]">Fútbol 7 (Benjamín y Alevín):</span>
+                        <strong class="text-white">Polideportivo La Elipa</strong>
                     </div>
                     <div>
-                        <span class="text-gray-500 font-bold block uppercase text-[10px]">Horario Habitual:</span>
-                        <strong class="text-amber-400">16:30h - 17:30h</strong>
+                        <span class="text-amber-400 font-bold block uppercase text-[10px]">Fútbol 11 (Infantil y Cadete):</span>
+                        <strong class="text-white">Polideportivo de Moratalaz</strong>
                     </div>
                 </div>
             </div>
 
             <!-- Botones Acción -->
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="#pretemporada" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-gray-950 font-black uppercase tracking-wider text-xs px-8 py-4 rounded-tr-xl rounded-bl-xl transition transform hover:-translate-y-1 shadow-neon-gold flex items-center justify-center">
-                    <i class="fa-solid fa-calendar-days text-base mr-2"></i> Ver Amistosos Confirmados
+                <a href="#horarios" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-gray-950 font-black uppercase tracking-wider text-xs px-8 py-4 rounded-tr-xl rounded-bl-xl transition transform hover:-translate-y-1 shadow-neon-gold flex items-center justify-center">
+                    <i class="fa-solid fa-calendar-days text-base mr-2"></i> Ver Partidos de pretemporada (12/09)
                 </a>
                 <a href="documents/Hoja_Inscripcion_Inter_26_27.PDF" download="Hoja_Inscripcion_Inter_26_27.PDF" class="w-full sm:w-auto bg-transparent hover:bg-gray-900 text-white border-2 border-white font-black uppercase tracking-wider text-xs px-8 py-4 rounded-tr-xl rounded-bl-xl transition flex items-center justify-center">
                     <i class="fa-solid fa-file-pdf mr-2"></i> Hoja de Inscripción PDF
@@ -167,261 +163,135 @@
     <!-- SEPARADOR DE FRANJAS -->
     <div class="h-4 inter-stripes shadow-inner relative z-20"></div>
 
-    <!-- SECCIÓN DE PRETEMPORADA Y AMISTOSOS -->
-    <section id="pretemporada" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+    <!-- SECCIÓN DE ENTRENAMIENTOS Y PARTIDOS -->
+    <section id="horarios" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-12">
             <span class="bg-interBlue/20 text-interBlue border border-interBlue/40 font-black text-xs uppercase px-4 py-1.5 rounded-full tracking-widest inline-block mb-3">
-                <i class="fa-solid fa-trophy mr-1"></i> RODAJE DE SEPTIEMBRE
+                <i class="fa-solid fa-futbol mr-1"></i> PLANIFICACIÓN DEPORTIVA
             </span>
-            <h2 class="text-4xl sm:text-5xl font-black text-white tracking-tight italic uppercase">PRETEMPORADA Y AMISTOSOS</h2>
-            <p class="text-gray-400 text-xs mt-3">Afina la puntería antes del arranque de la liga a mediados/finales de Octubre.</p>
+            <h2 class="text-4xl sm:text-5xl font-black text-white tracking-tight italic uppercase">ENTRENAMIENTOS Y PARTIDOS</h2>
+            <p class="text-gray-400 text-xs mt-3">Sedes oficiales y próximos encuentros de pretemporada para el sábado 12/09.</p>
             <div class="h-1 w-24 bg-interBlue mx-auto mt-4"></div>
         </div>
 
-        <!-- SELECTOR DE CATEGORÍA DE AMISTOSOS -->
-        <div class="flex justify-center mb-10">
-            <div class="inline-flex bg-black p-1.5 rounded-2xl border border-gray-800 text-xs font-black uppercase tracking-wider shadow-lg">
-                <button onclick="switchPreseason('alevin-pre')" id="btn-alevin-pre" class="px-6 py-3 rounded-xl text-black bg-amber-500 font-black transition duration-200 flex items-center">
-                    <i class="fa-solid fa-shield mr-2"></i> Alevín
-                </button>
-                <button onclick="switchPreseason('benjamin-pre')" id="btn-benjamin-pre" class="px-6 py-3 rounded-xl text-gray-400 hover:text-white transition duration-200 flex items-center">
-                    <i class="fa-solid fa-shield-halved mr-2"></i> Benjamín B
-                </button>
+        <!-- BLOQUE DE ENTRENAMIENTOS POR CATEGORÍA -->
+        <div class="mb-16">
+            <h3 class="text-xl font-black text-amber-400 italic uppercase mb-6 flex items-center justify-center">
+                <i class="fa-solid fa-location-dot mr-2"></i> Sedes de Entrenamiento
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="bg-gradient-to-b from-gray-900 to-black border border-interBlue/40 rounded-2xl p-6 shadow-xl flex items-center space-x-4">
+                    <div class="bg-interBlue/20 border border-interBlue/50 text-interBlue p-4 rounded-xl text-2xl">
+                        <i class="fa-solid fa-child"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest block">Fútbol 7</span>
+                        <h4 class="text-lg font-black text-white uppercase italic">Benjamín y Alevín</h4>
+                        <p class="text-xs text-gray-300 mt-1"><i class="fa-solid fa-map-pin text-red-500 mr-1"></i> Polideportivo La Elipa</p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-b from-gray-900 to-black border border-interBlue/40 rounded-2xl p-6 shadow-xl flex items-center space-x-4">
+                    <div class="bg-interBlue/20 border border-interBlue/50 text-interBlue p-4 rounded-xl text-2xl">
+                        <i class="fa-solid fa-user-ninja"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest block">Fútbol 11</span>
+                        <h4 class="text-lg font-black text-white uppercase italic">Infantil y Cadete</h4>
+                        <p class="text-xs text-gray-300 mt-1"><i class="fa-solid fa-map-pin text-red-500 mr-1"></i> Polideportivo de Moratalaz</p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- TARJETAS DE PARTIDOS Y ENTRENAMIENTOS: ALEVÍN -->
-        <div id="content-alevin-pre" class="preseason-content grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            
-            <!-- Entrenamiento 1 Alevín -->
-            <div class="bg-gradient-to-b from-gray-900 to-black border-2 border-interBlue/40 rounded-2xl p-6 shadow-2xl relative overflow-hidden group hover:border-interBlue transition duration-300">
-                <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
-                    <span class="bg-interBlue text-white text-[10px] font-black uppercase px-3 py-1 rounded-full">ALEVÍN</span>
-                    <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-calendar mr-1"></i> 9 de Septiembre</span>
-                </div>
+        <!-- PRÓXIMOS PARTIDOS AMISTOSOS (12/09) -->
+        <div>
+            <h3 class="text-xl font-black text-amber-400 italic uppercase mb-6 flex items-center justify-center">
+                <i class="fa-solid fa-trophy mr-2"></i> Partidos Amistosos (Sábado 12/09)
+            </h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 
-                <div class="flex items-center justify-center my-6 px-2 text-center">
-                    <div>
-                        <div class="w-14 h-14 rounded-full bg-interBlue/20 border border-interBlue/40 flex items-center justify-center mx-auto mb-2 text-interBlue font-black text-2xl">
-                            <i class="fa-solid fa-stopwatch"></i>
+                <!-- Infantil -->
+                <div class="bg-gradient-to-b from-gray-900 to-black border-2 border-interBlue/40 rounded-2xl p-6 shadow-2xl relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
+                        <span class="bg-interBlue text-white text-[10px] font-black uppercase px-3 py-1 rounded-full">INFANTIL</span>
+                        <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-clock mr-1"></i> 12:00h</span>
+                    </div>
+                    
+                    <div class="flex items-center justify-between my-6 px-2">
+                        <div class="text-center w-5/12">
+                            <span class="text-xs font-black text-white block">INTER</span>
                         </div>
-                        <span class="text-sm font-black text-white block uppercase">Entrenamiento de Inicio</span>
-                        <span class="text-xs font-bold text-gray-400 block mt-1">16:30h - 17:30h • Polideportivo La Elipa</span>
+
+                        <div class="text-center font-black italic text-interBlue text-lg w-2/12">
+                            VS
+                        </div>
+
+                        <div class="text-center w-5/12">
+                            <span class="text-xs font-black text-gray-300 block">SPORTING SAN FERNANDO B</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-black/80 p-3 rounded-xl text-center border border-gray-850">
+                        <span class="text-[10px] uppercase font-bold text-gray-500 tracking-wider block">Ubicación:</span>
+                        <p class="text-xs font-bold text-gray-200"><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Polideportivo Santiago del Pino, San Fernando</p>
                     </div>
                 </div>
 
-                <div class="bg-black/80 p-3 rounded-xl text-center border border-gray-850">
-                    <span class="text-[10px] uppercase font-bold text-gray-500 tracking-wider">Carácter de la Cita:</span>
-                    <p class="text-xs font-bold text-amber-400">Primer Entrenamiento de Pretemporada</p>
+                <!-- Alevín -->
+                <div class="bg-gradient-to-b from-gray-900 to-black border-2 border-interBlue/40 rounded-2xl p-6 shadow-2xl relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
+                        <span class="bg-interBlue text-white text-[10px] font-black uppercase px-3 py-1 rounded-full">ALEVÍN</span>
+                        <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-clock mr-1"></i> 13:30h</span>
+                    </div>
+                    
+                    <div class="flex items-center justify-between my-6 px-2">
+                        <div class="text-center w-5/12">
+                            <span class="text-xs font-black text-white block">INTER</span>
+                        </div>
+
+                        <div class="text-center font-black italic text-interBlue text-lg w-2/12">
+                            VS
+                        </div>
+
+                        <div class="text-center w-5/12">
+                            <span class="text-xs font-black text-gray-300 block">SPORTING SAN FERNANDO ALEVÍN B</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-black/80 p-3 rounded-xl text-center border border-gray-850">
+                        <span class="text-[10px] uppercase font-bold text-gray-500 tracking-wider block">Ubicación:</span>
+                        <p class="text-xs font-bold text-gray-200"><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Polideportivo Santiago del Pino, San Fernando</p>
+                    </div>
                 </div>
+
+                <!-- Cadete Inter (Torneo en Carranque) -->
+                <div class="bg-gradient-to-b from-gray-900 to-black border-2 border-amber-500/40 rounded-2xl p-6 shadow-2xl relative overflow-hidden lg:col-span-2">
+                    <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
+                        <span class="bg-amber-500 text-black text-[10px] font-black uppercase px-3 py-1 rounded-full">CADETE INTER</span>
+                        <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-trophy mr-1"></i> Torneo en Carranque</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+                        <div class="bg-black/60 p-4 rounded-xl border border-gray-800 flex items-center justify-between">
+                            <span class="text-xs font-black text-white">Cadete Inter vs CF Nuevo Pinto B</span>
+                            <span class="text-xs font-black text-amber-400 bg-amber-500/10 px-2 py-1 rounded border border-amber-500/20">15:00h</span>
+                        </div>
+                        <div class="bg-black/60 p-4 rounded-xl border border-gray-800 flex items-center justify-between">
+                            <span class="text-xs font-black text-white">Cadete Inter vs Navalcarnero CF H</span>
+                            <span class="text-xs font-black text-amber-400 bg-amber-500/10 px-2 py-1 rounded border border-amber-500/20">16:00h</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benjamines -->
+                <div class="bg-gradient-to-b from-gray-900 to-black border border-gray-800 rounded-2xl p-6 shadow-xl lg:col-span-2 text-center">
+                    <span class="bg-gray-800 text-gray-300 text-[10px] font-black uppercase px-3 py-1 rounded-full inline-block mb-2">BENJAMINES</span>
+                    <p class="text-xs font-bold text-gray-400 italic">Ubicaciones concretas y horarios pendientes de confirmación.</p>
+                </div>
+
             </div>
-
-            <!-- Entrenamiento 2 Alevín -->
-            <div class="bg-gradient-to-b from-gray-900 to-black border-2 border-interBlue/40 rounded-2xl p-6 shadow-2xl relative overflow-hidden group hover:border-interBlue transition duration-300">
-                <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
-                    <span class="bg-interBlue text-white text-[10px] font-black uppercase px-3 py-1 rounded-full">ALEVÍN</span>
-                    <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-calendar mr-1"></i> 11 de Septiembre</span>
-                </div>
-                
-                <div class="flex items-center justify-center my-6 px-2 text-center">
-                    <div>
-                        <div class="w-14 h-14 rounded-full bg-interBlue/20 border border-interBlue/40 flex items-center justify-center mx-auto mb-2 text-interBlue font-black text-2xl">
-                            <i class="fa-solid fa-dumbbell"></i>
-                        </div>
-                        <span class="text-sm font-black text-white block uppercase">Sesión de Preparación</span>
-                        <span class="text-xs font-bold text-gray-400 block mt-1">16:30h - 17:30h • Polideportivo La Elipa</span>
-                    </div>
-                </div>
-
-                <div class="bg-black/80 p-3 rounded-xl text-center border border-gray-850">
-                    <span class="text-[10px] uppercase font-bold text-gray-500 tracking-wider">Carácter de la Cita:</span>
-                    <p class="text-xs font-bold text-amber-400">Puesta a Punto Táctica y Física</p>
-                </div>
-            </div>
-
-            <!-- Partido 1 Alevín -->
-            <div class="bg-gradient-to-b from-gray-900 to-black border-2 border-interBlue/40 rounded-2xl p-6 shadow-2xl relative overflow-hidden group hover:border-interBlue transition duration-300">
-                <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
-                    <span class="bg-interBlue text-white text-[10px] font-black uppercase px-3 py-1 rounded-full">ALEVÍN</span>
-                    <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-calendar mr-1"></i> 12 / 13 de Septiembre</span>
-                </div>
-                
-                <div class="flex items-center justify-between my-6 px-2">
-                    <div class="text-center">
-                        <div class="w-12 h-12 rounded-full bg-interBlue/20 border border-interBlue/40 flex items-center justify-center mx-auto mb-2 text-white font-black">
-                            INT
-                        </div>
-                        <span class="text-xs font-black text-white block">INTER MORATALAZ</span>
-                    </div>
-
-                    <div class="text-center font-black italic text-gray-500 text-xl">
-                        VS
-                    </div>
-
-                    <div class="text-center">
-                        <div class="w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center mx-auto mb-2 text-gray-300 font-black">
-                            SF
-                        </div>
-                        <span class="text-xs font-black text-gray-300 block">SAN FERNANDO</span>
-                    </div>
-                </div>
-
-                <div class="bg-black/80 p-3 rounded-xl text-center border border-gray-850">
-                    <span class="text-[10px] uppercase font-bold text-gray-500 tracking-wider">Carácter del Encuentro:</span>
-                    <p class="text-xs font-bold text-amber-400">Primer Amistoso de Pretemporada</p>
-                </div>
-            </div>
-
-            <!-- Partido 2 Alevín -->
-            <div class="bg-gradient-to-b from-gray-900 to-black border-2 border-interBlue/40 rounded-2xl p-6 shadow-2xl relative overflow-hidden group hover:border-interBlue transition duration-300">
-                <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
-                    <span class="bg-interBlue text-white text-[10px] font-black uppercase px-3 py-1 rounded-full">ALEVÍN</span>
-                    <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-calendar mr-1"></i> 26 / 27 de Septiembre</span>
-                </div>
-                
-                <div class="flex items-center justify-between my-6 px-2">
-                    <div class="text-center">
-                        <div class="w-12 h-12 rounded-full bg-interBlue/20 border border-interBlue/40 flex items-center justify-center mx-auto mb-2 text-white font-black">
-                            INT
-                        </div>
-                        <span class="text-xs font-black text-white block">INTER MORATALAZ</span>
-                    </div>
-
-                    <div class="text-center font-black italic text-gray-500 text-xl">
-                        VS
-                    </div>
-
-                    <div class="text-center">
-                        <div class="w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center mx-auto mb-2 text-gray-300 font-black">
-                            PAR
-                        </div>
-                        <span class="text-xs font-black text-gray-300 block">PARLA</span>
-                    </div>
-                </div>
-
-                <div class="bg-black/80 p-3 rounded-xl text-center border border-gray-850">
-                    <span class="text-[10px] uppercase font-bold text-gray-500 tracking-wider">Carácter del Encuentro:</span>
-                    <p class="text-xs font-bold text-amber-400">Test de Preparación Pre-Liga</p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- TARJETAS DE PARTIDOS Y ENTRENAMIENTOS: BENJAMÍN B -->
-        <div id="content-benjamin-pre" class="preseason-content hidden grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            
-            <!-- Entrenamiento 1 Benjamín B -->
-            <div class="bg-gradient-to-b from-gray-900 to-black border-2 border-amber-500/40 rounded-2xl p-6 shadow-2xl relative overflow-hidden group hover:border-amber-500 transition duration-300">
-                <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
-                    <span class="bg-amber-500 text-black text-[10px] font-black uppercase px-3 py-1 rounded-full">BENJAMÍN B</span>
-                    <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-calendar mr-1"></i> 9 de Septiembre</span>
-                </div>
-                
-                <div class="flex items-center justify-center my-6 px-2 text-center">
-                    <div>
-                        <div class="w-14 h-14 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center mx-auto mb-2 text-amber-400 font-black text-2xl">
-                            <i class="fa-solid fa-stopwatch"></i>
-                        </div>
-                        <span class="text-sm font-black text-white block uppercase">Entrenamiento de Inicio</span>
-                        <span class="text-xs font-bold text-gray-400 block mt-1">16:30h - 17:30h • Polideportivo La Elipa</span>
-                    </div>
-                </div>
-
-                <div class="bg-black/80 p-3 rounded-xl text-center border border-gray-850">
-                    <span class="text-[10px] uppercase font-bold text-gray-500 tracking-wider">Carácter de la Cita:</span>
-                    <p class="text-xs font-bold text-amber-400">Primer Entrenamiento de Pretemporada</p>
-                </div>
-            </div>
-
-            <!-- Entrenamiento 2 Benjamín B -->
-            <div class="bg-gradient-to-b from-gray-900 to-black border-2 border-amber-500/40 rounded-2xl p-6 shadow-2xl relative overflow-hidden group hover:border-amber-500 transition duration-300">
-                <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
-                    <span class="bg-amber-500 text-black text-[10px] font-black uppercase px-3 py-1 rounded-full">BENJAMÍN B</span>
-                    <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-calendar mr-1"></i> 11 de Septiembre</span>
-                </div>
-                
-                <div class="flex items-center justify-center my-6 px-2 text-center">
-                    <div>
-                        <div class="w-14 h-14 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center mx-auto mb-2 text-amber-400 font-black text-2xl">
-                            <i class="fa-solid fa-dumbbell"></i>
-                        </div>
-                        <span class="text-sm font-black text-white block uppercase">Sesión de Preparación</span>
-                        <span class="text-xs font-bold text-gray-400 block mt-1">16:30h - 17:30h • Polideportivo La Elipa</span>
-                    </div>
-                </div>
-
-                <div class="bg-black/80 p-3 rounded-xl text-center border border-gray-850">
-                    <span class="text-[10px] uppercase font-bold text-gray-500 tracking-wider">Carácter de la Cita:</span>
-                    <p class="text-xs font-bold text-amber-400">Puesta a Punto Táctica y Física</p>
-                </div>
-            </div>
-
-            <!-- Partido 1 Benjamín B -->
-            <div class="bg-gradient-to-b from-gray-900 to-black border-2 border-amber-500/40 rounded-2xl p-6 shadow-2xl relative overflow-hidden group hover:border-amber-500 transition duration-300">
-                <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
-                    <span class="bg-amber-500 text-black text-[10px] font-black uppercase px-3 py-1 rounded-full">BENJAMÍN B</span>
-                    <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-calendar mr-1"></i> 20 de Septiembre</span>
-                </div>
-                
-                <div class="flex items-center justify-between my-6 px-2">
-                    <div class="text-center">
-                        <div class="w-12 h-12 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center mx-auto mb-2 text-white font-black">
-                            INT
-                        </div>
-                        <span class="text-xs font-black text-white block">INTER MORATALAZ B</span>
-                    </div>
-
-                    <div class="text-center font-black italic text-gray-500 text-xl">
-                        VS
-                    </div>
-
-                    <div class="text-center">
-                        <div class="w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center mx-auto mb-2 text-gray-300 font-black">
-                            MOR
-                        </div>
-                        <span class="text-xs font-black text-gray-300 block">MORALEJA ENMEDIO</span>
-                    </div>
-                </div>
-
-                <div class="bg-black/80 p-3 rounded-xl text-center border border-gray-850">
-                    <span class="text-[10px] uppercase font-bold text-gray-500 tracking-wider">Carácter del Encuentro:</span>
-                    <p class="text-xs font-bold text-amber-400">Debut de Pretemporada</p>
-                </div>
-            </div>
-
-            <!-- Partido 2 Benjamín B -->
-            <div class="bg-gradient-to-b from-gray-900 to-black border-2 border-amber-500/40 rounded-2xl p-6 shadow-2xl relative overflow-hidden group hover:border-amber-500 transition duration-300">
-                <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
-                    <span class="bg-amber-500 text-black text-[10px] font-black uppercase px-3 py-1 rounded-full">BENJAMÍN B</span>
-                    <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-calendar mr-1"></i> 26 / 27 de Septiembre</span>
-                </div>
-                
-                <div class="flex items-center justify-between my-6 px-2">
-                    <div class="text-center">
-                        <div class="w-12 h-12 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center mx-auto mb-2 text-white font-black">
-                            INT
-                        </div>
-                        <span class="text-xs font-black text-white block">INTER MORATALAZ B</span>
-                    </div>
-
-                    <div class="text-center font-black italic text-gray-500 text-xl">
-                        VS
-                    </div>
-
-                    <div class="text-center">
-                        <div class="w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center mx-auto mb-2 text-gray-300 font-black">
-                            PES
-                        </div>
-                        <span class="text-xs font-black text-gray-300 block">PARLA ESCUELAS</span>
-                    </div>
-                </div>
-
-                <div class="bg-black/80 p-3 rounded-xl text-center border border-gray-850">
-                    <span class="text-[10px] uppercase font-bold text-gray-500 tracking-wider">Carácter del Encuentro:</span>
-                    <p class="text-xs font-bold text-amber-400">Encuentro de Rodaje</p>
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -627,9 +497,9 @@
                     <p class="text-sm text-gray-400">Orgullosos de estar arraigados en el <strong>CEIP Conde de Arruga</strong> y en el <strong>CEIP Real Armada</strong>.</p>
                 </div>
                 <div class="bg-gray-900/60 p-8 rounded-2xl border border-gray-850 hover:border-interBlue/40 hover:scale-105 transition duration-300 relative group overflow-hidden shadow-lg backdrop-blur-sm">
-                    <div class="text-4xl text-interBlue font-black mb-4"><i class="fa-solid fa-map-location-dot"></i> La Elipa</div>
-                    <h3 class="text-xl font-bold text-white mb-2">Entrenamientos</h3>
-                    <p class="text-sm text-gray-400">Entrenamientos fijados los Miércoles y Viernes de 16:30 a 17:30 en el Polideportivo de La Elipa.</p>
+                    <div class="text-4xl text-interBlue font-black mb-4"><i class="fa-solid fa-map-location-dot"></i> La Elipa y Moratalaz</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Sedes Deportivas</h3>
+                    <p class="text-sm text-gray-400">Entrenamientos en Polideportivo La Elipa (Fútbol 7) y Polideportivo Moratalaz (Fútbol 11).</p>
                 </div>
             </div>
         </div>
@@ -725,7 +595,7 @@
         <div class="max-w-7xl mx-auto px-4 space-y-4">
             <p class="font-black tracking-widest text-gray-400 uppercase">© 2026 CLUB INTER DE MORATALAZ. TODOS LOS DERECHOS RESERVADOS.</p>
             <p class="max-w-md mx-auto text-[11px] text-gray-600">
-                Diseñado con identidad de barrio y ambición de campeones. Polideportivo Municipal de La Elipa.
+                Diseñado con identidad de barrio y ambición de campeones. Polideportivo Municipal de La Elipa y Polideportivo de Moratalaz.
             </p>
         </div>
     </footer>
@@ -748,26 +618,6 @@ if (mobileMenuBtn && mobileMenu) {
             mobileMenu.classList.add('hidden');
         });
     });
-}
-
-// --- SELECTOR PRETEMPORADA (AMISTOSOS) ---
-function switchPreseason(category) {
-    document.querySelectorAll('.preseason-content').forEach(el => el.classList.add('hidden'));
-    
-    const tabs = ['alevin-pre', 'benjamin-pre'];
-    tabs.forEach(tab => {
-        const btn = document.getElementById(`btn-${tab}`);
-        if (btn) btn.className = "px-6 py-3 rounded-xl text-gray-400 hover:text-white transition duration-200 flex items-center";
-    });
-
-    const activeContent = document.getElementById(`content-${category}`);
-    if (activeContent) {
-        activeContent.classList.remove('hidden');
-        activeContent.classList.add('grid');
-    }
-
-    const activeBtn = document.getElementById(`btn-${category}`);
-    if (activeBtn) activeBtn.className = "px-6 py-3 rounded-xl text-black bg-amber-500 font-black transition duration-200 flex items-center";
 }
 
 // --- LÓGICA REPRODUCTOR HIMNO ---
