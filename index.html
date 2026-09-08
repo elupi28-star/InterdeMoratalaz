@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Club Inter de Moratalaz | Sitio Oficial</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
@@ -39,16 +41,22 @@
 </head>
 <body class="bg-interDark text-gray-100 font-sans antialiased overflow-x-hidden relative">
 
+<!-- MARCA DE AGUA DEL ESCUDO (FONDO DE TODA LA PÁGINA) -->
 <div class="fixed inset-0 flex items-center justify-center pointer-events-none opacity-[0.12] z-0 select-none">
     <img src="images/galeria/image_b5457f.png" alt="Escudo de Fondo Inter de Moratalaz" class="w-[75vw] max-w-[850px] object-contain rounded-full">
 </div>
 
+<!-- CONTENEDOR PRINCIPAL -->
 <div class="relative z-10 flex flex-col min-h-screen">
 
-    <div class="bg-amber-500 text-black text-center py-2 px-4 text-xs font-black tracking-widest uppercase animate-pulse relative z-50 shadow-md">
-        <i class="fa-solid fa-trophy mr-2"></i> ¡HISTÓRICO DOBLETE! LOS ALEVINES SE CORONAN CAMPEONES DEL TROFEO DEL CARMEN CON UN INOLVIDABLE 7-1 <i class="fa-solid fa-crown ml-2"></i>
+    <!-- BARRA DE ANUNCIO SUPERIOR -->
+    <div class="bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black text-center py-2 px-4 text-xs font-black tracking-widest uppercase relative z-50 shadow-md flex items-center justify-center gap-2">
+        <i class="fa-solid fa-fire text-black animate-bounce"></i>
+        <span>¡VUELVEN LOS ENTRENAMIENTOS! MIÉRCOLES 9 DE SEPTIEMBRE A LAS 16:30H EN LA ELIPA</span>
+        <i class="fa-solid fa-futbol text-black animate-spin"></i>
     </div>
 
+    <!-- NAVBAR FÚTBOL PREMIUM -->
     <nav class="bg-black/95 backdrop-blur-md sticky top-0 z-50 border-b-2 border-interBlue shadow-neon-blue">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-28">
@@ -64,11 +72,11 @@
 
                 <div class="hidden lg:flex items-center space-x-8 text-xs font-black uppercase tracking-wider">
                     <a href="#inicio" class="text-interBlue hover:text-white transition">Inicio</a>
-                    <a href="#torneo" class="hover:text-amber-400 transition flex items-center"><i class="fa-solid fa-star mr-1"></i> Torneo de Primavera</a>
-                    <a href="#trofeo-carmen" class="hover:text-amber-400 transition flex items-center"><i class="fa-solid fa-trophy mr-1"></i> Trofeo del Carmen</a>
+                    <a href="#pretemporada" class="text-amber-400 hover:text-amber-300 transition flex items-center"><i class="fa-solid fa-calendar-days mr-1"></i> Pretemporada</a>
+                    <a href="#torneo" class="hover:text-interBlue transition flex items-center"><i class="fa-solid fa-star mr-1"></i> Palmarés</a>
                     <a href="#galeria" class="hover:text-interBlue transition"><i class="fa-solid fa-images mr-1"></i> Galería</a>
                     <a href="#el-club" class="hover:text-interBlue transition">El Club</a>
-                    <a href="#pruebas" class="text-amber-400 hover:text-amber-300 transition flex items-center bg-amber-500/10 px-3 py-1.5 rounded-md border border-amber-500/20 shadow-neon-gold"><i class="fa-solid fa-file-signature mr-1"></i> Inscripciones 2026/2027</a>
+                    <a href="#pruebas" class="text-amber-400 hover:text-amber-300 transition flex items-center bg-amber-500/10 px-3 py-1.5 rounded-md border border-amber-500/20 shadow-neon-gold"><i class="fa-solid fa-file-signature mr-1"></i> Inscripciones</a>
                     <a href="#comunidad" class="hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i> Instagram</a>
                 </div>
 
@@ -82,8 +90,8 @@
 
         <div id="mobile-menu" class="hidden lg:hidden bg-black/95 border-t border-gray-900 px-4 py-6 space-y-4 text-xs font-black uppercase tracking-wider transition-all duration-300 shadow-inner">
             <a href="#inicio" class="block text-interBlue hover:text-white py-2 border-b border-gray-900">Inicio</a>
-            <a href="#torneo" class="block text-gray-300 hover:text-amber-400 py-2 border-b border-gray-900 flex items-center"><i class="fa-solid fa-star mr-2"></i> Torneo de Primavera</a>
-            <a href="#trofeo-carmen" class="block text-gray-300 hover:text-interBlue py-2 border-b border-gray-900 flex items-center"><i class="fa-solid fa-trophy mr-2"></i> Trofeo del Carmen</a>
+            <a href="#pretemporada" class="block text-amber-400 hover:text-amber-300 py-2 border-b border-gray-900 flex items-center"><i class="fa-solid fa-calendar-days mr-2"></i> Pretemporada & Amistosos</a>
+            <a href="#torneo" class="block text-gray-300 hover:text-interBlue py-2 border-b border-gray-900 flex items-center"><i class="fa-solid fa-star mr-2"></i> Palmarés y Éxitos</a>
             <a href="#galeria" class="block text-gray-300 hover:text-interBlue py-2 border-b border-gray-900"><i class="fa-solid fa-images mr-2"></i> Galería</a>
             <a href="#el-club" class="block text-gray-300 hover:text-interBlue py-2 border-b border-gray-900">El Club</a>
             <a href="#pruebas" class="block text-amber-400 hover:text-amber-300 py-2 border-b border-gray-900"><i class="fa-solid fa-file-signature mr-2"></i> Inscripciones 2026/2027</a>
@@ -96,44 +104,249 @@
         </div>
     </nav>
 
-    <header id="inicio" class="relative bg-black py-32 px-4 text-center overflow-hidden border-b-4 border-black">
+    <!-- HERO PRINCIPAL DE NUEVA TEMPORADA -->
+    <header id="inicio" class="relative bg-black py-28 px-4 text-center overflow-hidden border-b-4 border-black">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-interBlue/20 rounded-full blur-[120px] pointer-events-none"></div>
 
-        <div class="max-w-4xl mx-auto relative z-10 pt-4">
-            <div class="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/40 text-amber-400 text-xs font-black uppercase px-4 py-1.5 rounded-full tracking-widest mb-6 shadow-neon-gold">
-                <i class="fa-solid fa-crown animate-bounce"></i> <span>¡INSCRIPCIONES ABIERTAS TEMPORADA 2026/2027!</span>
+        <div class="max-w-5xl mx-auto relative z-10 pt-4">
+            
+            <!-- Badge Temporada -->
+            <div class="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/40 text-amber-400 text-xs font-black uppercase px-5 py-2 rounded-full tracking-widest mb-6 shadow-neon-gold">
+                <i class="fa-solid fa-bolt animate-pulse"></i> <span>TEMPORADA 2026 / 2027 • ¡YA ESTAMOS DE VUELTA!</span>
             </div>
 
-            <h1 class="text-4xl sm:text-6xl font-black text-white italic tracking-tighter leading-none uppercase mb-6">
-                ¡ÚNETE A LA FAMILIA DEL <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600 drop-shadow-sm">INTER DE MORATALAZ!</span>
+            <!-- Titular Grande -->
+            <h1 class="text-4xl sm:text-7xl font-black text-white italic tracking-tighter leading-none uppercase mb-6">
+                ¡NUEVO CURSO, <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 drop-shadow-sm">MISMA PASIÓN!</span>
             </h1>
-            <p class="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto mb-10 font-medium">
-                Ya está disponible la hoja de inscripción oficial para Renovaciones y Nuevas Incorporaciones. Asegura tu plaza y compite con orgullo en la liga Federada o Municipal.
+            
+            <p class="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10 font-medium leading-relaxed">
+                Volvemos al césped con más ganas que nunca. Tras un año lleno de copas y triunfos, arrancamos la pretemporada preparados para hacer historia.
             </p>
 
+            <!-- CAJA DESTACADA DE INICIO DE ENTRENAMIENTOS -->
+            <div class="bg-gradient-to-br from-gray-900/90 via-black to-blue-950/80 border-2 border-interBlue/60 rounded-3xl p-6 sm:p-8 max-w-2xl mx-auto mb-10 shadow-neon-blue backdrop-blur-md">
+                <div class="flex items-center justify-center space-x-3 text-amber-400 font-black text-xs uppercase tracking-widest mb-3">
+                    <i class="fa-solid fa-stopwatch text-lg"></i>
+                    <span>PRIMERA CITA DE PRETEMPORADA</span>
+                </div>
+                
+                <div class="text-2xl sm:text-3xl font-black text-white italic uppercase tracking-tight mb-2">
+                    Miércoles, 9 de Septiembre • 16:30h
+                </div>
+                
+                <p class="text-xs text-gray-400 font-bold mb-4">
+                    <i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Polideportivo Municipal de La Elipa
+                </p>
+
+                <div class="grid grid-cols-2 gap-3 text-left bg-black/60 p-4 rounded-xl border border-gray-800 text-xs">
+                    <div>
+                        <span class="text-gray-500 font-bold block uppercase text-[10px]">Días Fijos:</span>
+                        <strong class="text-white">Miércoles y Viernes</strong>
+                    </div>
+                    <div>
+                        <span class="text-gray-500 font-bold block uppercase text-[10px]">Horario Habitual:</span>
+                        <strong class="text-amber-400">16:30h - 17:30h</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones Acción -->
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="documents/Hoja_Inscripcion_Inter_26_27.PDF" download="Hoja_Inscripcion_Inter_26_27.PDF" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-gray-950 font-black uppercase tracking-wider text-sm px-8 py-4 rounded-tr-xl rounded-bl-xl transition transform hover:-translate-y-1 shadow-neon-gold">
-                    <i class="fa-solid fa-file-pdf mr-2"></i> Descargar Inscripción
+                <a href="#pretemporada" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-gray-950 font-black uppercase tracking-wider text-xs px-8 py-4 rounded-tr-xl rounded-bl-xl transition transform hover:-translate-y-1 shadow-neon-gold flex items-center justify-center">
+                    <i class="fa-solid fa-calendar-days text-base mr-2"></i> Ver Amistosos Confirmados
                 </a>
-                <a href="#el-club" class="w-full sm:w-auto bg-transparent hover:bg-gray-900 text-white border-2 border-white font-black uppercase tracking-wider text-sm px-8 py-4 rounded-tr-xl rounded-bl-xl transition">
-                    Ver Cuotas y Tarifas
+                <a href="documents/Hoja_Inscripcion_Inter_26_27.PDF" download="Hoja_Inscripcion_Inter_26_27.PDF" class="w-full sm:w-auto bg-transparent hover:bg-gray-900 text-white border-2 border-white font-black uppercase tracking-wider text-xs px-8 py-4 rounded-tr-xl rounded-bl-xl transition flex items-center justify-center">
+                    <i class="fa-solid fa-file-pdf mr-2"></i> Hoja de Inscripción PDF
                 </a>
             </div>
         </div>
     </header>
 
+    <!-- SEPARADOR DE FRANJAS -->
     <div class="h-4 inter-stripes shadow-inner relative z-20"></div>
 
+    <!-- SECCIÓN DE PRETEMPORADA Y AMISTOSOS -->
+    <section id="pretemporada" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="bg-interBlue/20 text-interBlue border border-interBlue/40 font-black text-xs uppercase px-4 py-1.5 rounded-full tracking-widest inline-block mb-3">
+                <i class="fa-solid fa-trophy mr-1"></i> RODAJE DE SEPTIEMBRE
+            </span>
+            <h2 class="text-4xl sm:text-5xl font-black text-white tracking-tight italic uppercase">AMISTOSOS DE PRETEMPORADA</h2>
+            <p class="text-gray-400 text-xs mt-3">Afina la puntería antes del arranque de la liga a mediados/finales de Octubre.</p>
+            <div class="h-1 w-24 bg-interBlue mx-auto mt-4"></div>
+        </div>
+
+        <!-- SELECTOR DE CATEGORÍA DE AMISTOSOS -->
+        <div class="flex justify-center mb-10">
+            <div class="inline-flex bg-black p-1.5 rounded-2xl border border-gray-800 text-xs font-black uppercase tracking-wider shadow-lg">
+                <button onclick="switchPreseason('alevin-pre')" id="btn-alevin-pre" class="px-6 py-3 rounded-xl text-black bg-amber-500 font-black transition duration-200 flex items-center">
+                    <i class="fa-solid fa-shield mr-2"></i> Alevín
+                </button>
+                <button onclick="switchPreseason('benjamin-pre')" id="btn-benjamin-pre" class="px-6 py-3 rounded-xl text-gray-400 hover:text-white transition duration-200 flex items-center">
+                    <i class="fa-solid fa-shield-halved mr-2"></i> Benjamín B
+                </button>
+            </div>
+        </div>
+
+        <!-- TARJETAS DE PARTIDOS: ALEVÍN -->
+        <div id="content-alevin-pre" class="preseason-content grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            
+            <!-- Partido 1 Alevín -->
+            <div class="bg-gradient-to-b from-gray-900 to-black border-2 border-interBlue/40 rounded-2xl p-6 shadow-2xl relative overflow-hidden group hover:border-interBlue transition duration-300">
+                <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
+                    <span class="bg-interBlue text-white text-[10px] font-black uppercase px-3 py-1 rounded-full">ALEVÍN</span>
+                    <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-calendar mr-1"></i> 12 / 13 de Septiembre</span>
+                </div>
+                
+                <div class="flex items-center justify-between my-6 px-2">
+                    <div class="text-center">
+                        <div class="w-12 h-12 rounded-full bg-interBlue/20 border border-interBlue/40 flex items-center justify-center mx-auto mb-2 text-white font-black">
+                            INT
+                        </div>
+                        <span class="text-xs font-black text-white block">INTER MORATALAZ</span>
+                    </div>
+
+                    <div class="text-center font-black italic text-gray-500 text-xl">
+                        VS
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center mx-auto mb-2 text-gray-300 font-black">
+                            SF
+                        </div>
+                        <span class="text-xs font-black text-gray-300 block">SAN FERNANDO</span>
+                    </div>
+                </div>
+
+                <div class="bg-black/80 p-3 rounded-xl text-center border border-gray-850">
+                    <span class="text-[10px] uppercase font-bold text-gray-500 tracking-wider">Carácter del Encuentro:</span>
+                    <p class="text-xs font-bold text-amber-400">Primer Amistoso de Pretemporada</p>
+                </div>
+            </div>
+
+            <!-- Partido 2 Alevín -->
+            <div class="bg-gradient-to-b from-gray-900 to-black border-2 border-interBlue/40 rounded-2xl p-6 shadow-2xl relative overflow-hidden group hover:border-interBlue transition duration-300">
+                <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
+                    <span class="bg-interBlue text-white text-[10px] font-black uppercase px-3 py-1 rounded-full">ALEVÍN</span>
+                    <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-calendar mr-1"></i> 26 / 27 de Septiembre</span>
+                </div>
+                
+                <div class="flex items-center justify-between my-6 px-2">
+                    <div class="text-center">
+                        <div class="w-12 h-12 rounded-full bg-interBlue/20 border border-interBlue/40 flex items-center justify-center mx-auto mb-2 text-white font-black">
+                            INT
+                        </div>
+                        <span class="text-xs font-black text-white block">INTER MORATALAZ</span>
+                    </div>
+
+                    <div class="text-center font-black italic text-gray-500 text-xl">
+                        VS
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center mx-auto mb-2 text-gray-300 font-black">
+                            PAR
+                        </div>
+                        <span class="text-xs font-black text-gray-300 block">PARLA</span>
+                    </div>
+                </div>
+
+                <div class="bg-black/80 p-3 rounded-xl text-center border border-gray-850">
+                    <span class="text-[10px] uppercase font-bold text-gray-500 tracking-wider">Carácter del Encuentro:</span>
+                    <p class="text-xs font-bold text-amber-400">Test de Preparación Pre-Liga</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- TARJETAS DE PARTIDOS: BENJAMÍN B -->
+        <div id="content-benjamin-pre" class="preseason-content hidden grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            
+            <!-- Partido 1 Benjamín B -->
+            <div class="bg-gradient-to-b from-gray-900 to-black border-2 border-amber-500/40 rounded-2xl p-6 shadow-2xl relative overflow-hidden group hover:border-amber-500 transition duration-300">
+                <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
+                    <span class="bg-amber-500 text-black text-[10px] font-black uppercase px-3 py-1 rounded-full">BENJAMÍN B</span>
+                    <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-calendar mr-1"></i> 20 de Septiembre</span>
+                </div>
+                
+                <div class="flex items-center justify-between my-6 px-2">
+                    <div class="text-center">
+                        <div class="w-12 h-12 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center mx-auto mb-2 text-white font-black">
+                            INT
+                        </div>
+                        <span class="text-xs font-black text-white block">INTER MORATALAZ B</span>
+                    </div>
+
+                    <div class="text-center font-black italic text-gray-500 text-xl">
+                        VS
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center mx-auto mb-2 text-gray-300 font-black">
+                            MOR
+                        </div>
+                        <span class="text-xs font-black text-gray-300 block">MORALEJA ENMEDIO</span>
+                    </div>
+                </div>
+
+                <div class="bg-black/80 p-3 rounded-xl text-center border border-gray-850">
+                    <span class="text-[10px] uppercase font-bold text-gray-500 tracking-wider">Carácter del Encuentro:</span>
+                    <p class="text-xs font-bold text-amber-400">Debut de Pretemporada</p>
+                </div>
+            </div>
+
+            <!-- Partido 2 Benjamín B -->
+            <div class="bg-gradient-to-b from-gray-900 to-black border-2 border-amber-500/40 rounded-2xl p-6 shadow-2xl relative overflow-hidden group hover:border-amber-500 transition duration-300">
+                <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
+                    <span class="bg-amber-500 text-black text-[10px] font-black uppercase px-3 py-1 rounded-full">BENJAMÍN B</span>
+                    <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-calendar mr-1"></i> 26 / 27 de Septiembre</span>
+                </div>
+                
+                <div class="flex items-center justify-between my-6 px-2">
+                    <div class="text-center">
+                        <div class="w-12 h-12 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center mx-auto mb-2 text-white font-black">
+                            INT
+                        </div>
+                        <span class="text-xs font-black text-white block">INTER MORATALAZ B</span>
+                    </div>
+
+                    <div class="text-center font-black italic text-gray-500 text-xl">
+                        VS
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center mx-auto mb-2 text-gray-300 font-black">
+                            PES
+                        </div>
+                        <span class="text-xs font-black text-gray-300 block">PARLA ESCUELAS</span>
+                    </div>
+                </div>
+
+                <div class="bg-black/80 p-3 rounded-xl text-center border border-gray-850">
+                    <span class="text-[10px] uppercase font-bold text-gray-500 tracking-wider">Carácter del Encuentro:</span>
+                    <p class="text-xs font-bold text-amber-400">Encuentro de Rodaje</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEPARADOR DE FRANJAS -->
+    <div class="h-4 inter-stripes relative z-20"></div>
+
+    <!-- CRÓNICA Y PALMARÉS DE ÉXITOS RECIENTES -->
     <section id="torneo" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-12">
-            <span class="text-interBlue font-black text-xs uppercase tracking-widest block mb-2"><i class="fa-solid fa-star mr-1"></i> GESTA ANTERIOR</span>
-            <h2 class="text-4xl font-black text-white tracking-tight italic uppercase">EL CAMPEONATO DE PRIMAVERA</h2>
+            <span class="text-interBlue font-black text-xs uppercase tracking-widest block mb-2"><i class="fa-solid fa-star mr-1"></i> NUESTRO ORGULLO</span>
+            <h2 class="text-4xl font-black text-white tracking-tight italic uppercase">CAMPEONES RECIENTES</h2>
             <div class="h-1 w-24 bg-interBlue mx-auto mt-3"></div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
+            <!-- CARTEL DIGITAL DEL MARCADOR -->
             <div class="lg:col-span-5 flex justify-center w-full">
                 <div class="relative group w-full max-w-md">
                     <div class="absolute -inset-1 bg-gradient-to-r from-interBlue via-blue-800 to-interBlue rounded-2xl blur opacity-40 group-hover:opacity-60 transition duration-300"></div>
@@ -146,24 +359,24 @@
                         </div>
 
                         <h3 class="text-4xl font-black tracking-tighter text-white italic uppercase mb-2">
-                            ¡FINAL ÉPICA!
+                            ¡HISTÓRICO DOBLETE!
                         </h3>
-                        <p class="text-xs text-interBlue font-black tracking-widest uppercase mb-6">REMONTADA EN LA ELIPA</p>
+                        <p class="text-xs text-interBlue font-black tracking-widest uppercase mb-6">TORNEO DEL CARMEN & PRIMAVERA</p>
 
                         <div class="bg-black/80 border border-gray-880 rounded-xl px-6 py-4 flex items-center justify-center space-x-6 shadow-inner w-full max-w-xs mb-6">
                             <div class="text-center">
                                 <span class="block text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-1">INTER</span>
-                                <span class="text-5xl font-black text-white tracking-tight">3</span>
+                                <span class="text-5xl font-black text-white tracking-tight">7</span>
                             </div>
                             <div class="text-2xl font-black text-interBlue italic font-mono">-</div>
                             <div class="text-center">
-                                <span class="block text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-1">RIVAL</span>
-                                <span class="text-5xl font-black text-gray-400 tracking-tight">2</span>
+                                <span class="block text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-1">FINAL</span>
+                                <span class="text-5xl font-black text-gray-400 tracking-tight">1</span>
                             </div>
                         </div>
 
                         <span class="text-[10px] bg-white/5 border border-white/10 text-gray-300 px-4 py-1.5 rounded-full font-black tracking-widest uppercase">
-                            Torneo de Primavera • Alevín
+                            Palomeras • Alevín Campeón
                         </span>
                     </div>
                 </div>
@@ -171,135 +384,48 @@
 
             <div class="lg:col-span-7 space-y-6">
                 <div class="bg-gray-900/90 border-l-4 border-interBlue p-6 rounded-r-xl shadow-md">
-                    <h3 class="text-xl font-black text-white italic mb-2">CRÓNICA DE UNA TARDE INOLVIDABLE</h3>
+                    <h3 class="text-xl font-black text-white italic mb-2">UN AÑO PARA RECORDAR</h3>
                     <p class="text-sm text-gray-400 leading-relaxed">
-                        En el Polideportivo de La Elipa empezó a forjarse este año de ensueño. La final del plantel Alevín comenzó cuesta arriba con un doloroso 2-0 en contra antes del descanso. Pero en el vestuario se sintió la unión familiar y la garra de Moratalaz: salimos a morder y, gol a gol, materializamos un espectacular <strong class="text-white font-bold">3-2</strong> que abrió la veda de copas esta temporada.
+                        Cerramos la temporada pasada con el pabellón bien alto. Tras la mítica remontada del Torneo de Primavera en La Elipa (3-2), nuestros alevines sellaron el curso coronándose en Palomeras con un memorable <strong class="text-white font-bold">7-1 en la gran final del Trofeo del Carmen</strong>. ¡Esa es la actitud con la que arrancamos este nuevo año!
                     </p>
                 </div>
 
                 <div class="space-y-3">
                     <div class="bg-black/70 border border-gray-850 p-4 rounded-xl flex items-center justify-between">
                         <div class="flex items-center space-x-4">
-                            <div class="bg-gray-800 text-gray-400 font-black text-xs px-3 py-2 rounded italic">1ª PARTE</div>
+                            <div class="bg-gray-800 text-gray-400 font-black text-xs px-3 py-2 rounded italic">TROFEO CARMEN</div>
                             <div>
-                                <h4 class="text-base font-black text-gray-400 tracking-tight">Resultado Adverso (2 - 0)</h4>
-                                <p class="text-xs text-gray-500">Un inicio difícil donde tocó sufrir en el campo.</p>
+                                <h4 class="text-base font-black text-white tracking-tight">Campeones Alevín (7 - 1)</h4>
+                                <p class="text-xs text-gray-500">Exhibición de fútbol colectivo en Palomeras.</p>
                             </div>
                         </div>
-                        <i class="fa-solid fa-clock text-gray-700 text-lg"></i>
+                        <i class="fa-solid fa-crown text-amber-400 text-lg"></i>
                     </div>
                     <div class="bg-blue-950/40 border border-interBlue/30 p-4 rounded-xl flex items-center justify-between">
                         <div class="flex items-center space-x-4">
-                            <div class="bg-interBlue text-white font-black text-xs px-3 py-2 rounded italic shadow-neon-blue">DESCANSO</div>
+                            <div class="bg-interBlue text-white font-black text-xs px-3 py-2 rounded italic shadow-neon-blue">PRIMAVERA</div>
                             <div>
-                                <h4 class="text-base font-black text-white tracking-tight">Charla Técnico y Motivation</h4>
-                                <p class="text-xs text-gray-300">Unión en el vestuario. Ajustes, compromiso y fe en la victoria.</p>
+                                <h4 class="text-base font-black text-white tracking-tight">Remontada Épica (3 - 2)</h4>
+                                <p class="text-xs text-gray-300">Garra y coraje para darle la vuelta al marcador.</p>
                             </div>
                         </div>
-                        <i class="fa-solid fa-comments text-interBlue text-lg"></i>
-                    </div>
-                    <div class="bg-gradient-to-r from-amber-500/10 to-transparent border border-amber-500/30 p-4 rounded-xl flex items-center justify-between group hover:bg-gray-900/50 transition">
-                        <div class="flex items-center space-x-4">
-                            <div class="bg-amber-500 text-gray-950 font-black text-xs px-3 py-2 rounded italic shadow-neon-gold">2ª PARTE</div>
-                            <div>
-                                <h4 class="text-base font-black text-amber-400 tracking-tight">¡LA REMONTADA DE CAMPEONES! (3 - 2)</h4>
-                                <p class="text-xs text-gray-400">Tres goles de puro corazón para levantar el Trofeo de Primavera.</p>
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-fire text-amber-500 text-lg animate-pulse"></i>
+                        <i class="fa-solid fa-fire text-interBlue text-lg"></i>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="trofeo-carmen" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
-        <div class="bg-gradient-to-b from-gray-950 to-gray-900 border-2 border-amber-500/30 rounded-3xl p-6 sm:p-10 shadow-2xl">
-            
-            <div class="border-b border-gray-800 pb-6 mb-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4">
-                <div>
-                    <span class="bg-amber-500 text-black text-[10px] font-black uppercase px-3 py-1 rounded-full tracking-wider mb-3 inline-block">🏆 ¡CAMPEONES EN PALOMERAS!</span>
-                    <h2 class="text-3xl font-black text-white italic uppercase tracking-tight">LA CONQUISTA DEL TROFEO DEL CARMEN</h2>
-                    <p class="text-gray-400 text-xs mt-1"><i class="fa-solid fa-location-dot text-red-500 mr-1"></i> Sede: Polideportivo Palomeras • 13 y 14 de Junio</p>
-                </div>
-                <div class="flex bg-black p-1 rounded-xl border border-gray-800 text-xs font-black uppercase tracking-wider">
-                    <button onclick="switchCategory('alevin')" id="btn-alevin" class="px-4 py-2.5 rounded-lg text-black bg-amber-500 font-black transition duration-200">Alevín 👑</button>
-                    <button onclick="switchCategory('benjamin')" id="btn-benjamin" class="px-4 py-2.5 rounded-lg text-gray-400 hover:text-white transition duration-200">Benjamín</button>
-                    <button onclick="switchCategory('infantil')" id="btn-infantil" class="px-4 py-2.5 rounded-lg text-gray-400 hover:text-white transition duration-200">Infantil</button>
-                </div>
-            </div>
-
-            <div id="content-alevin" class="category-content grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div class="lg:col-span-5 space-y-4">
-                    <div class="bg-amber-500/10 border border-amber-500/30 p-6 rounded-2xl shadow-neon-gold">
-                        <span class="text-amber-400 font-black text-xs uppercase tracking-widest block mb-1">¡Resultado de la Gran Final!</span>
-                        <h3 class="text-2xl font-black text-white italic mb-2 uppercase">GOLEADA HISTÓRICA: 7 - 1</h3>
-                        <p class="text-xs text-gray-300 leading-relaxed mb-4">
-                            Nuestros alevines no dieron opción en la fase final. Tras superar la fase de grupos del sábado, el domingo desplegaron un fútbol espectacular en Palomeras para cerrar el torneo levantando la copa con un incontestable 7-1.
-                        </p>
-                        <div class="h-px bg-amber-500/20 my-3"></div>
-                        <h4 class="text-[10px] font-black uppercase text-gray-400 tracking-wider mb-2">Historial de Partidos:</h4>
-                        <ul class="space-y-2 text-xs">
-                            <li class="flex justify-between border-b border-gray-850 pb-1"><span class="text-gray-400">Partido 1</span> <strong class="text-white">INTER vs Hortaleza C</strong></li>
-                            <li class="flex justify-between border-b border-gray-850 pb-1"><span class="text-gray-400">Partido 2</span> <strong class="text-white">INTER vs Madrid Sur D</strong></li>
-                            <li class="flex justify-between pb-1"><span class="text-amber-400 font-black">¡GRAN FINAL!</span> <strong class="text-amber-400">INTER 7 - 1 RIVAL</strong></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="lg:col-span-7 flex justify-center">
-                    <img src="images/galeria/image_927440.jpg" alt="Horarios Alevín Torneo del Carmen" class="rounded-xl shadow-2xl border border-gray-800 max-h-[450px] w-full object-contain bg-black">
-                </div>
-            </div>
-
-            <div id="content-benjamin" class="category-content hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div class="lg:col-span-5 space-y-4">
-                    <div class="bg-black/40 border border-gray-800 p-6 rounded-2xl">
-                        <span class="text-red-400 font-black text-xs uppercase tracking-widest block mb-1">Fase de Grupos • Grupo 1</span>
-                        <h3 class="text-xl font-black text-white italic mb-4 uppercase">CALENDARIO BENJAMÍN</h3>
-                        <ul class="space-y-3 text-xs">
-                            <li class="flex justify-between border-b border-gray-850 pb-2"><span class="text-gray-400">9:50h - Partido 1</span> <strong class="text-white">INTER vs Hortaleza B</strong></li>
-                            <li class="flex justify-between pb-2"><span class="text-gray-400">11:40h - Partido 2</span> <strong class="text-white">INTER vs Vallecas CF</strong></li>
-                        </ul>
-                    </div>
-                    <div class="bg-gray-900/40 border border-gray-800 p-5 rounded-2xl text-xs text-gray-400 leading-relaxed">
-                        Nuestros benjamines compitieron con todo el corazón del barrio frente a grandes rivales en la matinal del sábado, dejando destellos de enorme calidad.
-                    </div>
-                </div>
-                <div class="lg:col-span-7 flex justify-center">
-                    <img src="images/galeria/image_92749b.jpg" alt="Horarios Benjamín Torneo del Carmen" class="rounded-xl shadow-2xl border border-gray-800 max-h-[450px] w-full object-contain bg-black">
-                </div>
-            </div>
-
-            <div id="content-infantil" class="category-content hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div class="lg:col-span-5 space-y-4">
-                    <div class="bg-black/40 border border-gray-800 p-6 rounded-2xl">
-                        <span class="text-red-400 font-black text-xs uppercase tracking-widest block mb-1">Fase de Grupos • Jornada Nocturna</span>
-                        <h3 class="text-xl font-black text-white italic mb-4 uppercase">CALENDARIO INFANTIL</h3>
-                        <ul class="space-y-3 text-xs">
-                            <li class="flex justify-between border-b border-gray-850 pb-2"><span class="text-gray-400">19:00h - Partido 1</span> <strong class="text-white">INTER vs EM Wilfred</strong></li>
-                            <li class="flex justify-between pb-2"><span class="text-gray-400">20:15h - Partido 2</span> <strong class="text-white">INTER vs Madrid Sur C</strong></li>
-                        </ul>
-                    </div>
-                    <div class="bg-gray-900/40 border border-gray-800 p-5 rounded-2xl text-xs text-gray-400 leading-relaxed">
-                        La plantilla del Infantil cerró la jornada del sábado bajo los focos de Palomeras, arropados por una grada espectacular que no paró de alentar.
-                    </div>
-                </div>
-                <div class="lg:col-span-7 flex justify-center">
-                    <img src="images/galeria/image_92776c.jpg" alt="Horarios Infantil Torneo del Carmen" class="rounded-xl shadow-2xl border border-gray-800 max-h-[450px] w-full object-contain bg-black">
-                </div>
-            </div>
-
-        </div>
-    </section>
-
+    <!-- SEPARADOR DE FRANJAS -->
     <div class="h-4 inter-stripes relative z-20"></div>
 
+    <!-- SECCIÓN DE GALERÍA DE MEDIOS -->
     <section id="galeria" class="bg-gradient-to-b from-interDark to-black py-20 relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <span class="text-interBlue font-black text-xs uppercase tracking-widest block mb-2">Contenido Multimedia Reciente</span>
-                <h2 class="text-4xl font-black text-white tracking-tight italic uppercase">GALERÍA DE LOS CAMPEONES</h2>
+                <h2 class="text-4xl font-black text-white tracking-tight italic uppercase">GALERÍA DE FOTOS Y RECUERDOS</h2>
                 <div class="h-1 w-16 bg-interBlue mx-auto mt-3"></div>
             </div>
 
@@ -307,7 +433,7 @@
                 <div class="relative w-full rounded-2xl overflow-hidden bg-black/30 aspect-[16/10] sm:aspect-[16/9] min-h-[380px] sm:min-h-[480px]">
 
                     <div id="carousel-container" class="flex transition-transform duration-500 ease-in-out h-full w-full">
-                        <p class="text-center w-full my-auto text-xs italic text-gray-500 py-10">Conectando con el catálogo de fotos...</p>
+                        <p class="text-center w-full my-auto text-xs italic text-gray-500 py-10">Sincronizando fotos de la galería...</p>
                     </div>
 
                     <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-interBlue text-white p-3 rounded-full border border-gray-700/50 backdrop-blur-sm transition z-30 transform hover:scale-110 active:scale-95">
@@ -318,7 +444,7 @@
                     </button>
 
                     <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/80 px-4 py-1.5 rounded-full border border-gray-880 text-[11px] font-black tracking-widest text-gray-300 z-30 select-none">
-                        ELEMENTO <span id="carousel-index" class="text-interBlue">0</span> / <span id="carousel-total">0</span>
+                        FOTO <span id="carousel-index" class="text-interBlue">0</span> / <span id="carousel-total">0</span>
                     </div>
                 </div>
             </div>
@@ -326,17 +452,20 @@
         </div>
     </section>
 
+    <!-- SEPARADOR DE FRANJAS -->
     <div class="h-4 inter-stripes relative z-20"></div>
 
+    <!-- SECCIÓN EL CLUB: PRECIOS Y SEDES -->
     <section id="el-club" class="bg-gradient-to-b from-black to-interDark/90 py-20 relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-interBlue font-black text-xs uppercase tracking-widest block mb-2">Transparencia e Información Oficial</span>
-                <h2 class="text-4xl font-black text-white tracking-tight italic uppercase">TARIFAS Y CONFIGURACIÓN TEMPORADA 26/27</h2>
+                <h2 class="text-4xl font-black text-white tracking-tight italic uppercase">TARIFAS TEMPORADA 2026 / 2027</h2>
                 <div class="h-1 w-16 bg-interBlue mx-auto mt-3"></div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 text-xs">
+                <!-- Tabla Federados -->
                 <div class="bg-gray-900/80 p-6 rounded-2xl border border-interBlue/20 shadow-md">
                     <h3 class="text-base font-black text-white italic uppercase tracking-wider mb-4 text-interBlue flex items-center">
                         <i class="fa-solid fa-shield-halved mr-2"></i> CATEGORÍAS FEDERADAS (ALEVÍN / INFANTIL)
@@ -362,6 +491,7 @@
                     </div>
                 </div>
 
+                <!-- Tabla Municipales -->
                 <div class="bg-gray-900/80 p-6 rounded-2xl border border-amber-500/20 shadow-md">
                     <h3 class="text-base font-black text-white italic uppercase tracking-wider mb-4 text-amber-400 flex items-center">
                         <i class="fa-solid fa-city mr-2"></i> CATEGORÍAS MUNICIPALES (BENJAMÍN / CADETE)
@@ -388,10 +518,9 @@
 
             <div class="bg-black/50 border border-gray-850 p-6 rounded-2xl mb-12 text-xs space-y-2 text-gray-400">
                 <p class="text-white font-black uppercase text-[10px] tracking-wider mb-1"><i class="fa-solid fa-circle-info text-interBlue mr-1"></i> Notas importantes sobre los pagos:</p>
-                <p>• El Kit de ropa incluye 2 equipaciones completas, chándal y mochila con zapatero. Se abona cada 2 años.</p>
+                <p>• El Kit de ropa incluye 2 equipaciones completas, chándal y mochila con zapatero.</p>
                 <p>• Los 50€ de inscripción se devolverán mensualmente de forma prorrateada exclusivamente a los antiguos alumnos.</p>
-                <p>• La inscripción (50€) se abonará por transferencia del 20 al 30 de junio. La ropa (70€) del 1 al 5 de julio.</p>
-                <p class="text-gray-200 font-mono select-all bg-gray-950 p-2 rounded border border-gray-900 mt-2">Cuenta Oficial del Club (IBAN): ES19 0128 0030 3701 0007 2933</p>
+                <p class="text-gray-200 font-mono select-all bg-gray-950 p-2 rounded border border-gray-900 mt-2">IBAN Cuenta Oficial: ES19 0128 0030 3701 0007 2933</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -406,43 +535,45 @@
                     <p class="text-sm text-gray-400">Orgullosos de estar arraigados en el <strong>CEIP Conde de Arruga</strong> y en el <strong>CEIP Real Armada</strong>.</p>
                 </div>
                 <div class="bg-gray-900/60 p-8 rounded-2xl border border-gray-850 hover:border-interBlue/40 hover:scale-105 transition duration-300 relative group overflow-hidden shadow-lg backdrop-blur-sm">
-                    <div class="text-4xl text-interBlue font-black mb-4"><i class="fa-solid fa-map-location-dot"></i> 2 Campos</div>
+                    <div class="text-4xl text-interBlue font-black mb-4"><i class="fa-solid fa-map-location-dot"></i> La Elipa</div>
                     <h3 class="text-xl font-bold text-white mb-2">Entrenamientos</h3>
-                    <p class="text-sm text-gray-400">Entrenamos entre el <strong>Polideportivo de La Elipa</strong> y el <strong>Polideportivo de Moratalaz</strong>.</p>
+                    <p class="text-sm text-gray-400">Entrenamientos fijados los Miércoles y Viernes de 16:30 a 17:30 en el Polideportivo de La Elipa.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- SECCIÓN DE INSCRIPCIONES Y PRUEBAS DE ACCESO -->
     <section id="pruebas" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         <div class="bg-gradient-to-r from-interBlue to-blue-900 rounded-3xl overflow-hidden shadow-neon-blue grid grid-cols-1 lg:grid-cols-12 backdrop-blur-sm">
             
+            <!-- LADO IZQUIERDO: DESCARGA DE HOJA OFICIAL -->
             <div class="lg:col-span-6 p-8 sm:p-12 flex flex-col justify-between bg-black/40 border-b-2 lg:border-b-0 lg:border-r-2 border-interBlue/30">
                 <div>
                     <span class="bg-amber-500 text-gray-950 text-[10px] font-black uppercase px-3 py-1 rounded-full tracking-wider mb-4 inline-block">📋 PROCESO DE MATRÍCULA 2026/2027</span>
-                    <h2 class="text-3xl sm:text-4xl font-black text-white italic tracking-tight uppercase mb-4">INSCRIPCIÓN OFICIAL <br><span class="text-amber-400">PASO A PASO</span></h2>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white italic tracking-tight uppercase mb-4">INSCRIPCIÓN OFICIAL <br><span class="text-amber-400">TEMPORADA 26/27</span></h2>
                     
                     <p class="text-gray-300 text-xs mb-6 leading-relaxed">
-                        Para formalizar la renovación o solicitar una nueva incorporación, es obligatorio cumplimentar el documento oficial del club que incluye las cláusulas legales y el uso de imágenes obligatorias (RGPD).
+                        Para formalizar la matrícula, es necesario enviar la hoja oficial cumplimentada y firmada por email para la gestión del seguro deportivo y licencias.
                     </p>
 
                     <div class="space-y-4 text-xs mb-8">
                         <div class="flex items-start space-x-3">
                             <div class="bg-amber-500 text-black rounded-full h-5 w-5 flex items-center justify-center font-black flex-shrink-0">1</div>
-                            <p class="text-gray-300"><strong class="text-white">Descarga el documento:</strong> Haz clic en el botón inferior para bajar la hoja guardada en la carpeta de documentos.</p>
+                            <p class="text-gray-300"><strong class="text-white">Descarga el documento:</strong> Pulsa el botón inferior para obtener el PDF.</p>
                         </div>
                         <div class="flex items-start space-x-3">
                             <div class="bg-amber-500 text-black rounded-full h-5 w-5 flex items-center justify-center font-black flex-shrink-0">2</div>
-                            <p class="text-gray-300"><strong class="text-white">Rellena y firma:</strong> Cumplimenta todos los campos en mayúsculas (datos bancarios, WhatsApp y consentimiento de fotos).</p>
+                            <p class="text-gray-300"><strong class="text-white">Rellena los datos:</strong> Cumplimenta los datos del jugador/a y la autorización.</p>
                         </div>
                         <div class="flex items-start space-x-3">
                             <div class="bg-amber-500 text-black rounded-full h-5 w-5 flex items-center justify-center font-black flex-shrink-0">3</div>
-                            <p class="text-gray-300"><strong class="text-white">Envío por Email:</strong> Envía el documento completamente escaneado o firmado digitalmente a la dirección: <strong class="text-amber-400 underline select-all">clubinterdemoratalaz@gmail.com</strong></p>
+                            <p class="text-gray-300"><strong class="text-white">Envío por Email:</strong> Mándalo a <strong class="text-amber-400 underline select-all">clubinterdemoratalaz@gmail.com</strong></p>
                         </div>
                     </div>
 
                     <a href="documents/Hoja_Inscripcion_Inter_26_27.PDF" download="Hoja_Inscripcion_Inter_26_27.PDF" class="inline-flex items-center justify-center w-full bg-amber-500 hover:bg-amber-600 text-gray-950 font-black uppercase tracking-wider text-xs py-4 px-6 rounded-xl transition transform hover:-translate-y-0.5 shadow-neon-gold text-center mb-6">
-                        <i class="fa-solid fa-file-pdf text-base mr-2"></i> DESCARGAR HOJA DE INSCRIPCIÓN OFICIAL
+                        <i class="fa-solid fa-file-pdf text-base mr-2"></i> DESCARGAR HOJA DE INSCRIPCIÓN PDF
                     </a>
                 </div>
 
@@ -452,39 +583,65 @@
                         <p class="text-xs font-black text-gray-200">C/ Encomienda de Palacios, 156 • 28030</p>
                     </div>
                     <div>
-                        <p class="text-[10px] text-gray-400 uppercase tracking-widest font-black">Contacto Directo Coordinación</p>
+                        <p class="text-[10px] text-gray-400 uppercase tracking-widest font-black">Contacto Coordinación</p>
                         <p class="text-sm font-black text-white"><i class="fa-solid fa-phone text-xs text-interBlue mr-1"></i> +34 615 024 116</p>
                     </div>
                 </div>
             </div>
 
+            <!-- LADO DERECHO: INSTAGRAM Y COMUNIDAD -->
             <div id="comunidad" class="lg:col-span-6 p-8 sm:p-12 bg-black/20 flex flex-col justify-center items-center text-center">
                 <div class="bg-gradient-to-tr from-purple-600 via-pink-500 to-amber-500 p-5 rounded-full shadow-insta-glow mb-6 text-4xl text-white transform hover:rotate-12 transition duration-300">
                     <i class="fa-brands fa-instagram"></i>
                 </div>
-                <h3 class="text-2xl font-black text-white italic tracking-tight uppercase mb-2">NUESTRA COMUNIDAD DIGITAL</h3>
+                <h3 class="text-2xl font-black text-white italic tracking-tight uppercase mb-2">¡SÍGUENOS EN DIRECTO!</h3>
                 <p class="text-gray-300 text-xs max-w-sm mb-8 leading-relaxed">
-                    No te pierdas los vídeos de los goles, las fotos de las jornadas en alta resolución y el día a día de todos nuestros planteles. ¡Forma parte de la grada virtual!
+                    Sigue en nuestras historias de Instagram los resultados de la pretemporada, fotos de cada entrenamiento y los horarios semanales.
                 </p>
                 <a href="https://www.instagram.com/clubinterdemoratalaz?igsh=MTJ0enYzZzA5ZHRqMA==" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 text-white font-black text-xs uppercase tracking-widest py-4 px-8 rounded-xl shadow-insta-glow transition transform hover:-translate-y-1 w-full max-w-xs flex items-center justify-center space-x-2">
                     <i class="fa-brands fa-instagram text-base"></i>
-                    <span>SEGUIR @CLUBINTERDEMORATALAZ</span>
+                    <span>VER @CLUBINTERDEMORATALAZ</span>
                 </a>
             </div>
 
         </div>
     </section>
 
+    <!-- REPRODUCTOR FLOTANTE PARA EL HIMNO DEL CLUB -->
+    <div class="fixed bottom-6 left-6 z-50 bg-black/90 backdrop-blur-md border border-interBlue/50 text-white px-4 py-3 rounded-2xl shadow-neon-blue flex items-center space-x-4 max-w-xs transition transform hover:scale-102 duration-300">
+        <audio id="club-anthem-audio" src="audio/himno.mp3" loop></audio>
+        
+        <button id="anthem-toggle-btn" class="bg-interBlue hover:bg-blue-700 text-white h-10 w-10 rounded-full flex items-center justify-center shadow-md transition transform active:scale-95 focus:outline-none" aria-label="Reproducir Himno">
+            <i id="anthem-icon" class="fa-solid fa-play text-sm pl-0.5"></i>
+        </button>
+
+        <div class="pr-2 select-none">
+            <p class="text-[10px] uppercase font-black tracking-widest text-interBlue leading-none mb-1">Himno Oficial</p>
+            <p class="text-xs font-black text-gray-200 tracking-tight whitespace-nowrap overflow-hidden text-ellipsis max-w-[140px]">Inter de Moratalaz</p>
+        </div>
+
+        <div id="anthem-eq" class="hidden flex items-end justify-between h-5 w-5 space-x-[2px]">
+            <span class="bg-amber-500 w-[3px] h-3 rounded-full animate-[bounce_0.8s_infinite_0.1s]"></span>
+            <span class="bg-amber-500 w-[3px] h-5 rounded-full animate-[bounce_0.5s_infinite_0.3s]"></span>
+            <span class="bg-amber-500 w-[3px] h-2 rounded-full animate-[bounce_0.7s_infinite_0s]"></span>
+            <span class="bg-amber-500 w-[3px] h-4 rounded-full animate-[bounce_0.6s_infinite_0.2s]"></span>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
     <footer class="bg-black text-gray-500 text-xs py-8 border-t border-gray-900 relative z-20 text-center">
         <div class="max-w-7xl mx-auto px-4 space-y-4">
             <p class="font-black tracking-widest text-gray-400 uppercase">© 2026 CLUB INTER DE MORATALAZ. TODOS LOS DERECHOS RESERVADOS.</p>
             <p class="max-w-md mx-auto text-[11px] text-gray-600">
-                Diseñado con identidad de barrio y ambición de campeones. Las imágenes y marcas del club están protegidas bajo regulaciones de la RGPD vigente.
+                Diseñado con identidad de barrio y ambición de campeones. Polideportivo Municipal de La Elipa.
             </p>
         </div>
     </footer>
 
-</div> <script>
+</div> <!-- CIERRE CONTENEDOR -->
+
+<!-- SCRIPTS DE INTERACTIVIDAD -->
+<script>
 // --- MENÚ MÓVIL ---
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -501,14 +658,14 @@ if (mobileMenuBtn && mobileMenu) {
     });
 }
 
-// --- SELECTOR DE CATEGORÍAS (TROFEO DEL CARMEN) ---
-function switchCategory(category) {
-    document.querySelectorAll('.category-content').forEach(el => el.classList.add('hidden'));
+// --- SELECTOR PRETEMPORADA (AMISTOSOS) ---
+function switchPreseason(category) {
+    document.querySelectorAll('.preseason-content').forEach(el => el.classList.add('hidden'));
     
-    const tabs = ['alevin', 'benjamin', 'infantil'];
+    const tabs = ['alevin-pre', 'benjamin-pre'];
     tabs.forEach(tab => {
         const btn = document.getElementById(`btn-${tab}`);
-        if (btn) btn.className = "px-4 py-2.5 rounded-lg text-gray-400 hover:text-white transition duration-200";
+        if (btn) btn.className = "px-6 py-3 rounded-xl text-gray-400 hover:text-white transition duration-200 flex items-center";
     });
 
     const activeContent = document.getElementById(`content-${category}`);
@@ -518,10 +675,30 @@ function switchCategory(category) {
     }
 
     const activeBtn = document.getElementById(`btn-${category}`);
-    if (activeBtn) activeBtn.className = "px-4 py-2.5 rounded-lg text-black bg-amber-500 font-black transition duration-200";
+    if (activeBtn) activeBtn.className = "px-6 py-3 rounded-xl text-black bg-amber-500 font-black transition duration-200 flex items-center";
 }
 
-// --- CARRUSEL DINÁMICO VIA GITHUB API ---
+// --- LÓGICA REPRODUCTOR HIMNO ---
+const anthemAudio = document.getElementById('club-anthem-audio');
+const anthemToggleBtn = document.getElementById('anthem-toggle-btn');
+const anthemIcon = document.getElementById('anthem-icon');
+const anthemEq = document.getElementById('anthem-eq');
+
+if (anthemAudio && anthemToggleBtn) {
+    anthemToggleBtn.addEventListener('click', () => {
+        if (anthemAudio.paused) {
+            anthemAudio.play();
+            anthemIcon.className = "fa-solid fa-pause text-sm";
+            anthemEq.classList.remove('hidden');
+        } else {
+            anthemAudio.pause();
+            anthemIcon.className = "fa-solid fa-play text-sm pl-0.5";
+            anthemEq.classList.add('hidden');
+        }
+    });
+}
+
+// --- CARRUSEL DINÁMICO GITHUB ---
 const GITHUB_USER = "elupi28-star";
 const GITHUB_REPO = "InterdeMoratalaz";
 
@@ -543,8 +720,6 @@ async function loadGalleryFromGitHub() {
         
         const files = await response.json();
         
-        // Filtramos para cargar únicamente archivos de tipo imagen válidos
-        // Excluimos explícitamente los carteles de horarios (image_927...) y otros recursos de la app
         const images = files.filter(file => {
             const fileName = file.name.toLowerCase();
             const isImage = VALID_EXTENSIONS.some(ext => fileName.endsWith(ext));
@@ -554,21 +729,20 @@ async function loadGalleryFromGitHub() {
         });
 
         if (images.length === 0) {
-            CONTAINER.innerHTML = `<p class="text-center w-full my-auto text-xs italic text-gray-400 py-10">No se encontraron imágenes de galería en el repositorio.</p>`;
+            CONTAINER.innerHTML = `<p class="text-center w-full my-auto text-xs italic text-gray-400 py-10">No hay fotos en la carpeta de galería.</p>`;
             return;
         }
 
-        // Mapeamos las rutas relativas de los archivos para usarlas como origen
         carouselItems = images.map((file, index) => ({
             src: file.path, 
-            alt: `Galería Inter - Foto ${index + 1}`
+            alt: `Inter de Moratalaz - Foto ${index + 1}`
         }));
 
         renderCarousel();
 
     } catch (error) {
-        console.error("Error cargando la galería dinámica:", error);
-        CONTAINER.innerHTML = `<p class="text-center w-full my-auto text-xs text-red-400 py-10"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Error al sincronizar con las imágenes de GitHub.</p>`;
+        console.error("Error cargando fotos:", error);
+        CONTAINER.innerHTML = `<p class="text-center w-full my-auto text-xs text-red-400 py-10"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Error de conexión con GitHub.</p>`;
     }
 }
 
@@ -597,7 +771,6 @@ function updateCarousel() {
     INDEX_EL.textContent = currentIndex + 1;
 }
 
-// Controles del carrusel
 document.getElementById('next-btn').addEventListener('click', () => {
     if (carouselItems.length === 0) return;
     currentIndex = (currentIndex + 1) % carouselItems.length;
@@ -610,7 +783,6 @@ document.getElementById('prev-btn').addEventListener('click', () => {
     updateCarousel();
 });
 
-// Inicialización
 document.addEventListener('DOMContentLoaded', () => {
     loadGalleryFromGitHub();
 });
