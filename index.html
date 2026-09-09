@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Club Inter de Moratalaz | Sitio Oficial</title>
+    <title>Club Inter de Moratalaz | Escuela de Fútbol Base en Madrid</title>
+    <meta name="description" content="Sitio oficial del Club Inter de Moratalaz. Información sobre equipos de fútbol base, horarios de entrenamientos, inscripciones y partidos en Moratalaz (Madrid).">
+    <meta name="robots" content="index, follow">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome para Iconos -->
@@ -43,7 +45,7 @@
 
 <!-- MARCA DE AGUA DEL ESCUDO (FONDO DE TODA LA PÁGINA) -->
 <div class="fixed inset-0 flex items-center justify-center pointer-events-none opacity-[0.12] z-0 select-none">
-    <img src="images/galeria/image_b5457f.png" alt="Escudo de Fondo Inter de Moratalaz" class="w-[75vw] max-w-[850px] object-contain rounded-full">
+    <img src="images/galeria/image_b5457f.png" alt="Escudo oficial del Club de Fútbol Inter de Moratalaz en marca de agua de fondo" class="w-[75vw] max-w-[850px] object-contain rounded-full">
 </div>
 
 <!-- CONTENEDOR PRINCIPAL -->
@@ -62,7 +64,7 @@
             <div class="flex items-center justify-between h-28">
                 <div class="flex items-center space-x-5">
                     <div class="h-20 w-20 sm:h-24 sm:w-24 rounded-full overflow-hidden bg-[#e6e6e8] p-0.5 shadow-md flex items-center justify-center transition transform hover:scale-105 duration-300 flex-shrink-0">
-                        <img src="images/galeria/image_b5457f.png" alt="Escudo Inter de Moratalaz" class="h-full w-full object-contain rounded-full">
+                        <img src="images/galeria/image_b5457f.png" alt="Escudo oficial del Club de Fútbol Inter de Moratalaz" class="h-full w-full object-contain rounded-full">
                     </div>
                     <div>
                         <span class="text-xl sm:text-3xl font-black tracking-tighter text-white block italic">INTER DE MORATALAZ</span>
@@ -115,10 +117,10 @@
                 <i class="fa-solid fa-bolt animate-pulse"></i> <span>TEMPORADA 2026 / 2027 • ¡YA ESTAMOS DE VUELTA!</span>
             </div>
 
-            <!-- Titular Grande -->
+            <!-- Titular Grande H1 Principal para SEO -->
             <h1 class="text-4xl sm:text-7xl font-black text-white italic tracking-tighter leading-none uppercase mb-6">
-                ¡NUEVO CURSO, <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 drop-shadow-sm">MISMA PASIÓN!</span>
+                Club de Fútbol Inter de Moratalaz <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 drop-shadow-sm">¡NUEVO CURSO, MISMA PASIÓN!</span>
             </h1>
             
             <p class="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10 font-medium leading-relaxed">
@@ -412,10 +414,10 @@
                         <p class="text-center w-full my-auto text-xs italic text-gray-500 py-10">Sincronizando fotos de la galería...</p>
                     </div>
 
-                    <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-interBlue text-white p-3 rounded-full border border-gray-700/50 backdrop-blur-sm transition z-30 transform hover:scale-110 active:scale-95">
+                    <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-interBlue text-white p-3 rounded-full border border-gray-700/50 backdrop-blur-sm transition z-30 transform hover:scale-110 active:scale-95" aria-label="Imagen anterior">
                         <i class="fa-solid fa-chevron-left text-base"></i>
                     </button>
-                    <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-interBlue text-white p-3 rounded-full border border-gray-700/50 backdrop-blur-sm transition z-30 transform hover:scale-110 active:scale-95">
+                    <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-interBlue text-white p-3 rounded-full border border-gray-700/50 backdrop-blur-sm transition z-30 transform hover:scale-110 active:scale-95" aria-label="Imagen siguiente">
                         <i class="fa-solid fa-chevron-right text-base"></i>
                     </button>
 
@@ -691,7 +693,7 @@ async function loadGalleryFromGitHub() {
 
         carouselItems = images.map((file, index) => ({
             src: file.path, 
-            alt: `Inter de Moratalaz - Foto ${index + 1}`
+            alt: `Fotografía del Club de Fútbol Inter de Moratalaz - Imagen ${index + 1}`
         }));
 
         renderCarousel();
@@ -730,12 +732,6 @@ function updateCarousel() {
 document.getElementById('next-btn').addEventListener('click', () => {
     if (carouselItems.length === 0) return;
     currentIndex = (currentIndex + 1) % carouselItems.length;
-    updateCarousel();
-});
-
-document.getElementById('prev-btn').addEventListener('click', () => {
-    if (carouselItems.length === 0) return;
-    currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
     updateCarousel();
 });
 
