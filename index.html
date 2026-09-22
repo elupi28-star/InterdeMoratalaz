@@ -32,6 +32,16 @@
             background-image: linear-gradient(90deg, #111111 0px, #111111 25px, #0044cc 25px, #0044cc 50px);
             background-size: 50px 100%;
         }
+        @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); filter: brightness(1); }
+            50% { transform: scale(1.03); filter: brightness(1.15); }
+        }
+        .sponsor-card {
+            animation: pulseGlow 4s ease-in-out infinite;
+        }
+        .sponsor-card:nth-child(2) {
+            animation-delay: 2s;
+        }
     </style>
 </head>
 <body class="bg-interDark text-gray-100 font-sans antialiased overflow-x-hidden relative">
@@ -96,7 +106,7 @@
         </div>
     </nav>
 
-    <!-- HERO PRINCIPAL (TITULAR OPTIMIZADO Y EQUILIBRADO) -->
+    <!-- HERO PRINCIPAL -->
     <header id="inicio" class="relative bg-black py-20 px-4 text-center overflow-hidden border-b-4 border-black">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-interBlue/20 rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -495,26 +505,34 @@
 
     <div class="h-4 inter-stripes relative z-20"></div>
 
-    <!-- SECCIÓN NUESTROS COLABORADORES -->
+    <!-- SECCIÓN NUESTROS COLABORADORES (CON ANIMACIÓN INTERACTIVA PROFESIONAL) -->
     <section id="colaboradores" class="bg-black py-16 border-t border-b border-gray-900 relative z-10">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <span class="text-amber-400 font-black text-xs uppercase tracking-widest block mb-2">APOYANDO AL DEPORTE DE BARRIO</span>
-            <h2 class="text-3xl font-black text-white italic uppercase tracking-tight mb-10">NUESTROS COLABORADORES</h2>
+            <h2 class="text-3xl font-black text-white italic uppercase tracking-tight mb-12">NUESTROS COLABORADORES</h2>
             
-            <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16">
-                <div class="flex flex-col items-center group">
-                    <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border-2 border-interBlue/40 bg-black p-3 shadow-neon-blue transition transform group-hover:scale-105 duration-300">
-                        <img src="images/colaboradores/el-july.jpg" alt="Bar El July - Colaborador Oficial" class="w-full h-full object-contain rounded-xl">
+            <div class="flex flex-wrap items-center justify-center gap-10 md:gap-20">
+                
+                <!-- Colaborador 1: Bar El July -->
+                <div class="flex flex-col items-center group sponsor-card">
+                    <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-3xl overflow-hidden border-2 border-interBlue/60 bg-gradient-to-b from-gray-900 to-black p-3.5 shadow-neon-blue transition-all duration-500 transform group-hover:scale-110 group-hover:border-interBlue group-hover:shadow-[0_0_35px_rgba(0,82,204,0.7)] relative">
+                        <img src="images/colaboradores/el-july.jpg" alt="Bar El July - Colaborador Oficial" class="w-full h-full object-contain rounded-2xl filter group-hover:brightness-110 transition duration-300">
+                        <div class="absolute inset-0 bg-interBlue/10 opacity-0 group-hover:opacity-100 transition duration-300 rounded-3xl pointer-events-none"></div>
                     </div>
-                    <span class="text-xs font-black text-gray-300 mt-4 uppercase tracking-wider group-hover:text-amber-400 transition">Bar El July</span>
+                    <span class="text-xs font-black text-gray-200 mt-5 uppercase tracking-widest group-hover:text-amber-400 transition">Bar El July</span>
+                    <span class="text-[10px] text-gray-500 font-bold uppercase mt-0.5 tracking-wider">Patrocinador Oficial</span>
                 </div>
 
-                <div class="flex flex-col items-center group">
-                    <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border-2 border-amber-500/40 bg-black p-3 shadow-neon-gold transition transform group-hover:scale-105 duration-300">
-                        <img src="images/colaboradores/pobre-nico.jpg" alt="Cervecería Pobre Nico - Colaborador Oficial" class="w-full h-full object-contain rounded-xl">
+                <!-- Colaborador 2: Cervecería Pobre Nico -->
+                <div class="flex flex-col items-center group sponsor-card">
+                    <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-3xl overflow-hidden border-2 border-amber-500/60 bg-gradient-to-b from-gray-900 to-black p-3.5 shadow-neon-gold transition-all duration-500 transform group-hover:scale-110 group-hover:border-amber-400 group-hover:shadow-[0_0_35px_rgba(245,158,11,0.7)] relative">
+                        <img src="images/colaboradores/pobre-nico.jpg" alt="Cervecería Pobre Nico - Colaborador Oficial" class="w-full h-full object-contain rounded-2xl filter group-hover:brightness-110 transition duration-300">
+                        <div class="absolute inset-0 bg-amber-500/10 opacity-0 group-hover:opacity-100 transition duration-300 rounded-3xl pointer-events-none"></div>
                     </div>
-                    <span class="text-xs font-black text-gray-300 mt-4 uppercase tracking-wider group-hover:text-amber-400 transition">Cervecería Pobre Nico</span>
+                    <span class="text-xs font-black text-gray-200 mt-5 uppercase tracking-widest group-hover:text-amber-400 transition">Cervecería Pobre Nico</span>
+                    <span class="text-[10px] text-gray-500 font-bold uppercase mt-0.5 tracking-wider">Patrocinador Oficial</span>
                 </div>
+
             </div>
         </div>
     </section>
