@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Inter de Moratalaz | Escuela de Fútbol Base en Madrid</title>
+    <meta name="description" content="Sitio oficial del Club Inter de Moratalaz. Información sobre equipos de fútbol base, horarios de entrenamientos y partidos en Moratalaz (Madrid).">
+    <meta name="robots" content="index, follow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        interBlue: '#0052CC',
+                        interBlack: '#111111',
+                        interDark: '#0a0a0c',
+                        interStripes: '#003bb3',
+                    },
+                    boxShadow: {
+                        'neon-blue': '0 0 25px rgba(0, 82, 204, 0.45)',
+                        'neon-gold': '0 0 25px rgba(245, 158, 11, 0.5)',
+                        'insta-glow': '0 4px 15px rgba(236, 72, 153, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .inter-stripes {
+            background-image: linear-gradient(90deg, #111111 0px, #111111 25px, #0044cc 25px, #0044cc 50px);
+            background-size: 50px 100%;
+        }
+    </style>
+</head>
+<body class="bg-interDark text-gray-100 font-sans antialiased overflow-x-hidden relative">
+
+<!-- MARCA DE AGUA DEL ESCUDO -->
+<div class="fixed inset-0 flex items-center justify-center pointer-events-none opacity-[0.12] z-0 select-none">
+    <img src="images/galeria/image_b5457f.png" alt="Escudo oficial del Club de Fútbol Inter de Moratalaz" class="w-[75vw] max-w-[850px] object-contain rounded-full">
+</div>
+
+<div class="relative z-10 flex flex-col min-h-screen">
+
+    <!-- BARRA DE ANUNCIO SUPERIOR -->
+    <div class="bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black text-center py-2 px-4 text-xs font-black tracking-widest uppercase relative z-50 shadow-md flex items-center justify-center gap-2">
+        <i class="fa-solid fa-trophy text-black animate-bounce"></i>
+        <span>¡SIGUE LA COMPETICIÓN OFICIAL Y CONSULTA LAS CLASIFICACIONES!</span>
+        <i class="fa-solid fa-futbol text-black animate-spin"></i>
+    </div>
+
+    <!-- NAVBAR PRINCIPAL -->
+    <nav class="bg-black/95 backdrop-blur-md sticky top-0 z-50 border-b-2 border-interBlue shadow-neon-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-28">
+                <div class="flex items-center space-x-5">
+                    <a href="index.html" class="h-20 w-20 sm:h-24 sm:w-24 rounded-full overflow-hidden bg-[#e6e6e8] p-0.5 shadow-md flex items-center justify-center transition transform hover:scale-105 duration-300 flex-shrink-0">
+                        <img src="images/galeria/image_b5457f.png" alt="Escudo oficial del Club de Fútbol Inter de Moratalaz" class="h-full w-full object-contain rounded-full">
+                    </a>
+                    <div>
+                        <span class="text-xl sm:text-3xl font-black tracking-tighter text-white block italic">INTER DE MORATALAZ</span>
+                        <span class="text-xs text-interBlue font-black tracking-widest uppercase block">Creciendo desde el barrio</span>
+                    </div>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-6 text-xs font-black uppercase tracking-wider">
+                    <a href="#inicio" class="text-interBlue hover:text-white transition">Inicio</a>
+                    <a href="#clasificaciones" class="text-amber-400 hover:text-amber-300 transition flex items-center"><i class="fa-solid fa-trophy mr-1"></i> Clasificaciones</a>
+                    <a href="#horarios" class="hover:text-interBlue transition"><i class="fa-solid fa-clock mr-1"></i> Horarios</a>
+                    <a href="temporada2526.html" class="text-amber-400 hover:text-amber-300 transition flex items-center bg-amber-500/10 px-3 py-1.5 rounded-md border border-amber-500/20 shadow-neon-gold"><i class="fa-solid fa-star mr-1"></i> Temporada 25/26</a>
+                    <a href="#galeria" class="hover:text-interBlue transition"><i class="fa-solid fa-images mr-1"></i> Galería</a>
+                    <a href="#el-club" class="hover:text-interBlue transition">El Club y Tarifas</a>
+                    <a href="#comunidad" class="hover:text-pink-500 transition"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                </div>
+
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-interBlue focus:outline-none p-2 rounded-md transition duration-200" aria-label="Abrir menú">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-black/95 border-t border-gray-900 px-4 py-6 space-y-4 text-xs font-black uppercase tracking-wider transition-all duration-300 shadow-inner">
+            <a href="#inicio" class="block text-interBlue hover:text-white py-2 border-b border-gray-900">Inicio</a>
+            <a href="#clasificaciones" class="block text-amber-400 hover:text-amber-300 py-2 border-b border-gray-900 flex items-center"><i class="fa-solid fa-trophy mr-2"></i> Clasificaciones Oficiales</a>
+            <a href="#horarios" class="block text-gray-300 hover:text-interBlue py-2 border-b border-gray-900"><i class="fa-solid fa-clock mr-2"></i> Horarios</a>
+            <a href="temporada2526.html" class="block text-amber-400 hover:text-amber-300 py-2 border-b border-gray-900 flex items-center"><i class="fa-solid fa-star mr-2"></i> Temporada 25/26</a>
+            <a href="#galeria" class="block text-gray-300 hover:text-interBlue py-2 border-b border-gray-900"><i class="fa-solid fa-images mr-2"></i> Galería</a>
+            <a href="#el-club" class="block text-gray-300 hover:text-interBlue py-2 border-b border-gray-900">El Club y Tarifas</a>
+            <a href="#comunidad" class="block text-gray-300 hover:text-pink-500 py-2 border-b border-gray-900">Instagram</a>
+        </div>
+    </nav>
+
+    <!-- HERO PRINCIPAL -->
+    <header id="inicio" class="relative bg-black py-24 px-4 text-center overflow-hidden border-b-4 border-black">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-interBlue/20 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto relative z-10 pt-2">
+            <div class="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/40 text-amber-400 text-xs font-black uppercase px-5 py-2 rounded-full tracking-widest mb-6 shadow-neon-gold">
+                <i class="fa-solid fa-shield-halved animate-pulse"></i> <span>COMPETICIÓN OFICIAL • ¡SENTIMIENTO E INTER!</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-7xl font-black text-white italic tracking-tighter leading-none uppercase mb-6">
+                Club de Fútbol Inter de Moratalaz <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 drop-shadow-sm">ORGULLO DE BARRIO • SENTIMIENTO EN CADA JORNADA</span>
+            </h1>
+            
+            <p class="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto font-medium leading-relaxed">
+                Nuestros equipos defienden con pasión los colores del club cada semana en los campos de Madrid.
+            </p>
+        </div>
+    </header>
+
+    <div class="h-4 inter-stripes shadow-inner relative z-20"></div>
+
+    <!-- SECCIÓN DE ACCESO RÁPIDO A CLASIFICACIONES -->
+    <section id="clasificaciones" class="bg-gradient-to-b from-black via-gray-950 to-interDark py-16 relative z-10 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="bg-amber-500/10 text-amber-400 border border-amber-500/30 font-black text-xs uppercase px-4 py-1.5 rounded-full tracking-widest inline-block mb-3 shadow-neon-gold">
+                    <i class="fa-solid fa-ranking-star mr-1"></i> COMPROBAR RESULTADOS AL INSTANTE
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight italic uppercase">
+                    CALENDARIOS Y CLASIFICACIONES
+                </h2>
+                <p class="text-gray-400 text-xs sm:text-sm mt-3">Haz clic en la categoría de tu equipo para ir directamente a la ficha de competición oficial</p>
+            </div>
+
+            <!-- TARJETAS DESTACADAS CADA CATEGORÍA -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                
+                <!-- BOTÓN BENJAMÍN -->
+                <a href="#" class="group relative bg-gradient-to-b from-gray-900 to-black border-2 border-gray-800 hover:border-amber-500 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-neon-gold flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-gray-800 text-gray-300 text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider">MUNICIPAL</span>
+                            <i class="fa-solid fa-child-reaching text-2xl text-gray-500 group-hover:text-amber-400 transition"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white italic uppercase tracking-tight mb-1">BENJAMÍN</h3>
+                        <p class="text-[11px] text-gray-400 mb-6">Fútbol 7</p>
+                    </div>
+                    <div class="w-full bg-gray-800 group-hover:bg-amber-500 text-gray-300 group-hover:text-black font-black text-xs uppercase tracking-wider py-3 px-4 rounded-xl text-center transition flex items-center justify-center space-x-2">
+                        <span>Ver Clasificación</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </div>
+                </a>
+
+                <!-- BOTÓN ALEVÍN (ACTIVO) -->
+                <a href="https://www.rffm.es/competicion/calendario?temporada=22&tipojuego=2&competicion=26738071&grupo=26738090" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-b from-gray-900 via-blue-950/40 to-black border-2 border-interBlue hover:border-blue-400 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-neon-blue flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-amber-500 text-black text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider shadow-neon-gold">RFFM OFICIAL</span>
+                            <i class="fa-solid fa-trophy text-2xl text-amber-400 animate-pulse"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white italic uppercase tracking-tight mb-1">ALEVÍN</h3>
+                        <p class="text-[11px] text-gray-400 mb-6">Fútbol 7</p>
+                    </div>
+                    <div class="w-full bg-interBlue group-hover:bg-blue-600 text-white font-black text-xs uppercase tracking-wider py-3 px-4 rounded-xl text-center transition flex items-center justify-center space-x-2 shadow-neon-blue">
+                        <i class="fa-solid fa-globe text-xs"></i>
+                        <span>Ver Clasificación</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </div>
+                </a>
+
+                <!-- BOTÓN INFANTIL (ACTIVO) -->
+                <a href="https://www.rffm.es/competicion/calendario?temporada=22&tipojuego=1&competicion=26738324&grupo=26738347&jornada=1" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-b from-gray-900 via-blue-950/40 to-black border-2 border-interBlue hover:border-blue-400 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-neon-blue flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-amber-500 text-black text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider shadow-neon-gold">RFFM OFICIAL</span>
+                            <i class="fa-solid fa-trophy text-2xl text-amber-400 animate-pulse"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white italic uppercase tracking-tight mb-1">INFANTIL</h3>
+                        <p class="text-[11px] text-gray-400 mb-6">Fútbol 11</p>
+                    </div>
+                    <div class="w-full bg-interBlue group-hover:bg-blue-600 text-white font-black text-xs uppercase tracking-wider py-3 px-4 rounded-xl text-center transition flex items-center justify-center space-x-2 shadow-neon-blue">
+                        <i class="fa-solid fa-globe text-xs"></i>
+                        <span>Ver Clasificación</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </div>
+                </a>
+
+                <!-- BOTÓN CADETE -->
+                <a href="#" class="group relative bg-gradient-to-b from-gray-900 to-black border-2 border-gray-800 hover:border-amber-500 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-neon-gold flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-gray-800 text-gray-300 text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider">MUNICIPAL</span>
+                            <i class="fa-solid fa-user-ninja text-2xl text-gray-500 group-hover:text-amber-400 transition"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-white italic uppercase tracking-tight mb-1">CADETE</h3>
+                        <p class="text-[11px] text-gray-400 mb-6">Fútbol 11</p>
+                    </div>
+                    <div class="w-full bg-gray-800 group-hover:bg-amber-500 text-gray-300 group-hover:text-black font-black text-xs uppercase tracking-wider py-3 px-4 rounded-xl text-center transition flex items-center justify-center space-x-2">
+                        <span>Ver Clasificación</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE HORARIOS DE ENTRENAMIENTO -->
+    <section id="horarios" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="bg-interBlue/20 text-interBlue border border-interBlue/40 font-black text-xs uppercase px-4 py-1.5 rounded-full tracking-widest inline-block mb-3">
+                <i class="fa-solid fa-clock mr-1"></i> DETALLES DE ENTRENAMIENTO
+            </span>
+            <h2 class="text-4xl sm:text-5xl font-black text-white tracking-tight italic uppercase">SEDES Y HORARIOS</h2>
+            <div class="h-1 w-24 bg-interBlue mx-auto mt-4"></div>
+        </div>
+
+        <div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="bg-gradient-to-b from-gray-900 to-black border border-interBlue/40 rounded-2xl p-6 shadow-xl flex items-start space-x-4">
+                    <div class="bg-interBlue/20 border border-interBlue/50 text-interBlue p-4 rounded-xl text-2xl flex-shrink-0">
+                        <i class="fa-solid fa-child"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest block">Fútbol 7</span>
+                        <h4 class="text-lg font-black text-white uppercase italic">Benjamín y Alevín</h4>
+                        <p class="text-xs text-gray-300 mt-1 mb-3"><i class="fa-solid fa-map-pin text-red-500 mr-1"></i> Polideportivo La Elipa</p>
+                        <div class="bg-black/60 border border-gray-800 p-2.5 rounded-lg inline-block w-full">
+                            <span class="text-[10px] text-gray-400 uppercase font-bold block mb-0.5">Días de entreno:</span>
+                            <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-clock text-interBlue mr-1"></i> Miércoles y Viernes de 16:30 a 17:30</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-b from-gray-900 to-black border border-interBlue/40 rounded-2xl p-6 shadow-xl flex items-start space-x-4">
+                    <div class="bg-interBlue/20 border border-interBlue/50 text-interBlue p-4 rounded-xl text-2xl flex-shrink-0">
+                        <i class="fa-solid fa-user-ninja"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest block">Fútbol 11</span>
+                        <h4 class="text-lg font-black text-white uppercase italic">Infantil y Cadete</h4>
+                        <p class="text-xs text-gray-300 mt-1 mb-3"><i class="fa-solid fa-map-pin text-red-500 mr-1"></i> Polideportivo de Moratalaz</p>
+                        <div class="bg-black/60 border border-gray-800 p-2.5 rounded-lg inline-block w-full">
+                            <span class="text-[10px] text-gray-400 uppercase font-bold block mb-0.5">Días de entreno:</span>
+                            <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-clock text-interBlue mr-1"></i> Miércoles y Viernes de 16:00 a 17:30</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="h-4 inter-stripes relative z-20"></div>
+
+    <!-- GALERÍA DE MEDIOS -->
+    <section id="galeria" class="bg-gradient-to-b from-interDark to-black py-20 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-interBlue font-black text-xs uppercase tracking-widest block mb-2">Contenido Multimedia</span>
+                <h2 class="text-4xl font-black text-white tracking-tight italic uppercase">GALERÍA DE FOTOS</h2>
+                <div class="h-1 w-16 bg-interBlue mx-auto mt-3"></div>
+            </div>
+
+            <div class="relative p-3 sm:p-6 rounded-3xl bg-gradient-to-br from-gray-900/70 via-black/50 to-blue-950/40 border border-gray-800 shadow-neon-blue backdrop-blur-md max-w-4xl mx-auto">
+                <div class="relative w-full rounded-2xl overflow-hidden bg-black/30 aspect-[16/10] sm:aspect-[16/9] min-h-[380px] sm:min-h-[480px]">
+                    <div id="carousel-container" class="flex transition-transform duration-500 ease-in-out h-full w-full"></div>
+
+                    <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-interBlue text-white p-3 rounded-full border border-gray-700/50 backdrop-blur-sm transition z-30 transform hover:scale-110 active:scale-95" aria-label="Anterior">
+                        <i class="fa-solid fa-chevron-left text-base"></i>
+                    </button>
+                    <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-interBlue text-white p-3 rounded-full border border-gray-700/50 backdrop-blur-sm transition z-30 transform hover:scale-110 active:scale-95" aria-label="Siguiente">
+                        <i class="fa-solid fa-chevron-right text-base"></i>
+                    </button>
+
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/80 px-4 py-1.5 rounded-full border border-gray-880 text-[11px] font-black tracking-widest text-gray-300 z-30 select-none">
+                        FOTO <span id="carousel-index" class="text-interBlue">1</span> / <span id="carousel-total">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="h-4 inter-stripes relative z-20"></div>
+
+    <!-- SECCIÓN EL CLUB Y TARIFAS -->
+    <section id="el-club" class="bg-gradient-to-b from-black to-interDark/90 py-20 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-interBlue font-black text-xs uppercase tracking-widest block mb-2">Desglose Económico Oficial</span>
+                <h2 class="text-4xl font-black text-white tracking-tight italic uppercase">TARIFAS Y CUOTAS</h2>
+                <div class="h-1 w-16 bg-interBlue mx-auto mt-3"></div>
+            </div>
+
+            <!-- TABLAS CUOTAS -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 text-xs">
+                
+                <!-- FEDERADO -->
+                <div class="bg-gray-900/90 p-6 rounded-2xl border-2 border-interBlue/40 shadow-neon-blue">
+                    <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
+                        <h3 class="text-base font-black text-white italic uppercase tracking-wider text-interBlue flex items-center">
+                            <i class="fa-solid fa-shield-halved mr-2"></i> FEDERADO
+                        </h3>
+                        <span class="text-[10px] bg-interBlue/20 text-interBlue border border-interBlue/30 px-2 py-0.5 rounded font-black">ALEVÍN / INFANTIL</span>
+                    </div>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="border-b border-gray-800 text-gray-400 font-bold text-[11px]">
+                                    <th class="pb-2">CONCEPTO</th>
+                                    <th class="pb-2 text-center text-blue-400">ANTIGUO ALEVÍN</th>
+                                    <th class="pb-2 text-center text-blue-400">ANTIGUO INFANTIL</th>
+                                    <th class="pb-2 text-center text-purple-400">NUEVO ALEVÍN</th>
+                                    <th class="pb-2 text-center text-purple-400">NUEVO INFANTIL</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-300 divide-y divide-gray-850">
+                                <tr>
+                                    <td class="py-2.5 font-medium">Inscripción <span class="text-[9px] text-gray-500 block">(descuenta antiguo)</span></td>
+                                    <td class="text-center font-bold">50 €</td>
+                                    <td class="text-center font-bold">50 €</td>
+                                    <td class="text-center font-bold">50 €</td>
+                                    <td class="text-center font-bold">50 €</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 font-medium">Ropa</td>
+                                    <td class="text-center font-bold">70 €</td>
+                                    <td class="text-center font-bold">70 €</td>
+                                    <td class="text-center font-bold">70 €</td>
+                                    <td class="text-center font-bold">70 €</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 font-medium">Cuota Mensual x10</td>
+                                    <td class="text-center">45 €</td>
+                                    <td class="text-center">50 €</td>
+                                    <td class="text-center">50 €</td>
+                                    <td class="text-center">55 €</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 font-medium">Cuota Anual</td>
+                                    <td class="text-center">450 €</td>
+                                    <td class="text-center">500 €</td>
+                                    <td class="text-center">500 €</td>
+                                    <td class="text-center">550 €</td>
+                                </tr>
+                                <tr class="text-amber-400 font-black bg-black/40 text-sm">
+                                    <td class="py-3 uppercase text-xs pl-2">TOTAL</td>
+                                    <td class="text-center">570 €</td>
+                                    <td class="text-center">620 €</td>
+                                    <td class="text-center">620 €</td>
+                                    <td class="text-center">670 €</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- MUNICIPAL -->
+                <div class="bg-gray-900/90 p-6 rounded-2xl border-2 border-amber-500/40 shadow-neon-gold">
+                    <div class="flex items-center justify-between mb-4 border-b border-gray-800 pb-3">
+                        <h3 class="text-base font-black text-white italic uppercase tracking-wider text-amber-400 flex items-center">
+                            <i class="fa-solid fa-city mr-2"></i> MUNICIPAL
+                        </h3>
+                        <span class="text-[10px] bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded font-black">BENJAMÍN Y CADETE</span>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="border-b border-gray-800 text-gray-400 font-bold text-[11px]">
+                                    <th class="pb-2">CONCEPTO</th>
+                                    <th class="pb-2 text-center text-blue-400">ANTIGUO</th>
+                                    <th class="pb-2 text-center text-purple-400">NUEVO</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-300 divide-y divide-gray-850">
+                                <tr>
+                                    <td class="py-2.5 font-medium">Inscripción</td>
+                                    <td class="text-center font-bold">50 €</td>
+                                    <td class="text-center font-bold">50 €</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 font-medium">Ropa</td>
+                                    <td class="text-center font-bold">70 €</td>
+                                    <td class="text-center font-bold">70 €</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 font-medium">Cuota Mensual x10</td>
+                                    <td class="text-center">35 €</td>
+                                    <td class="text-center">40 €</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2.5 font-medium">Cuota Anual</td>
+                                    <td class="text-center">350 €</td>
+                                    <td class="text-center">400 €</td>
+                                </tr>
+                                <tr class="text-amber-400 font-black bg-black/40 text-sm">
+                                    <td class="py-3 uppercase text-xs pl-2">TOTAL</td>
+                                    <td class="text-center">470 €</td>
+                                    <td class="text-center">520 €</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- NORMATIVA Y DETALLES DE PAGO -->
+            <div class="bg-gradient-to-r from-gray-900 via-black to-gray-900 border border-gray-800 p-6 rounded-2xl mb-12 text-xs space-y-2.5 text-gray-300 shadow-xl">
+                <p class="text-amber-400 font-black uppercase text-xs tracking-wider mb-2 flex items-center">
+                    <i class="fa-solid fa-circle-info mr-2 text-base"></i> NORMATIVA Y CONDICIONES DE PAGO:
+                </p>
+                <ul class="space-y-1.5 list-disc list-inside text-gray-300">
+                    <li>En el kit de ropa viene <strong>2 equipaciones enteras, chándal y mochila con zapatero</strong>.</li>
+                    <li>La ropa se paga <strong>cada 2 años</strong>, el año que viene no habría que pagar la ropa.</li>
+                    <li>Los 50 € de inscripción se devolverán mensualmente, <strong>solo a los antiguos en el club</strong>.</li>
+                    <li>Los 50 € de la inscripción se pagarán mediante una transferencia el <strong>20-30 de junio</strong>.</li>
+                    <li>Los 70 € de ropa se pagarán mediante una transferencia el <strong>1-5 de julio</strong>.</li>
+                </ul>
+                <div class="mt-4 pt-3 border-t border-gray-800">
+                    <span class="text-[10px] text-gray-400 uppercase font-bold block mb-1">Los dos pagos se realizarán al número de cuenta del club:</span>
+                    <p class="text-sm font-mono font-black text-amber-400 select-all bg-black p-2.5 rounded-lg border border-gray-800 inline-block">
+                        IBAN: ES19 0128 0030 3701 0007 2933
+                    </p>
+                </div>
+            </div>
+
+            <!-- DATOS DEL CLUB -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-900/60 p-8 rounded-2xl border border-gray-850 hover:border-interBlue/40 hover:scale-105 transition duration-300 relative group overflow-hidden shadow-lg backdrop-blur-sm">
+                    <div class="text-4xl text-interBlue font-black mb-4"><i class="fa-solid fa-users"></i> +95</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Jugadores del Club</h3>
+                    <p class="text-sm text-gray-400">Niños y niñas que defienden el escudo de nuestro club cada semana con ilusión.</p>
+                </div>
+                <div class="bg-gray-900/60 p-8 rounded-2xl border border-gray-850 hover:border-interBlue/40 hover:scale-105 transition duration-300 relative group overflow-hidden shadow-lg backdrop-blur-sm">
+                    <div class="text-4xl text-interBlue font-black mb-4"><i class="fa-solid fa-school"></i> 2 Sedes</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Colegios Vinculados</h3>
+                    <p class="text-sm text-gray-400">Orgullosos de estar arraigados en el <strong>CEIP Conde de Arruga</strong> y en el <strong>CEIP Real Armada</strong>.</p>
+                </div>
+                <div class="bg-gray-900/60 p-8 rounded-2xl border border-gray-850 hover:border-interBlue/40 hover:scale-105 transition duration-300 relative group overflow-hidden shadow-lg backdrop-blur-sm">
+                    <div class="text-4xl text-interBlue font-black mb-4"><i class="fa-solid fa-map-location-dot"></i> La Elipa y Moratalaz</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Sedes Deportivas</h3>
+                    <p class="text-sm text-gray-400">Entrenamientos en Polideportivo La Elipa (Fútbol 7) y Polideportivo Moratalaz (Fútbol 11).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN COMUNIDAD INSTAGRAM -->
+    <section id="comunidad" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+        <div class="bg-gradient-to-r from-interBlue to-blue-900 rounded-3xl overflow-hidden shadow-neon-blue p-8 sm:p-12 text-center flex flex-col items-center">
+            <div class="bg-gradient-to-tr from-purple-600 via-pink-500 to-amber-500 p-5 rounded-full shadow-insta-glow mb-6 text-4xl text-white transform hover:rotate-12 transition duration-300">
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+            <h3 class="text-3xl font-black text-white italic tracking-tight uppercase mb-2">¡SÍGUENOS EN DIRECTO!</h3>
+            <p class="text-gray-300 text-xs max-w-md mb-8 leading-relaxed">
+                Sigue en nuestras historias de Instagram los resultados de los partidos, fotos de cada entrenamiento y las noticias al instante.
+            </p>
+            <a href="https://www.instagram.com/clubinterdemoratalaz?igsh=MTJ0enYzZzA5ZHRqMA==" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 text-white font-black text-xs uppercase tracking-widest py-4 px-8 rounded-xl shadow-insta-glow transition transform hover:-translate-y-1 flex items-center justify-center space-x-2">
+                <i class="fa-brands fa-instagram text-base"></i>
+                <span>VER @CLUBINTERDEMORATALAZ</span>
+            </a>
+        </div>
+    </section>
+
+    <div class="h-4 inter-stripes relative z-20"></div>
+
+    <!-- SECCIÓN NUESTROS COLABORADORES -->
+    <section id="colaboradores" class="bg-black py-16 border-t border-b border-gray-900 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="text-amber-400 font-black text-xs uppercase tracking-widest block mb-2">APOYANDO AL DEPORTE DE BARRIO</span>
+            <h2 class="text-3xl font-black text-white italic uppercase tracking-tight mb-10">NUESTROS COLABORADORES</h2>
+            
+            <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16">
+                <div class="flex flex-col items-center group">
+                    <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border-2 border-interBlue/40 bg-black p-3 shadow-neon-blue transition transform group-hover:scale-105 duration-300">
+                        <img src="images/colaboradores/el-july.jpg" alt="Bar El July - Colaborador Oficial" class="w-full h-full object-contain rounded-xl">
+                    </div>
+                    <span class="text-xs font-black text-gray-300 mt-4 uppercase tracking-wider group-hover:text-amber-400 transition">Bar El July</span>
+                </div>
+
+                <div class="flex flex-col items-center group">
+                    <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border-2 border-amber-500/40 bg-black p-3 shadow-neon-gold transition transform group-hover:scale-105 duration-300">
+                        <img src="images/colaboradores/pobre-nico.jpg" alt="Cervecería Pobre Nico - Colaborador Oficial" class="w-full h-full object-contain rounded-xl">
+                    </div>
+                    <span class="text-xs font-black text-gray-300 mt-4 uppercase tracking-wider group-hover:text-amber-400 transition">Cervecería Pobre Nico</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REPRODUCTOR HIMNO -->
+    <div class="fixed bottom-6 left-6 z-50 bg-black/90 backdrop-blur-md border border-interBlue/50 text-white px-4 py-3 rounded-2xl shadow-neon-blue flex items-center space-x-4 max-w-xs transition transform hover:scale-102 duration-300">
+        <audio id="club-anthem-audio" src="audio/himno.mp3" loop></audio>
+        
+        <button id="anthem-toggle-btn" class="bg-interBlue hover:bg-blue-700 text-white h-10 w-10 rounded-full flex items-center justify-center shadow-md transition transform active:scale-95 focus:outline-none" aria-label="Reproducir Himno">
+            <i id="anthem-icon" class="fa-solid fa-play text-sm pl-0.5"></i>
+        </button>
+
+        <div class="pr-2 select-none">
+            <p class="text-[10px] uppercase font-black tracking-widest text-interBlue leading-none mb-1">Himno Oficial</p>
+            <p class="text-xs font-black text-gray-200 tracking-tight whitespace-nowrap overflow-hidden text-ellipsis max-w-[140px]">Inter de Moratalaz</p>
+        </div>
+
+        <div id="anthem-eq" class="hidden flex items-end justify-between h-5 w-5 space-x-[2px]">
+            <span class="bg-amber-500 w-[3px] h-3 rounded-full animate-[bounce_0.8s_infinite_0.1s]"></span>
+            <span class="bg-amber-500 w-[3px] h-5 rounded-full animate-[bounce_0.5s_infinite_0.3s]"></span>
+            <span class="bg-amber-500 w-[3px] h-2 rounded-full animate-[bounce_0.7s_infinite_0s]"></span>
+            <span class="bg-amber-500 w-[3px] h-4 rounded-full animate-[bounce_0.6s_infinite_0.2s]"></span>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-gray-500 text-xs py-8 border-t border-gray-900 relative z-20 text-center">
+        <div class="max-w-7xl mx-auto px-4 space-y-4">
+            <p class="font-black tracking-widest text-gray-400 uppercase">© 2026 CLUB INTER DE MORATALAZ. TODOS LOS DERECHOS RESERVADOS.</p>
+        </div>
+    </footer>
+
+</div>
+
+<script>
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+}
+
+const anthemAudio = document.getElementById('club-anthem-audio');
+const anthemToggleBtn = document.getElementById('anthem-toggle-btn');
+const anthemIcon = document.getElementById('anthem-icon');
+const anthemEq = document.getElementById('anthem-eq');
+
+if (anthemAudio && anthemToggleBtn) {
+    anthemToggleBtn.addEventListener('click', () => {
+        if (anthemAudio.paused) {
+            anthemAudio.play();
+            anthemIcon.className = "fa-solid fa-pause text-sm";
+            anthemEq.classList.remove('hidden');
+        } else {
+            anthemAudio.pause();
+            anthemIcon.className = "fa-solid fa-play text-sm pl-0.5";
+            anthemEq.classList.add('hidden');
+        }
+    });
+}
+
+const CONTAINER = document.getElementById('carousel-container');
+const INDEX_EL = document.getElementById('carousel-index');
+const TOTAL_EL = document.getElementById('carousel-total');
+
+const carouselItems = [
+    { src: 'images/galeria/Campeones Trofeo del Carmen.jpg', alt: 'Campeones Trofeo del Carmen' },
+    { src: 'images/galeria/Campeones Trofeo del Carmen1.jpg', alt: 'Celebración Trofeo del Carmen' },
+    { src: 'images/galeria/foto1.jpg', alt: 'Fotografía Inter de Moratalaz' },
+    { src: 'images/galeria/foto2.jpg', alt: 'Fotografía Inter de Moratalaz' },
+    { src: 'images/galeria/foto3.jpg', alt: 'Fotografía Inter de Moratalaz' },
+    { src: 'images/galeria/foto4.jpg', alt: 'Fotografía Inter de Moratalaz' },
+    { src: 'images/galeria/foto5.jpg', alt: 'Fotografía Inter de Moratalaz' },
+    { src: 'images/galeria/foto6.jpg', alt: 'Fotografía Inter de Moratalaz' },
+    { src: 'images/galeria/foto7.jpg', alt: 'Fotografía Inter de Moratalaz' },
+    { src: 'images/galeria/foto8.jpg', alt: 'Fotografía Inter de Moratalaz' },
+    { src: 'images/galeria/foto9.jpg', alt: 'Fotografía Inter de Moratalaz' },
+    { src: 'images/galeria/foto10.jpg', alt: 'Fotografía Inter de Moratalaz' }
+];
+
+let currentIndex = 0;
+
+function renderCarousel() {
+    if (!CONTAINER) return;
+    CONTAINER.innerHTML = '';
+    TOTAL_EL.textContent = carouselItems.length;
+    
+    carouselItems.forEach((img) => {
+        const slide = document.createElement('div');
+        slide.className = 'w-full min-w-full h-full flex-shrink-0 relative';
+        slide.innerHTML = `
+            <img src="${img.src}" alt="${img.alt}" class="w-full h-full object-cover" loading="lazy">
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/40 to-transparent p-6 pt-16 text-center">
+                <p class="text-xs sm:text-sm font-black uppercase tracking-wider text-amber-400 italic">${img.alt}</p>
+            </div>
+        `;
+        CONTAINER.appendChild(slide);
+    });
+    
+    updateCarousel();
+}
+
+function updateCarousel() {
+    if (!CONTAINER || carouselItems.length === 0) return;
+    CONTAINER.style.transform = `translateX(-${currentIndex * 100}%)`;
+    INDEX_EL.textContent = currentIndex + 1;
+}
+
+document.getElementById('next-btn')?.addEventListener('click', () => {
+    if (carouselItems.length === 0) return;
+    currentIndex = (currentIndex + 1) % carouselItems.length;
+    updateCarousel();
+});
+
+document.getElementById('prev-btn')?.addEventListener('click', () => {
+    if (carouselItems.length === 0) return;
+    currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+    updateCarousel();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderCarousel();
+});
+</script>
+</body>
+</html>
