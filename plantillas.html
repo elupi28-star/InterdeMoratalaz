@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plantillas Oficiales | Club Inter de Moratalaz</title>
-    <meta name="description" content="Fotografías oficiales y listados de jugadores de las plantillas del Club Inter de Moratalaz.">
+    <meta name="description" content="Fotografías oficiales y listados de jugadores y entrenadores del Club Inter de Moratalaz.">
     <meta name="robots" content="index, follow">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,7 +20,6 @@
                     },
                     boxShadow: {
                         'neon-blue': '0 0 25px rgba(0, 82, 204, 0.45)',
-                        'neon-gold': '0 0 25px rgba(245, 158, 11, 0.5)',
                     }
                 }
             }
@@ -58,10 +57,11 @@
 
                 <div class="hidden lg:flex items-center space-x-6 text-xs font-black uppercase tracking-wider">
                     <a href="index.html" class="hover:text-interBlue transition"><i class="fa-solid fa-arrow-left mr-1"></i> Volver al Inicio</a>
-                    <a href="#benjamin" class="text-interBlue hover:text-white transition">Benjamín</a>
+                    <a href="#benjamin" class="hover:text-interBlue transition">Benjamines</a>
                     <a href="#alevin" class="hover:text-interBlue transition">Alevín</a>
                     <a href="#infantil" class="hover:text-interBlue transition">Infantil</a>
                     <a href="#cadete" class="hover:text-interBlue transition">Cadete</a>
+                    <a href="#entrenadores" class="hover:text-interBlue transition">Técnicos</a>
                 </div>
             </div>
         </div>
@@ -74,10 +74,10 @@
                 <i class="fa-solid fa-users-viewfinder mr-1.5"></i> EQUIPOS DEL CLUB
             </span>
             <h1 class="text-3xl sm:text-5xl font-black text-white italic tracking-tight uppercase mb-4">
-                PLANTILLAS <span class="text-transparent bg-clip-text bg-gradient-to-r from-interBlue via-blue-400 to-interBlue">TEMPORADA 26/27</span>
+                PLANTILLAS Y TÉCNICOS <span class="text-transparent bg-clip-text bg-gradient-to-r from-interBlue via-blue-400 to-interBlue">TEMPORADA 26/27</span>
             </h1>
             <p class="text-gray-400 text-xs sm:text-sm max-w-xl mx-auto">
-                Fotografías oficiales y listados de jugadores ordenados por categorías.
+                Fotografías oficiales, listados de jugadores y cuerpo técnico del club.
             </p>
         </div>
     </header>
@@ -87,25 +87,158 @@
     <!-- CONTENEDOR DE PLANTILLAS -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16 relative z-10">
 
-        <!-- 1. EQUIPO BENJAMÍN -->
-        <section id="benjamin" class="scroll-mt-32">
-            <div class="bg-gradient-to-br from-gray-900/90 via-black to-gray-900/90 border-2 border-amber-500/40 p-6 sm:p-10 rounded-3xl shadow-neon-gold backdrop-blur-md">
+        <!-- 1. EQUIPOS BENJAMÍN (A y B) -->
+        <section id="benjamin" class="scroll-mt-32 space-y-10">
+            
+            <!-- BENJAMÍN A -->
+            <div class="bg-gradient-to-br from-gray-900/90 via-black to-gray-900/90 border-2 border-interBlue/50 p-6 sm:p-10 rounded-3xl shadow-neon-blue backdrop-blur-md">
                 <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8 border-b border-gray-800 pb-6">
                     <div>
-                        <span class="bg-amber-500 text-black text-[10px] font-black px-3 py-1 rounded uppercase tracking-wider">Fútbol 7 Municipal</span>
-                        <h2 class="text-2xl sm:text-3xl font-black text-white italic uppercase tracking-tight mt-2">EQUIPO BENJAMÍN</h2>
+                        <span class="bg-interBlue text-white text-[10px] font-black px-3 py-1 rounded uppercase tracking-wider">Fútbol 7 Municipal</span>
+                        <h2 class="text-2xl sm:text-3xl font-black text-white italic uppercase tracking-tight mt-2">EQUIPO BENJAMÍN A</h2>
                         <p class="text-xs text-gray-400 mt-1">Sede Polideportivo La Elipa</p>
                     </div>
                 </div>
 
-                <div class="border-2 border-dashed border-gray-800 rounded-2xl p-8 text-center bg-black/40 mb-8">
-                    <i class="fa-solid fa-camera text-4xl text-amber-400/60 mb-3 animate-pulse"></i>
-                    <p class="text-sm font-black text-white uppercase tracking-wider">Foto Oficial Próximamente</p>
+                <div class="relative group w-full rounded-2xl overflow-hidden border-2 border-gray-800 bg-black p-2 shadow-xl mb-8 flex justify-center">
+                    <a href="images/plantilla/benjamin-a.jpeg" target="_blank" rel="noopener noreferrer" class="w-full">
+                        <img src="images/plantilla/benjamin-a.jpeg" alt="Plantilla Oficial Equipo Benjamín A" class="w-full h-auto object-contain rounded-xl transform group-hover:scale-[1.01] transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-xl pointer-events-none">
+                            <span class="bg-interBlue text-white text-xs font-black px-5 py-2.5 rounded-xl shadow-lg uppercase tracking-wider">
+                                <i class="fa-solid fa-expand mr-1"></i> Ampliar Fotografía
+                            </span>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="bg-black/70 border border-gray-800 p-6 rounded-2xl">
-                    <h3 class="text-xs text-amber-400 font-black uppercase tracking-wider mb-4"><i class="fa-solid fa-list-ol mr-2"></i> Plantilla y Dorsales</h3>
-                    <p class="text-xs text-gray-500 italic">Listado pendiente de publicación.</p>
+                    <h3 class="text-xs text-interBlue font-black uppercase tracking-wider mb-4"><i class="fa-solid fa-list-ol mr-2"></i> Plantilla y Dorsales</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs">
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-green-500 text-black font-black px-2 py-0.5 rounded text-[11px]">1</span>
+                            <span class="text-gray-200 font-bold">JAIME</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">5</span>
+                            <span class="text-gray-200 font-bold">OLI N.F</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">6</span>
+                            <span class="text-gray-200 font-bold">DANIEL</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">7</span>
+                            <span class="text-gray-200 font-bold">MORALEDA</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">8</span>
+                            <span class="text-gray-200 font-bold">JOEL</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">9</span>
+                            <span class="text-gray-200 font-bold">ÓSCAR</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">10</span>
+                            <span class="text-gray-200 font-bold">RAÚL</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">11</span>
+                            <span class="text-gray-200 font-bold">ERIC</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">13</span>
+                            <span class="text-gray-200 font-bold">JAVI</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">17</span>
+                            <span class="text-gray-200 font-bold">IÑAKI</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">19</span>
+                            <span class="text-gray-200 font-bold">VÍCTOR</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">67</span>
+                            <span class="text-gray-200 font-bold">LEO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BENJAMÍN B -->
+            <div class="bg-gradient-to-br from-gray-900/90 via-black to-gray-900/90 border-2 border-interBlue/50 p-6 sm:p-10 rounded-3xl shadow-neon-blue backdrop-blur-md">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8 border-b border-gray-800 pb-6">
+                    <div>
+                        <span class="bg-interBlue text-white text-[10px] font-black px-3 py-1 rounded uppercase tracking-wider">Fútbol 7 Municipal</span>
+                        <h2 class="text-2xl sm:text-3xl font-black text-white italic uppercase tracking-tight mt-2">EQUIPO BENJAMÍN B</h2>
+                        <p class="text-xs text-gray-400 mt-1">Sede Polideportivo La Elipa</p>
+                    </div>
+                </div>
+
+                <div class="relative group w-full rounded-2xl overflow-hidden border-2 border-gray-800 bg-black p-2 shadow-xl mb-8 flex justify-center">
+                    <a href="images/plantilla/benjamin-b.jpeg" target="_blank" rel="noopener noreferrer" class="w-full">
+                        <img src="images/plantilla/benjamin-b.jpeg" alt="Plantilla Oficial Equipo Benjamín B" class="w-full h-auto object-contain rounded-xl transform group-hover:scale-[1.01] transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-xl pointer-events-none">
+                            <span class="bg-interBlue text-white text-xs font-black px-5 py-2.5 rounded-xl shadow-lg uppercase tracking-wider">
+                                <i class="fa-solid fa-expand mr-1"></i> Ampliar Fotografía
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-black/70 border border-gray-800 p-6 rounded-2xl">
+                    <h3 class="text-xs text-interBlue font-black uppercase tracking-wider mb-4"><i class="fa-solid fa-list-ol mr-2"></i> Plantilla y Dorsales</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-xs">
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-green-500 text-black font-black px-2 py-0.5 rounded text-[11px]">1</span>
+                            <span class="text-gray-200 font-bold">DAVID E.</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-green-500 text-black font-black px-2 py-0.5 rounded text-[11px]">19</span>
+                            <span class="text-gray-200 font-bold">MARTÍN</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">2</span>
+                            <span class="text-gray-200 font-bold">MARCOS</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">3</span>
+                            <span class="text-gray-200 font-bold">HUGO</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">5</span>
+                            <span class="text-gray-200 font-bold">DIEGO S.</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">7</span>
+                            <span class="text-gray-200 font-bold">ALEX</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">8</span>
+                            <span class="text-gray-200 font-bold">SERGI</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">9</span>
+                            <span class="text-gray-200 font-bold">MATEO</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">10</span>
+                            <span class="text-gray-200 font-bold">HÉCTOR</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">11</span>
+                            <span class="text-gray-200 font-bold">RYAN</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">17</span>
+                            <span class="text-gray-200 font-bold">JAVIER</span>
+                        </div>
+                        <div class="bg-black/60 p-2.5 rounded-xl border border-gray-800 flex items-center space-x-3">
+                            <span class="bg-interBlue text-white font-black px-2 py-0.5 rounded text-[11px]">21</span>
+                            <span class="text-gray-200 font-bold">LEÓN</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -300,23 +433,73 @@
 
         <!-- 4. EQUIPO CADETE -->
         <section id="cadete" class="scroll-mt-32">
-            <div class="bg-gradient-to-br from-gray-900/90 via-black to-gray-900/90 border-2 border-amber-500/40 p-6 sm:p-10 rounded-3xl shadow-neon-gold backdrop-blur-md">
+            <div class="bg-gradient-to-br from-gray-900/90 via-black to-gray-900/90 border-2 border-interBlue/50 p-6 sm:p-10 rounded-3xl shadow-neon-blue backdrop-blur-md">
                 <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8 border-b border-gray-800 pb-6">
                     <div>
-                        <span class="bg-amber-500 text-black text-[10px] font-black px-3 py-1 rounded uppercase tracking-wider">Fútbol 11 Municipal</span>
+                        <span class="bg-interBlue text-white text-[10px] font-black px-3 py-1 rounded uppercase tracking-wider">Fútbol 11 Municipal</span>
                         <h2 class="text-2xl sm:text-3xl font-black text-white italic uppercase tracking-tight mt-2">EQUIPO CADETE</h2>
                         <p class="text-xs text-gray-400 mt-1">Sede Polideportivo Moratalaz</p>
                     </div>
                 </div>
 
                 <div class="border-2 border-dashed border-gray-800 rounded-2xl p-8 text-center bg-black/40 mb-8">
-                    <i class="fa-solid fa-camera text-4xl text-amber-400/60 mb-3 animate-pulse"></i>
+                    <i class="fa-solid fa-camera text-4xl text-interBlue/60 mb-3 animate-pulse"></i>
                     <p class="text-sm font-black text-white uppercase tracking-wider">Foto Oficial Próximamente</p>
                 </div>
 
                 <div class="bg-black/70 border border-gray-800 p-6 rounded-2xl">
-                    <h3 class="text-xs text-amber-400 font-black uppercase tracking-wider mb-4"><i class="fa-solid fa-list-ol mr-2"></i> Plantilla y Dorsales</h3>
+                    <h3 class="text-xs text-interBlue font-black uppercase tracking-wider mb-4"><i class="fa-solid fa-list-ol mr-2"></i> Plantilla y Dorsales</h3>
                     <p class="text-xs text-gray-500 italic">Listado pendiente de publicación.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CUERPO TÉCNICO -->
+        <section id="entrenadores" class="scroll-mt-32">
+            <div class="bg-gradient-to-br from-gray-900/90 via-black to-gray-900/90 border-2 border-interBlue/50 p-6 sm:p-10 rounded-3xl shadow-neon-blue backdrop-blur-md">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8 border-b border-gray-800 pb-6">
+                    <div>
+                        <span class="bg-interBlue text-white text-[10px] font-black px-3 py-1 rounded uppercase tracking-wider">Staff Técnico</span>
+                        <h2 class="text-2xl sm:text-3xl font-black text-white italic uppercase tracking-tight mt-2">CUERPO TÉCNICO</h2>
+                        <p class="text-xs text-gray-400 mt-1">Entrenadores de la Escuela Temporada 26/27</p>
+                    </div>
+                </div>
+
+                <div class="relative group w-full rounded-2xl overflow-hidden border-2 border-gray-800 bg-black p-2 shadow-xl mb-8 flex justify-center">
+                    <a href="images/plantilla/entrenadores.jpg" target="_blank" rel="noopener noreferrer" class="w-full">
+                        <img src="images/plantilla/entrenadores.jpg" alt="Cuerpo Técnico Oficial" class="w-full h-auto object-contain rounded-xl transform group-hover:scale-[1.01] transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-xl pointer-events-none">
+                            <span class="bg-interBlue text-white text-xs font-black px-5 py-2.5 rounded-xl shadow-lg uppercase tracking-wider">
+                                <i class="fa-solid fa-expand mr-1"></i> Ampliar Fotografía
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-black/70 border border-gray-800 p-6 rounded-2xl">
+                    <h3 class="text-xs text-interBlue font-black uppercase tracking-wider mb-4"><i class="fa-solid fa-user-tie mr-2"></i> Entrenadores por Categoría</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
+                        <div class="bg-black/60 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
+                            <span class="text-gray-400 uppercase font-bold">Benjamín A</span>
+                            <span class="text-gray-200 font-black">Sergio</span>
+                        </div>
+                        <div class="bg-black/60 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
+                            <span class="text-gray-400 uppercase font-bold">Benjamín B</span>
+                            <span class="text-gray-200 font-black">Víctor</span>
+                        </div>
+                        <div class="bg-black/60 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
+                            <span class="text-gray-400 uppercase font-bold">Alevín</span>
+                            <span class="text-gray-200 font-black">César</span>
+                        </div>
+                        <div class="bg-black/60 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
+                            <span class="text-gray-400 uppercase font-bold">Infantil</span>
+                            <span class="text-gray-200 font-black">Paco</span>
+                        </div>
+                        <div class="bg-black/60 p-3 rounded-xl border border-gray-800 flex items-center justify-between sm:col-span-2 md:col-span-2">
+                            <span class="text-gray-400 uppercase font-bold">Cadete</span>
+                            <span class="text-gray-200 font-black">Javi y Marcos</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
