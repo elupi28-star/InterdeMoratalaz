@@ -53,15 +53,47 @@
 
 <div class="relative z-10 flex flex-col min-h-screen">
 
+    <!-- ========================================== -->
+    <!-- BANNER DE LUTO INSTITUCIONAL GRANDE Y VISIBLE -->
+    <!-- ========================================== -->
+    <div id="banner-luto" class="bg-black text-white border-b-2 border-gray-800 shadow-2xl relative z-50 py-6 px-4">
+        <div class="max-w-4xl mx-auto flex flex-col items-center text-center space-y-4">
+            
+            <div class="flex items-center justify-between w-full">
+                <span class="bg-gray-800 text-gray-300 text-[10px] font-black uppercase px-3 py-1 rounded border border-gray-700 tracking-widest">
+                    Luto Oficial Institucional
+                </span>
+                <button onclick="document.getElementById('banner-luto').style.display='none'" class="text-gray-400 hover:text-white text-xs font-black uppercase bg-gray-900 hover:bg-gray-800 border border-gray-700 px-3 py-1.5 rounded-lg transition flex items-center" title="Cerrar aviso">
+                    Cerrar <i class="fa-solid fa-xmark ml-1.5"></i>
+                </button>
+            </div>
+
+            <!-- Imagen grande y perfectamente visible -->
+            <div class="w-full max-w-2xl bg-black/80 p-2 rounded-2xl border border-gray-800 shadow-xl overflow-hidden">
+                <img src="images/carteles/tren.jpeg" alt="En memoria de las víctimas del accidente de tren" class="w-full h-auto max-h-[450px] object-contain rounded-xl mx-auto">
+            </div>
+
+            <div class="space-y-1 max-w-xl">
+                <h3 class="font-black text-base sm:text-lg text-gray-100 uppercase tracking-wide">
+                    En memoria de las víctimas del trágico accidente ferroviario
+                </h3>
+                <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
+                    Desde el Inter de Moratalaz nos sumamos al dolor de todo el país y expresamos nuestras más sinceras condolencias y apoyo absoluto a los familiares y afectados.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
     <!-- BARRA DE ANUNCIO SUPERIOR -->
-    <div class="bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black text-center py-2 px-4 text-xs font-black tracking-widest uppercase relative z-50 shadow-md flex items-center justify-center gap-2">
+    <div class="bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 text-black text-center py-2 px-4 text-xs font-black tracking-widest uppercase relative z-45 shadow-md flex items-center justify-center gap-2">
         <i class="fa-solid fa-trophy text-black animate-bounce"></i>
         <span>¡DOBLE VICTORIA A DOMICILIO: ALEVINES E INFANTILES GANAN 3-4 ESTE FIN DE SEMANA!</span>
         <i class="fa-solid fa-futbol text-black animate-spin"></i>
     </div>
 
     <!-- NAVBAR PRINCIPAL -->
-    <nav class="bg-black/95 backdrop-blur-md sticky top-0 z-50 border-b-2 border-interBlue shadow-neon-blue">
+    <nav class="bg-black/95 backdrop-blur-md sticky top-0 z-40 border-b-2 border-interBlue shadow-neon-blue">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-28">
                 <div class="flex items-center space-x-5">
@@ -569,7 +601,7 @@
                     <li>Los 70 € de ropa se pagarán mediante una transferencia el <strong>1-5 de julio</strong>.</li>
                 </ul>
                 <div class="mt-4 pt-3 border-t border-gray-800">
-                    <span class="text-[10px] text-gray-400 uppercase font-bold block mb-1">Los dois pagos se realizarán al número de cuenta del club:</span>
+                    <span class="text-[10px] text-gray-400 uppercase font-bold block mb-1">Los dos pagos se realizarán al número de cuenta del club:</span>
                     <p class="text-sm font-mono font-black text-amber-400 select-all bg-black p-2.5 rounded-lg border border-gray-800 inline-block">
                         IBAN: ES19 0128 0030 3701 0007 2933
                     </p>
