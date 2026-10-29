@@ -53,9 +53,7 @@
 
 <div class="relative z-10 flex flex-col min-h-screen">
 
-    <!-- ========================================== -->
     <!-- BANNER DE LUTO INSTITUCIONAL GRANDE Y VISIBLE -->
-    <!-- ========================================== -->
     <div id="banner-luto" class="bg-black text-white border-b-2 border-gray-800 shadow-2xl relative z-50 py-6 px-4">
         <div class="max-w-4xl mx-auto flex flex-col items-center text-center space-y-4">
             
@@ -68,7 +66,6 @@
                 </button>
             </div>
 
-            <!-- Imagen grande y perfectamente visible -->
             <div class="w-full max-w-2xl bg-black/80 p-2 rounded-2xl border border-gray-800 shadow-xl overflow-hidden">
                 <img src="images/carteles/tren.jpeg" alt="En memoria de las víctimas del accidente de tren" class="w-full h-auto max-h-[450px] object-contain rounded-xl mx-auto">
             </div>
@@ -315,18 +312,19 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-                <div class="group relative bg-gradient-to-b from-gray-900 to-black border-2 border-gray-800 hover:border-amber-500 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-neon-gold flex flex-col justify-between">
+                <div class="group relative bg-gradient-to-b from-gray-900 to-black border-2 border-amber-500/60 hover:border-amber-400 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-neon-gold flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="bg-gray-800 text-gray-300 text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider">MUNICIPAL</span>
-                            <span class="text-[10px] bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded font-bold">Próximamente</span>
+                            <span class="bg-amber-500 text-black text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider shadow-neon-gold">MUNICIPAL</span>
+                            <i class="fa-solid fa-calendar-days text-2xl text-amber-400 animate-pulse"></i>
                         </div>
-                        <h3 class="text-2xl font-black text-white italic uppercase tracking-tight mb-1">BENJAMÍN</h3>
-                        <p class="text-[11px] text-gray-400 mb-6">Fútbol 7</p>
+                        <h3 class="text-2xl font-black text-white italic uppercase tracking-tight mb-1">BENJAMÍN B</h3>
+                        <p class="text-[11px] text-gray-400 mb-6">Fútbol 7 • Calendario Oficial</p>
                     </div>
-                    <div class="w-full bg-gray-800 text-gray-400 font-black text-xs uppercase tracking-wider py-3 px-4 rounded-xl text-center flex items-center justify-center space-x-2 cursor-not-allowed">
-                        <span>Pendiente Oficial</span>
-                    </div>
+                    <button id="btn-toggle-benjamin" class="w-full bg-amber-500 hover:bg-amber-600 text-black font-black text-xs uppercase tracking-wider py-3 px-4 rounded-xl text-center transition flex items-center justify-center space-x-2 shadow-neon-gold cursor-pointer">
+                        <i class="fa-solid fa-eye text-xs"></i>
+                        <span id="btn-text">Ver Calendario</span>
+                    </button>
                 </div>
 
                 <a href="https://www.rffm.es/competicion/calendario?temporada=22&tipojuego=2&competicion=26738071&grupo=26738090" target="_blank" rel="noopener noreferrer" class="group relative bg-gradient-to-b from-gray-900 via-blue-950/40 to-black border-2 border-interBlue hover:border-blue-400 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-neon-blue flex flex-col justify-between">
@@ -374,6 +372,176 @@
                         <span>Pendiente Oficial</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CALENDARIO BENJAMÍN B (OCULTO POR DEFECTO, SE ABRE AL CLIC) -->
+    <section id="calendario-benjamin-b" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10 hidden">
+        <div class="bg-gradient-to-br from-gray-900/90 via-black to-gray-900/90 border-2 border-amber-500/50 rounded-3xl p-6 sm:p-10 shadow-neon-gold backdrop-blur-md">
+            <div class="flex flex-col lg:flex-row items-center justify-between mb-8 pb-6 border-b border-gray-800 gap-6 text-center lg:text-left">
+                <div>
+                    <span class="bg-amber-500/20 text-amber-400 border border-amber-500/30 text-[10px] font-black uppercase px-3.5 py-1.5 rounded-full tracking-widest inline-block mb-3 shadow-neon-gold">
+                        <i class="fa-solid fa-futbol mr-1.5"></i> CALENDARIO MUNICIPAL OFICIAL
+                    </span>
+                    <h3 class="text-3xl sm:text-4xl font-black text-white italic uppercase tracking-tight">
+                        BENJAMÍN B • TEMPORADA 2026/2027
+                    </h3>
+                    <p class="text-gray-400 text-xs sm:text-sm mt-2">Consulta los horarios, fechas y rivales de la competición municipal</p>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="bg-black/80 border border-gray-800 px-5 py-3 rounded-2xl flex items-center space-x-3">
+                        <i class="fa-solid fa-map-pin text-red-500 text-xl"></i>
+                        <div class="text-left">
+                            <span class="text-[10px] text-gray-400 uppercase font-bold block">Sede / Campo Habitual</span>
+                            <span class="text-xs sm:text-sm font-black text-white">WILFRED AGBONAVBARE</span>
+                        </div>
+                    </div>
+                    <button id="btn-cerrar-calendario" class="bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white px-4 py-3 rounded-2xl border border-gray-700 text-xs font-black uppercase transition" title="Cerrar calendario">
+                        <i class="fa-solid fa-xmark text-base"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tabla de partidos Benjamín B -->
+            <div class="overflow-x-auto pb-2">
+                <table class="w-full text-left border-collapse min-w-[700px] text-xs sm:text-sm">
+                    <thead>
+                        <tr class="border-b border-gray-800 text-amber-400 font-bold uppercase tracking-wider bg-black/40">
+                            <th class="py-3.5 px-4 rounded-l-xl">Jornada</th>
+                            <th class="py-3.5 px-4">Día</th>
+                            <th class="py-3.5 px-4">Hora</th>
+                            <th class="py-3.5 px-4">Rival</th>
+                            <th class="py-3.5 px-4 rounded-r-xl">Campo</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-300 divide-y divide-gray-850 font-medium">
+                        <tr class="hover:bg-black/60 transition">
+                            <td class="py-3.5 px-4 font-black text-white">JORNADA 1</td>
+                            <td class="py-3.5 px-4">14/11/26</td>
+                            <td class="py-3.5 px-4 text-amber-400 font-bold">10:30</td>
+                            <td class="py-3.5 px-4 font-bold text-gray-200">SIGLO FC</td>
+                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
+                        </tr>
+                        <tr class="hover:bg-black/60 transition">
+                            <td class="py-3.5 px-4 font-black text-white">JORNADA 2</td>
+                            <td class="py-3.5 px-4">21/11/26</td>
+                            <td class="py-3.5 px-4 text-amber-400 font-bold">10:30</td>
+                            <td class="py-3.5 px-4 font-bold text-gray-200">WILFRED</td>
+                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
+                        </tr>
+                        <tr class="hover:bg-black/60 transition">
+                            <td class="py-3.5 px-4 font-black text-white">JORNADA 3</td>
+                            <td class="py-3.5 px-4">28/11/26</td>
+                            <td class="py-3.5 px-4 text-amber-400 font-bold">11:30</td>
+                            <td class="py-3.5 px-4 font-bold text-gray-200">LEONES</td>
+                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
+                        </tr>
+                        <tr class="hover:bg-black/60 transition">
+                            <td class="py-3.5 px-4 font-black text-white">JORNADA 4</td>
+                            <td class="py-3.5 px-4">12/12/26</td>
+                            <td class="py-3.5 px-4 text-amber-400 font-bold">11:30</td>
+                            <td class="py-3.5 px-4 font-bold text-gray-200">LOBOS</td>
+                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
+                        </tr>
+                        <tr class="hover:bg-black/60 transition">
+                            <td class="py-3.5 px-4 font-black text-white">JORNADA 5</td>
+                            <td class="py-3.5 px-4">19/12/26</td>
+                            <td class="py-3.5 px-4 text-amber-400 font-bold">10:30</td>
+                            <td class="py-3.5 px-4 font-bold text-interBlue">INTER A</td>
+                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
+                        </tr>
+                        <tr class="bg-red-950/30 text-red-400 font-bold border-y border-red-900/40">
+                            <td class="py-3.5 px-4">JORNADA 6</td>
+                            <td class="py-3.5 px-4">9/1/27</td>
+                            <td class="py-3.5 px-4">-</td>
+                            <td class="py-3.5 px-4 uppercase tracking-wider" colspan="2"><i class="fa-solid fa-mug-hot mr-2"></i> DESCANSAMOS</td>
+                        </tr>
+                        <tr class="hover:bg-black/60 transition">
+                            <td class="py-3.5 px-4 font-black text-white">JORNADA 7</td>
+                            <td class="py-3.5 px-4">16/1/27</td>
+                            <td class="py-3.5 px-4 text-amber-400 font-bold">10:30</td>
+                            <td class="py-3.5 px-4 font-bold text-gray-200">LOS OLMOS</td>
+                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
+                        </tr>
+                        <tr class="hover:bg-black/60 transition">
+                            <td class="py-3.5 px-4 font-black text-white">JORNADA 8</td>
+                            <td class="py-3.5 px-4">23/1/27</td>
+                            <td class="py-3.5 px-4 text-amber-400 font-bold">11:30</td>
+                            <td class="py-3.5 px-4 font-bold text-gray-200">LEONES VALLECAS</td>
+                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
+                        </tr>
+                        <tr class="hover:bg-black/60 transition">
+                            <td class="py-3.5 px-4 font-black text-white">JORNADA 9</td>
+                            <td class="py-3.5 px-4">30/1/27</td>
+                            <td class="py-3.5 px-4 text-amber-400 font-bold">11:30</td>
+                            <td class="py-3.5 px-4 font-bold text-gray-200">MADRID SUR</td>
+                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
+                        </tr>
+                        <tr class="hover:bg-black/60 transition">
+                            <td class="py-3.5 px-4 font-black text-white">JORNADA 10</td>
+                            <td class="py-3.5 px-4">6/2/27</td>
+                            <td class="py-3.5 px-4 text-amber-400 font-bold">10:30</td>
+                            <td class="py-3.5 px-4 font-bold text-gray-200">SIGLO FC</td>
+                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
+                        </tr>
+                        <tr class="hover:bg-black/60 transition">
+                            <td class="py-3.5 px-4 font-black text-white">JORNADA 11</td>
+                            <td class="py-3.5 px-4">20/2/27</td>
+                            <td class="py-3.5 px-4 text-amber-400 font-bold">10:30</td>
+                            <td class="py-3.5 px-4 font-bold text-gray-200">WILFRED</td>
+                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
+                        </tr>
+                        <tr class="hover:bg-black/60 transition">
+                            <td class="py-3.5 px-4 font-black text-white">JORNADA 12</td>
+                            <td class="py-3.5 px-4">27/2/27</td>
+                            <td class="py-3.5 px-4 text-amber-400 font-bold">11:30</td>
+                            <td class="py-3.5 px-4 font-bold text-gray-200">LEONES</td>
+                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
+                        </tr>
+                        <tr class="hover:bg-black/60 transition">
+                            <td class="py-3.5 px-4 font-black text-white">JORNADA 13</td>
+                            <td class="py-3.5 px-4">6/3/27</td>
+                            <td class="py-3.5 px-4 text-amber-400 font-bold">11:30</td>
+                            <td class="py-3.5 px-4 font-bold text-gray-200">LOBOS</td>
+                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
+                        </tr>
+                        <tr class="hover:bg-black/60 transition">
+                            <td class="py-3.5 px-4 font-black text-white">JORNADA 14</td>
+                            <td class="py-3.5 px-4">13/3/27</td>
+                            <td class="py-3.5 px-4 text-amber-400 font-bold">10:30</td>
+                            <td class="py-3.5 px-4 font-bold text-interBlue">INTER A</td>
+                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
+                        </tr>
+                        <tr class="bg-red-950/30 text-red-400 font-bold border-y border-red-900/40">
+                            <td class="py-3.5 px-4">JORNADA 15</td>
+                            <td class="py-3.5 px-4">10/4/27</td>
+                            <td class="py-3.5 px-4">-</td>
+                            <td class="py-3.5 px-4 uppercase tracking-wider" colspan="2"><i class="fa-solid fa-mug-hot mr-2"></i> DESCANSAMOS</td>
+                        </tr>
+                        <tr class="hover:bg-black/60 transition">
+                            <td class="py-3.5 px-4 font-black text-white">JORNADA 16</td>
+                            <td class="py-3.5 px-4">17/4/27</td>
+                            <td class="py-3.5 px-4 text-amber-400 font-bold">10:30</td>
+                            <td class="py-3.5 px-4 font-bold text-gray-200">LOS OLMOS</td>
+                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
+                        </tr>
+                        <tr class="hover:bg-black/60 transition">
+                            <td class="py-3.5 px-4 font-black text-white">JORNADA 17</td>
+                            <td class="py-3.5 px-4">24/4/27</td>
+                            <td class="py-3.5 px-4 text-amber-400 font-bold">11:30</td>
+                            <td class="py-3.5 px-4 font-bold text-gray-200">LEONES VALLECAS</td>
+                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
+                        </tr>
+                        <tr class="hover:bg-black/60 transition">
+                            <td class="py-3.5 px-4 font-black text-white">JORNADA 18</td>
+                            <td class="py-3.5 px-4">8/5/27</td>
+                            <td class="py-3.5 px-4 text-amber-400 font-bold">11:30</td>
+                            <td class="py-3.5 px-4 font-bold text-gray-200">MADRID SUR</td>
+                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
@@ -720,6 +888,34 @@ if (mobileMenuBtn && mobileMenu) {
     });
 }
 
+// CONTROL DE APERTURA / CIERRE DEL CALENDARIO BENJAMÍN B
+const btnToggleBenjamin = document.getElementById('btn-toggle-benjamin');
+const btnCerrarCalendario = document.getElementById('btn-cerrar-calendario');
+const calendarioBenjaminB = document.getElementById('calendario-benjamin-b');
+const btnText = document.getElementById('btn-text');
+
+if (btnToggleBenjamin && calendarioBenjaminB) {
+    btnToggleBenjamin.addEventListener('click', () => {
+        const isHidden = calendarioBenjaminB.classList.contains('hidden');
+        if (isHidden) {
+            calendarioBenjaminB.classList.remove('hidden');
+            btnText.textContent = "Ocultar Calendario";
+            calendarioBenjaminB.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            calendarioBenjaminB.classList.add('hidden');
+            btnText.textContent = "Ver Calendario";
+        }
+    });
+}
+
+if (btnCerrarCalendario && calendarioBenjaminB) {
+    btnCerrarCalendario.addEventListener('click', () => {
+        calendarioBenjaminB.classList.add('hidden');
+        if (btnText) btnText.textContent = "Ver Calendario";
+        document.getElementById('clasificaciones').scrollIntoView({ behavior: 'smooth' });
+    });
+}
+
 const anthemAudio = document.getElementById('club-anthem-audio');
 const anthemToggleBtn = document.getElementById('anthem-toggle-btn');
 const anthemIcon = document.getElementById('anthem-icon');
@@ -810,7 +1006,7 @@ document.getElementById('next-btn')?.addEventListener('click', () => {
 
 document.getElementById('prev-btn')?.addEventListener('click', () => {
     if (carouselItems.length === 0) return;
-    currentIndex = (carouselItems.length + currentIndex - 1) % carouselItems.length;
+    currentIndex = (carouselItems.length + carouselItems.length - 1) % carouselItems.length;
     updateCarousel();
 });
 
