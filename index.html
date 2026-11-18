@@ -56,7 +56,7 @@
     <!-- BARRA DE ANUNCIO SUPERIOR -->
     <div class="bg-gradient-to-r from-gray-900 via-zinc-800 to-gray-900 text-amber-400 text-center py-2.5 px-4 text-xs font-black tracking-widest uppercase relative z-45 shadow-md flex items-center justify-center gap-3 border-b border-gray-800">
         <i class="fa-solid fa-star text-white animate-pulse"></i>
-        <span>¡NUEVA JORNADA • ARRANQUE Y PARTIDOS DEL FIN DE SEMANA!</span>
+        <span>¡NUEVA JORNADA • PREPARADOS PARA EL FIN DE SEMANA!</span>
         <i class="fa-solid fa-futbol text-white"></i>
     </div>
 
@@ -76,6 +76,7 @@
 
                 <div class="hidden lg:flex items-center space-x-6 text-xs font-black uppercase tracking-wider">
                     <a href="#inicio" class="text-interBlue hover:text-white transition">Inicio</a>
+                    <a href="#cronicas-seccion" class="text-green-400 hover:text-green-300 transition flex items-center"><i class="fa-solid fa-trophy mr-1"></i> Crónicas</a>
                     <a href="#proximos-partidos" class="text-amber-400 hover:text-amber-300 transition flex items-center animate-pulse"><i class="fa-solid fa-calendar-days mr-1"></i> Próximos Partidos</a>
                     <a href="#clasificaciones" class="hover:text-interBlue transition">Clasificaciones</a>
                     <a href="#horarios" class="hover:text-interBlue transition">Horarios</a>
@@ -96,7 +97,8 @@
 
         <div id="mobile-menu" class="hidden lg:hidden bg-black/95 border-t border-gray-900 px-4 py-6 space-y-4 text-xs font-black uppercase tracking-wider">
             <a href="#inicio" class="block text-interBlue hover:text-white py-2 border-b border-gray-900">Inicio</a>
-            <a href="#proximos-partidos" class="block text-amber-400 hover:text-amber-300 py-2 border-b border-gray-900"><i class="fa-solid fa-calendar-days mr-2"></i> Próximos Partidos y Carteles</a>
+            <a href="#cronicas-seccion" class="block text-green-400 hover:text-green-300 py-2 border-b border-gray-900"><i class="fa-solid fa-trophy mr-2"></i> Crónicas y Resultados</a>
+            <a href="#proximos-partidos" class="block text-amber-400 hover:text-amber-300 py-2 border-b border-gray-900"><i class="fa-solid fa-calendar-days mr-2"></i> Próximos Partidos</a>
             <a href="#clasificaciones" class="block text-gray-300 hover:text-interBlue py-2 border-b border-gray-900">Clasificaciones Oficiales</a>
             <a href="#horarios" class="block text-gray-300 hover:text-interBlue py-2 border-b border-gray-900">Horarios</a>
             <a href="plantillas.html" class="block text-white hover:text-white py-2 border-b border-gray-900"><i class="fa-solid fa-users mr-2"></i> Plantillas Oficiales</a>
@@ -127,7 +129,11 @@
             <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-black uppercase tracking-wider">
                 <a href="#proximos-partidos" class="bg-amber-500 hover:bg-amber-600 text-black px-7 py-3.5 rounded-xl shadow-neon-gold transition transform hover:-translate-y-1 flex items-center space-x-2">
                     <i class="fa-solid fa-calendar-days"></i>
-                    <span>Ver Próximos Partidos y Carteles</span>
+                    <span>Próximos Partidos</span>
+                </a>
+                <a href="#cronicas-seccion" class="bg-interBlue hover:bg-blue-700 text-white px-7 py-3.5 rounded-xl shadow-neon-blue transition transform hover:-translate-y-1 flex items-center space-x-2">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>Ver Crónicas</span>
                 </a>
             </div>
         </div>
@@ -135,143 +141,224 @@
 
     <div class="h-4 inter-stripes shadow-inner relative z-20"></div>
 
-    <!-- SECCIÓN DE PRÓXIMOS PARTIDOS Y CARTELES (TODAS LAS CATEGORÍAS) -->
+    <!-- SECCIÓN 1: CRÓNICAS Y RESULTADOS (JORNADA ANTERIOR) -->
+    <section id="cronicas-seccion" class="bg-gradient-to-b from-black via-green-950/20 to-black py-16 relative z-10 border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="bg-green-500/10 text-green-400 border border-green-500/30 font-black text-xs uppercase px-4 py-1.5 rounded-full tracking-widest inline-block mb-3 shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+                    <i class="fa-solid fa-trophy mr-1"></i> RESULTADOS Y RESÚMENES
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight italic uppercase">
+                    CRÓNICAS DE LA JORNADA ANTERIOR
+                </h2>
+                <p class="text-gray-400 text-xs sm:text-sm mt-3">Repaso a los marcadores y encuentros del fin de semana pasado</p>
+            </div>
+
+            <div class="space-y-10">
+                
+                <!-- INFANTIL: GOLEADA 16-1 -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-gradient-to-br from-gray-900/90 via-black to-gray-900/90 border-2 border-green-500/50 p-6 sm:p-8 rounded-3xl shadow-[0_0_30px_rgba(34,197,94,0.25)] backdrop-blur-md">
+                    <div class="lg:col-span-7 space-y-5">
+                        <div class="flex flex-wrap items-center gap-3">
+                            <span class="bg-interBlue text-white text-xs font-black px-3.5 py-1.5 rounded-md uppercase tracking-wider shadow-neon-blue">INFANTIL • FÚTBOL 11</span>
+                            <span class="bg-green-500 text-black text-xs font-black px-3.5 py-1.5 rounded-md uppercase tracking-wider"><i class="fa-solid fa-arrow-up mr-1"></i> VICTORIA APLASTANTE</span>
+                        </div>
+
+                        <h3 class="text-2xl sm:text-3xl font-black text-white italic uppercase tracking-tight">
+                            EXHIBICIÓN INFANTIL • <span class="text-green-400">16 - 1</span>
+                        </h3>
+
+                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-medium">
+                            ¡Exhibición total de nuestro equipo Infantil! Los chicos firmaron un partido inolvidable con un marcador contundente de <strong>16-1</strong>, desplegando un juego ofensivo brillante, precisión en los metros finales y una seriedad defensiva impecable. ¡Enhorabuena por este partidazo histórico! ⚽🔥
+                        </p>
+                    </div>
+
+                    <div class="lg:col-span-5 flex flex-col items-center justify-center">
+                        <div class="w-full bg-gradient-to-b from-green-950/40 via-black to-gray-900 border-2 border-green-500/40 p-8 rounded-2xl text-center shadow-xl space-y-4">
+                            <div class="w-16 h-16 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center mx-auto text-3xl border border-green-500/40 shadow-[0_0_20px_rgba(34,197,94,0.4)]">
+                                <i class="fa-solid fa-hands-clapping"></i>
+                            </div>
+                            <h4 class="text-xl font-black text-white italic uppercase">¡Festival de Goles!</h4>
+                            <p class="text-xs text-gray-300">Dominio absoluto de principio a fin sobre el terreno de juego.</p>
+                            <span class="inline-block bg-green-500 text-black text-xs font-black px-4 py-2 rounded-xl uppercase tracking-wider shadow-lg">¡Tres puntos de oro!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BENJAMÍN B: VICTORIA -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-gradient-to-br from-gray-900/90 via-black to-gray-900/90 border-2 border-amber-500/50 p-6 sm:p-8 rounded-3xl shadow-neon-gold backdrop-blur-md">
+                    <div class="lg:col-span-7 space-y-5">
+                        <div class="flex flex-wrap items-center gap-3">
+                            <span class="bg-amber-500 text-black text-xs font-black px-3.5 py-1.5 rounded-md uppercase tracking-wider shadow-neon-gold">BENJAMÍN B • FÚTBOL 7</span>
+                            <span class="bg-amber-500/20 text-amber-400 border border-amber-500/40 text-xs font-black px-3.5 py-1.5 rounded-md uppercase tracking-wider">VICTORIA TRABAJADA</span>
+                        </div>
+
+                        <h3 class="text-2xl sm:text-3xl font-black text-white italic uppercase tracking-tight">
+                            ¡GRAN VICTORIA DEL <span class="text-amber-400">BENJAMÍN B</span>!
+                        </h3>
+
+                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-medium">
+                            Nuestros pequeños campeones demostraron casta, esfuerzo y mucha ilusión para llevarse una fantástica victoria. Cada fin de semana se ve el gran crecimiento y la alegría con la que defienden el escudo del <strong>Inter de Moratalaz</strong> en el Wilfred Agbonavbare. ¡A seguir en esta línea! ⚽💪
+                        </p>
+                    </div>
+
+                    <div class="lg:col-span-5 flex flex-col items-center justify-center">
+                        <div class="w-full bg-gradient-to-b from-amber-950/30 via-black to-gray-900 border-2 border-amber-500/30 p-8 rounded-2xl text-center shadow-xl space-y-4">
+                            <div class="w-16 h-16 bg-amber-500/20 text-amber-400 rounded-full flex items-center justify-center mx-auto text-3xl border border-amber-500/40 shadow-neon-gold">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <h4 class="text-xl font-black text-white italic uppercase">¡Alegría en el Barrio!</h4>
+                            <p class="text-xs text-gray-300">Trabajo en equipo y diversión asegurada sobre el césped.</p>
+                            <span class="inline-block bg-amber-500 text-black text-xs font-black px-4 py-2 rounded-xl uppercase tracking-wider shadow-neon-gold">¡Enhorabuena equipo!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BENJAMÍN A: SUSPENDIDO -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-gradient-to-br from-gray-900/90 via-black to-gray-900/90 border-2 border-zinc-700 p-6 sm:p-8 rounded-3xl shadow-xl backdrop-blur-md">
+                    <div class="lg:col-span-7 space-y-5">
+                        <div class="flex flex-wrap items-center gap-3">
+                            <span class="bg-interBlue text-white text-xs font-black px-3.5 py-1.5 rounded-md uppercase tracking-wider shadow-neon-blue">BENJAMÍN A • FÚTBOL 7</span>
+                            <span class="bg-red-500/20 text-red-400 border border-red-500/40 text-xs font-black px-3.5 py-1.5 rounded-md uppercase tracking-wider">PARTIDO SUSPENDIDO</span>
+                        </div>
+
+                        <h3 class="text-2xl sm:text-3xl font-black text-white italic uppercase tracking-tight">
+                            BENJAMÍN A • <span class="text-red-400">SUSPENDIDO</span>
+                        </h3>
+
+                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-medium">
+                            El encuentro del Benjamín A tuvo que ser suspendido debido a las adversas condiciones climatológicas (lluvia) y a la incomparecencia arbitral. ¡Pronto volverán a saltar al terreno de campo con las pilas cargadas! 🌧️⚽
+                        </p>
+                    </div>
+
+                    <div class="lg:col-span-5 flex flex-col items-center justify-center">
+                        <div class="w-full bg-gradient-to-b from-zinc-950 via-black to-gray-900 border-2 border-zinc-700 p-8 rounded-2xl text-center shadow-xl space-y-4">
+                            <div class="w-16 h-16 bg-zinc-800 text-red-400 rounded-full flex items-center justify-center mx-auto text-3xl border border-zinc-700">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                            </div>
+                            <h4 class="text-xl font-black text-white italic uppercase">Aplazado por Lluvia</h4>
+                            <p class="text-xs text-gray-300">La climatología impidió que se disputara el choque oficial.</p>
+                            <span class="inline-block bg-zinc-800 text-gray-300 text-xs font-black px-4 py-2 rounded-xl uppercase tracking-wider border border-zinc-700">¡A por el siguiente!</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: PRÓXIMOS PARTIDOS (FIN DE SEMANA DEL 21 DE NOVIEMBRE) -->
     <section id="proximos-partidos" class="bg-gradient-to-b from-black via-zinc-950 to-black py-20 px-4 border-b border-gray-800 relative z-10 overflow-hidden">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-interBlue/10 rounded-full blur-[160px] pointer-events-none"></div>
 
         <div class="max-w-6xl mx-auto relative z-10 space-y-16">
             <div class="text-center max-w-3xl mx-auto">
                 <span class="bg-amber-500 text-black font-black text-xs uppercase px-5 py-2 rounded-full tracking-widest inline-block mb-3 shadow-neon-gold animate-bounce">
-                    <i class="fa-solid fa-star mr-1.5"></i> JORNADA DE FIN DE SEMANA • CARTELES OFICIALES
+                    <i class="fa-solid fa-calendar-days mr-1.5"></i> FIN DE SEMANA DEL 21 DE NOVIEMBRE
                 </span>
                 <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight italic uppercase">
-                    🔥 PRÓXIMOS PARTIDOS Y ENCUENTROS
+                    🔥 PRÓXIMOS PARTIDOS Y CONVOCATORIAS
                 </h2>
                 <p class="text-gray-300 text-sm sm:text-base font-medium mt-3">
-                    Consulta los carteles y convocatorias oficiales de nuestros equipos para este fin de semana.
+                    Recuerda: la citación oficial es siempre <strong class="text-amber-400">45 minutos antes</strong> de la hora del encuentro.
                 </p>
                 <div class="h-1 w-32 bg-amber-500 mx-auto mt-4 shadow-neon-gold"></div>
             </div>
 
-            <!-- AVISO ESPECIAL ALEVINES -->
-            <div class="bg-gradient-to-r from-blue-950/40 via-zinc-900 to-blue-950/40 border-2 border-interBlue/50 p-6 rounded-2xl text-center shadow-neon-blue max-w-3xl mx-auto">
-                <div class="flex items-center justify-center space-x-3 text-interBlue text-xl mb-2">
-                    <i class="fa-solid fa-mug-hot animate-pulse"></i>
-                    <span class="font-black text-white uppercase italic text-sm sm:text-base">AVISO OFICIAL ALEVINES</span>
-                </div>
-                <p class="text-xs sm:text-sm text-gray-300 font-bold uppercase tracking-wider">
-                    ¡Los alevines descansan este finde! A recargar pilas para volver con más fuerza la próxima jornada. ⚽☕
-                </p>
-            </div>
-
-            <!-- GRID DE CARTTELES Y PARTIDOS -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- GRID DE PARTIDOS Y CITACIONES -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <!-- BENJAMÍN A -->
-                <div class="bg-gradient-to-br from-gray-900/95 via-black to-zinc-950 border-2 border-amber-500/60 p-6 sm:p-8 rounded-3xl shadow-neon-gold backdrop-blur-md flex flex-col justify-between">
+                <!-- BENJAMÍN B -->
+                <div class="bg-gradient-to-br from-gray-900/95 via-black to-zinc-950 border-2 border-amber-500/60 p-6 rounded-3xl shadow-neon-gold backdrop-blur-md flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="bg-amber-500 text-black text-xs font-black px-3.5 py-1.5 rounded-md uppercase tracking-wider shadow-neon-gold">BENJAMÍN A</span>
-                            <span class="text-xs font-black text-amber-400 uppercase tracking-widest"><i class="fa-solid fa-futbol mr-1"></i> JORNADA 1</span>
+                            <span class="bg-amber-500 text-black text-xs font-black px-3 py-1 rounded-md uppercase tracking-wider shadow-neon-gold">BENJAMÍN B</span>
+                            <span class="text-[11px] font-black text-amber-400 uppercase">Sábado 21</span>
                         </div>
-                        <h3 class="text-xl sm:text-2xl font-black text-white italic uppercase tracking-tight mb-4">
-                            ESTRENO LIGUERO BENJAMÍN A
+                        <h3 class="text-xl font-black text-white italic uppercase tracking-tight mb-4">
+                            VS. WILFRED
                         </h3>
-
-                        <div class="relative group w-full rounded-2xl overflow-hidden border-2 border-amber-500/60 bg-black p-1.5 mb-6">
-                            <a href="images/carteles/benjamina-j1.jpeg" target="_blank" rel="noopener noreferrer">
-                                <img src="images/carteles/benjamina-j1.jpeg" alt="Cartel Benjamín A - Jornada 1" class="w-full h-auto object-contain rounded-xl transform group-hover:scale-105 transition duration-500">
-                                <div class="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-xl pointer-events-none">
-                                    <span class="bg-amber-500 text-black text-xs font-black px-4 py-2 rounded-xl shadow-neon-gold uppercase tracking-wider border border-amber-300">
-                                        <i class="fa-solid fa-expand mr-1.5"></i> Ampliar Cartel
-                                    </span>
-                                </div>
-                            </a>
+                        
+                        <div class="space-y-2.5 text-xs text-gray-300 font-medium mb-6">
+                            <div class="bg-black/80 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
+                                <span class="text-gray-400"><i class="fa-solid fa-clock text-amber-400 mr-1.5"></i> Horario partido:</span>
+                                <span class="text-amber-400 font-bold">10:30</span>
+                            </div>
+                            <div class="bg-black/80 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
+                                <span class="text-gray-400"><i class="fa-solid fa-stopwatch text-interBlue mr-1.5"></i> Citación (-45 min):</span>
+                                <span class="text-white font-bold">09:45</span>
+                            </div>
+                            <div class="bg-black/80 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
+                                <span class="text-gray-400"><i class="fa-solid fa-map-pin text-red-500 mr-1.5"></i> Campo:</span>
+                                <span class="text-gray-200 font-bold">Wilfred Agbonavbare</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="bg-black/80 border border-gray-800 p-4 rounded-xl text-center">
-                        <p class="text-xs font-black text-amber-400 uppercase tracking-wider">¡A darlo todo en este arranque de liga!</p>
+                    <div class="bg-black/80 border border-gray-800 p-3 rounded-xl text-center">
+                        <p class="text-[11px] font-black text-amber-400 uppercase tracking-wider">¡A por todas en casa!</p>
                     </div>
                 </div>
 
-                <!-- BENJAMÍN B -->
-                <div class="bg-gradient-to-br from-gray-900/95 via-black to-zinc-950 border-2 border-amber-500/60 p-6 sm:p-8 rounded-3xl shadow-neon-gold backdrop-blur-md flex flex-col justify-between">
+                <!-- ALEVÍN -->
+                <div class="bg-gradient-to-br from-gray-900/95 via-black to-zinc-950 border-2 border-interBlue/60 p-6 rounded-3xl shadow-neon-blue backdrop-blur-md flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="bg-amber-500 text-black text-xs font-black px-3.5 py-1.5 rounded-md uppercase tracking-wider shadow-neon-gold">BENJAMÍN B</span>
-                            <span class="text-xs font-black text-amber-400 uppercase tracking-widest"><i class="fa-solid fa-futbol mr-1"></i> JORNADA 1</span>
+                            <span class="bg-interBlue text-white text-xs font-black px-3 py-1 rounded-md uppercase tracking-wider shadow-neon-blue">ALEVÍN</span>
+                            <span class="text-[11px] font-black text-blue-400 uppercase">Sábado 21</span>
                         </div>
-                        <h3 class="text-xl sm:text-2xl font-black text-white italic uppercase tracking-tight mb-4">
-                            ESTRENO LIGUERO BENJAMÍN B
+                        <h3 class="text-xl font-black text-white italic uppercase tracking-tight mb-4">
+                            VS. C.D.E INNOVA MORATALAZ 'A'
                         </h3>
-
-                        <div class="relative group w-full rounded-2xl overflow-hidden border-2 border-amber-500/60 bg-black p-1.5 mb-6">
-                            <a href="images/carteles/benjaminb-j1.jpeg" target="_blank" rel="noopener noreferrer">
-                                <img src="images/carteles/benjaminb-j1.jpeg" alt="Cartel Benjamín B - Jornada 1" class="w-full h-auto object-contain rounded-xl transform group-hover:scale-105 transition duration-500">
-                                <div class="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-xl pointer-events-none">
-                                    <span class="bg-amber-500 text-black text-xs font-black px-4 py-2 rounded-xl shadow-neon-gold uppercase tracking-wider border border-amber-300">
-                                        <i class="fa-solid fa-expand mr-1.5"></i> Ampliar Cartel
-                                    </span>
-                                </div>
-                            </a>
+                        
+                        <div class="space-y-2.5 text-xs text-gray-300 font-medium mb-6">
+                            <div class="bg-black/80 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
+                                <span class="text-gray-400"><i class="fa-solid fa-clock text-blue-400 mr-1.5"></i> Horario partido:</span>
+                                <span class="text-blue-400 font-bold">10:00</span>
+                            </div>
+                            <div class="bg-black/80 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
+                                <span class="text-gray-400"><i class="fa-solid fa-stopwatch text-interBlue mr-1.5"></i> Citación (-45 min):</span>
+                                <span class="text-white font-bold">09:15</span>
+                            </div>
+                            <div class="bg-black/80 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
+                                <span class="text-gray-400"><i class="fa-solid fa-map-pin text-red-500 mr-1.5"></i> Campo:</span>
+                                <span class="text-gray-200 font-bold">Trece Rosas</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="bg-black/80 border border-gray-800 p-4 rounded-xl text-center">
-                        <p class="text-xs font-black text-amber-400 uppercase tracking-wider">¡La ilusión de los más pequeños en marcha!</p>
+                    <div class="bg-black/80 border border-gray-800 p-3 rounded-xl text-center">
+                        <p class="text-[11px] font-black text-interBlue uppercase tracking-wider">¡A darlo todo en el campo!</p>
                     </div>
                 </div>
 
                 <!-- INFANTIL -->
-                <div class="bg-gradient-to-br from-gray-900/95 via-black to-zinc-950 border-2 border-interBlue/60 p-6 sm:p-8 rounded-3xl shadow-neon-blue backdrop-blur-md flex flex-col justify-between">
+                <div class="bg-gradient-to-br from-gray-900/95 via-black to-zinc-950 border-2 border-interBlue/60 p-6 rounded-3xl shadow-neon-blue backdrop-blur-md flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="bg-interBlue text-white text-xs font-black px-3.5 py-1.5 rounded-md uppercase tracking-wider shadow-neon-blue">INFANTIL</span>
-                            <span class="text-xs font-black text-interBlue uppercase tracking-widest"><i class="fa-solid fa-futbol mr-1"></i> JORNADA 6</span>
+                            <span class="bg-interBlue text-white text-xs font-black px-3 py-1 rounded-md uppercase tracking-wider shadow-neon-blue">INFANTIL</span>
+                            <span class="text-[11px] font-black text-blue-400 uppercase">Sábado 21</span>
                         </div>
-                        <h3 class="text-xl sm:text-2xl font-black text-white italic uppercase tracking-tight mb-4">
-                            PARTIDO OFICIAL INFANTIL
+                        <h3 class="text-xl font-black text-white italic uppercase tracking-tight mb-4">
+                            VS. C.D. ASOC RETIRO SUR D
                         </h3>
-
-                        <div class="relative group w-full rounded-2xl overflow-hidden border-2 border-interBlue/60 bg-black p-1.5 mb-6">
-                            <a href="images/carteles/infantilj5.jpeg" target="_blank" rel="noopener noreferrer">
-                                <img src="images/carteles/infantilj5.jpeg" alt="Cartel Infantil - Jornada 5" class="w-full h-auto object-contain rounded-xl transform group-hover:scale-105 transition duration-500">
-                                <div class="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-xl pointer-events-none">
-                                    <span class="bg-interBlue text-white text-xs font-black px-4 py-2 rounded-xl shadow-neon-blue uppercase tracking-wider border border-blue-400">
-                                        <i class="fa-solid fa-expand mr-1.5"></i> Ampliar Cartel
-                                    </span>
-                                </div>
-                            </a>
+                        
+                        <div class="space-y-2.5 text-xs text-gray-300 font-medium mb-6">
+                            <div class="bg-black/80 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
+                                <span class="text-gray-400"><i class="fa-solid fa-clock text-blue-400 mr-1.5"></i> Horario partido:</span>
+                                <span class="text-blue-400 font-bold">19:15</span>
+                            </div>
+                            <div class="bg-black/80 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
+                                <span class="text-gray-400"><i class="fa-solid fa-stopwatch text-interBlue mr-1.5"></i> Citación (-45 min):</span>
+                                <span class="text-white font-bold">18:30</span>
+                            </div>
+                            <div class="bg-black/80 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
+                                <span class="text-gray-400"><i class="fa-solid fa-map-pin text-red-500 mr-1.5"></i> Sede:</span>
+                                <span class="text-gray-200 font-bold">Polideportivo Moratalaz</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="bg-black/80 border border-gray-800 p-4 rounded-xl text-center">
-                        <p class="text-xs font-black text-interBlue uppercase tracking-wider">¡A por la victoria en Fútbol 11!</p>
-                    </div>
-                </div>
-
-                <!-- CADETE -->
-                <div class="bg-gradient-to-br from-gray-900/95 via-black to-zinc-950 border-2 border-interBlue/60 p-6 sm:p-8 rounded-3xl shadow-neon-blue backdrop-blur-md flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="bg-interBlue text-white text-xs font-black px-3.5 py-1.5 rounded-md uppercase tracking-wider shadow-neon-blue">CADETE</span>
-                            <span class="text-xs font-black text-interBlue uppercase tracking-widest"><i class="fa-solid fa-futbol mr-1"></i> JORNADA 1</span>
-                        </div>
-                        <h3 class="text-xl sm:text-2xl font-black text-white italic uppercase tracking-tight mb-4">
-                            ESTRENO LIGUERO CADETE
-                        </h3>
-
-                        <div class="relative group w-full rounded-2xl overflow-hidden border-2 border-interBlue/60 bg-black p-1.5 mb-6">
-                            <a href="images/carteles/cadetej1.jpeg" target="_blank" rel="noopener noreferrer">
-                                <img src="images/carteles/cadetej1.jpeg" alt="Cartel Cadete - Jornada 1" class="w-full h-auto object-contain rounded-xl transform group-hover:scale-105 transition duration-500">
-                                <div class="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-xl pointer-events-none">
-                                    <span class="bg-interBlue text-white text-xs font-black px-4 py-2 rounded-xl shadow-neon-blue uppercase tracking-wider border border-blue-400">
-                                        <i class="fa-solid fa-expand mr-1.5"></i> Ampliar Cartel
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="bg-black/80 border border-gray-800 p-4 rounded-xl text-center">
-                        <p class="text-xs font-black text-interBlue uppercase tracking-wider">¡Comienza el reto para los mayores!</p>
+                    <div class="bg-black/80 border border-gray-800 p-3 rounded-xl text-center">
+                        <p class="text-[11px] font-black text-interBlue uppercase tracking-wider">¡A mantener la racha goleadora!</p>
                     </div>
                 </div>
 
@@ -300,7 +387,7 @@
                             <i class="fa-solid fa-calendar-days text-2xl text-amber-400 animate-pulse"></i>
                         </div>
                         <h3 class="text-2xl font-black text-white italic uppercase tracking-tight mb-1">BENJAMÍN B</h3>
-                        <p class="text-[11px] text-gray-400 mb-6">Fútbol 7 • Calendario Oficial</p>
+                        <p class="text-[11px] text-gray-400 mb-6">Fútbol 7 • Sede Wilfred</p>
                     </div>
                     <button id="btn-toggle-benjamin" class="w-full bg-amber-500 hover:bg-amber-600 text-black font-black text-xs uppercase tracking-wider py-3 px-4 rounded-xl text-center transition flex items-center justify-center space-x-2 shadow-neon-gold cursor-pointer">
                         <i class="fa-solid fa-eye text-xs"></i>
@@ -315,7 +402,7 @@
                             <i class="fa-solid fa-trophy text-2xl text-amber-400 animate-pulse"></i>
                         </div>
                         <h3 class="text-2xl font-black text-white italic uppercase tracking-tight mb-1">ALEVÍN</h3>
-                        <p class="text-[11px] text-gray-400 mb-6">Fútbol 7 (Descansa)</p>
+                        <p class="text-[11px] text-gray-400 mb-6">Fútbol 7 • Sede Trece Rosas</p>
                     </div>
                     <div class="w-full bg-interBlue group-hover:bg-blue-600 text-white font-black text-xs uppercase tracking-wider py-3 px-4 rounded-xl text-center transition flex items-center justify-center space-x-2 shadow-neon-blue">
                         <i class="fa-solid fa-globe text-xs"></i>
@@ -340,17 +427,17 @@
                     </div>
                 </a>
 
-                <div class="group relative bg-gradient-to-b from-gray-900 to-black border-2 border-interBlue/40 hover:border-interBlue rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-neon-blue flex flex-col justify-between">
+                <div class="group relative bg-gradient-to-b from-gray-900 to-black border-2 border-gray-800 hover:border-amber-500 rounded-2xl p-6 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-neon-gold flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="bg-gray-800 text-gray-300 text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider">MUNICIPAL</span>
-                            <span class="text-[10px] bg-interBlue/20 text-interBlue px-2 py-0.5 rounded font-bold">Jornada 1</span>
+                            <span class="text-[10px] bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded font-bold">Activo</span>
                         </div>
                         <h3 class="text-2xl font-black text-white italic uppercase tracking-tight mb-1">CADETE</h3>
                         <p class="text-[11px] text-gray-400 mb-6">Fútbol 11</p>
                     </div>
-                    <div class="w-full bg-interBlue/20 hover:bg-interBlue text-interBlue hover:text-white border border-interBlue/50 text-xs font-black uppercase tracking-wider py-3 px-4 rounded-xl text-center transition flex items-center justify-center space-x-2">
-                        <span>Ver Calendario</span>
+                    <div class="w-full bg-gray-800 text-gray-400 font-black text-xs uppercase tracking-wider py-3 px-4 rounded-xl text-center flex items-center justify-center space-x-2">
+                        <span>Ficha Oficial</span>
                     </div>
                 </div>
             </div>
@@ -368,13 +455,13 @@
                     <h3 class="text-3xl sm:text-4xl font-black text-white italic uppercase tracking-tight">
                         BENJAMÍN B • TEMPORADA 2026/2027
                     </h3>
-                    <p class="text-gray-400 text-xs sm:text-sm mt-2">Consulta los horarios, fechas y rivales de la competición municipal</p>
+                    <p class="text-gray-400 text-xs sm:text-sm mt-2">Sede oficial: Campo Wilfred Agbonavbare</p>
                 </div>
                 <div class="flex items-center space-x-4">
                     <div class="bg-black/80 border border-gray-800 px-5 py-3 rounded-2xl flex items-center space-x-3">
                         <i class="fa-solid fa-map-pin text-red-500 text-xl"></i>
                         <div class="text-left">
-                            <span class="text-[10px] text-gray-400 uppercase font-bold block">Sede / Campo Habitual</span>
+                            <span class="text-[10px] text-gray-400 uppercase font-bold block">Sede Habitual</span>
                             <span class="text-xs sm:text-sm font-black text-white">WILFRED AGBONAVBARE</span>
                         </div>
                     </div>
@@ -384,7 +471,6 @@
                 </div>
             </div>
 
-            <!-- Tabla de partidos Benjamín B -->
             <div class="overflow-x-auto pb-2">
                 <table class="w-full text-left border-collapse min-w-[700px] text-xs sm:text-sm">
                     <thead>
@@ -399,126 +485,9 @@
                     <tbody class="text-gray-300 divide-y divide-gray-850 font-medium">
                         <tr class="hover:bg-black/60 transition">
                             <td class="py-3.5 px-4 font-black text-white">JORNADA 1</td>
-                            <td class="py-3.5 px-4">14/11/26</td>
-                            <td class="py-3.5 px-4 text-amber-400 font-bold">10:30</td>
-                            <td class="py-3.5 px-4 font-bold text-gray-200">SIGLO FC</td>
-                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
-                        </tr>
-                        <tr class="hover:bg-black/60 transition">
-                            <td class="py-3.5 px-4 font-black text-white">JORNADA 2</td>
                             <td class="py-3.5 px-4">21/11/26</td>
                             <td class="py-3.5 px-4 text-amber-400 font-bold">10:30</td>
                             <td class="py-3.5 px-4 font-bold text-gray-200">WILFRED</td>
-                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
-                        </tr>
-                        <tr class="hover:bg-black/60 transition">
-                            <td class="py-3.5 px-4 font-black text-white">JORNADA 3</td>
-                            <td class="py-3.5 px-4">28/11/26</td>
-                            <td class="py-3.5 px-4 text-amber-400 font-bold">11:30</td>
-                            <td class="py-3.5 px-4 font-bold text-gray-200">LEONES</td>
-                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
-                        </tr>
-                        <tr class="hover:bg-black/60 transition">
-                            <td class="py-3.5 px-4 font-black text-white">JORNADA 4</td>
-                            <td class="py-3.5 px-4">12/12/26</td>
-                            <td class="py-3.5 px-4 text-amber-400 font-bold">11:30</td>
-                            <td class="py-3.5 px-4 font-bold text-gray-200">LOBOS</td>
-                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
-                        </tr>
-                        <tr class="hover:bg-black/60 transition">
-                            <td class="py-3.5 px-4 font-black text-white">JORNADA 6</td>
-                            <td class="py-3.5 px-4">19/12/26</td>
-                            <td class="py-3.5 px-4 text-amber-400 font-bold">10:30</td>
-                            <td class="py-3.5 px-4 font-bold text-interBlue">INTER A</td>
-                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
-                        </tr>
-                        <tr class="bg-red-950/30 text-red-400 font-bold border-y border-red-900/40">
-                            <td class="py-3.5 px-4">JORNADA 6</td>
-                            <td class="py-3.5 px-4">9/1/27</td>
-                            <td class="py-3.5 px-4">-</td>
-                            <td class="py-3.5 px-4 uppercase tracking-wider" colspan="2"><i class="fa-solid fa-mug-hot mr-2"></i> DESCANSAMOS</td>
-                        </tr>
-                        <tr class="hover:bg-black/60 transition">
-                            <td class="py-3.5 px-4 font-black text-white">JORNADA 7</td>
-                            <td class="py-3.5 px-4">16/1/27</td>
-                            <td class="py-3.5 px-4 text-amber-400 font-bold">10:30</td>
-                            <td class="py-3.5 px-4 font-bold text-gray-200">LOS OLMOS</td>
-                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
-                        </tr>
-                        <tr class="hover:bg-black/60 transition">
-                            <td class="py-3.5 px-4 font-black text-white">JORNADA 8</td>
-                            <td class="py-3.5 px-4">23/1/27</td>
-                            <td class="py-3.5 px-4 text-amber-400 font-bold">11:30</td>
-                            <td class="py-3.5 px-4 font-bold text-gray-200">LEONES VALLECAS</td>
-                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
-                        </tr>
-                        <tr class="hover:bg-black/60 transition">
-                            <td class="py-3.5 px-4 font-black text-white">JORNADA 9</td>
-                            <td class="py-3.5 px-4">30/1/27</td>
-                            <td class="py-3.5 px-4 text-amber-400 font-bold">11:30</td>
-                            <td class="py-3.5 px-4 font-bold text-gray-200">MADRID SUR</td>
-                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
-                        </tr>
-                        <tr class="hover:bg-black/60 transition">
-                            <td class="py-3.5 px-4 font-black text-white">JORNADA 10</td>
-                            <td class="py-3.5 px-4">6/2/27</td>
-                            <td class="py-3.5 px-4 text-amber-400 font-bold">10:30</td>
-                            <td class="py-3.5 px-4 font-bold text-gray-200">SIGLO FC</td>
-                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
-                        </tr>
-                        <tr class="hover:bg-black/60 transition">
-                            <td class="py-3.5 px-4 font-black text-white">JORNADA 11</td>
-                            <td class="py-3.5 px-4">20/2/27</td>
-                            <td class="py-3.5 px-4 text-amber-400 font-bold">10:30</td>
-                            <td class="py-3.5 px-4 font-bold text-gray-200">WILFRED</td>
-                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
-                        </tr>
-                        <tr class="hover:bg-black/60 transition">
-                            <td class="py-3.5 px-4 font-black text-white">JORNADA 12</td>
-                            <td class="py-3.5 px-4">27/2/27</td>
-                            <td class="py-3.5 px-4 text-amber-400 font-bold">11:30</td>
-                            <td class="py-3.5 px-4 font-bold text-gray-200">LEONES</td>
-                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
-                        </tr>
-                        <tr class="hover:bg-black/60 transition">
-                            <td class="py-3.5 px-4 font-black text-white">JORNADA 13</td>
-                            <td class="py-3.5 px-4">6/3/27</td>
-                            <td class="py-3.5 px-4 text-amber-400 font-bold">11:30</td>
-                            <td class="py-3.5 px-4 font-bold text-gray-200">LOBOS</td>
-                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
-                        </tr>
-                        <tr class="hover:bg-black/60 transition">
-                            <td class="py-3.5 px-4 font-black text-white">JORNADA 14</td>
-                            <td class="py-3.5 px-4">13/3/27</td>
-                            <td class="py-3.5 px-4 text-amber-400 font-bold">10:30</td>
-                            <td class="py-3.5 px-4 font-bold text-interBlue">INTER A</td>
-                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
-                        </tr>
-                        <tr class="bg-red-950/30 text-red-400 font-bold border-y border-red-900/40">
-                            <td class="py-3.5 px-4">JORNADA 15</td>
-                            <td class="py-3.5 px-4">10/4/27</td>
-                            <td class="py-3.5 px-4">-</td>
-                            <td class="py-3.5 px-4 uppercase tracking-wider" colspan="2"><i class="fa-solid fa-mug-hot mr-2"></i> DESCANSAMOS</td>
-                        </tr>
-                        <tr class="hover:bg-black/60 transition">
-                            <td class="py-3.5 px-4 font-black text-white">JORNADA 16</td>
-                            <td class="py-3.5 px-4">17/4/27</td>
-                            <td class="py-3.5 px-4 text-amber-400 font-bold">10:30</td>
-                            <td class="py-3.5 px-4 font-bold text-gray-200">LOS OLMOS</td>
-                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
-                        </tr>
-                        <tr class="hover:bg-black/60 transition">
-                            <td class="py-3.5 px-4 font-black text-white">JORNADA 17</td>
-                            <td class="py-3.5 px-4">24/4/27</td>
-                            <td class="py-3.5 px-4 text-amber-400 font-bold">11:30</td>
-                            <td class="py-3.5 px-4 font-bold text-gray-200">LEONES VALLECAS</td>
-                            <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
-                        </tr>
-                        <tr class="hover:bg-black/60 transition">
-                            <td class="py-3.5 px-4 font-black text-white">JORNADA 18</td>
-                            <td class="py-3.5 px-4">8/5/27</td>
-                            <td class="py-3.5 px-4 text-amber-400 font-bold">11:30</td>
-                            <td class="py-3.5 px-4 font-bold text-gray-200">MADRID SUR</td>
                             <td class="py-3.5 px-4 text-gray-400">WILFRED AGBONAVBARE</td>
                         </tr>
                     </tbody>
@@ -531,9 +500,9 @@
     <section id="horarios" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-12">
             <span class="bg-interBlue/20 text-interBlue border border-interBlue/40 font-black text-xs uppercase px-4 py-1.5 rounded-full tracking-widest inline-block mb-3">
-                <i class="fa-solid fa-clock mr-1"></i> DETALLES DE ENTRENAMIENTO
+                <i class="fa-solid fa-clock mr-1"></i> DETALLES DE ENTRENAMIENTO Y SEDES
             </span>
-            <h2 class="text-4xl sm:text-5xl font-black text-white tracking-tight italic uppercase">SEDES Y HORARIOS</h2>
+            <h2 class="text-4xl sm:text-5xl font-black text-white tracking-tight italic uppercase">SEDES OFICIALES</h2>
             <div class="h-1 w-24 bg-interBlue mx-auto mt-4"></div>
         </div>
 
@@ -542,43 +511,33 @@
                 <div class="bg-gradient-to-b from-gray-900 to-black border-2 border-interBlue/40 hover:border-interBlue rounded-2xl p-6 shadow-xl flex flex-col justify-between transition duration-300">
                     <div>
                         <div class="flex items-center justify-between mb-3">
-                            <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2.5 py-1 rounded">Fútbol 7</span>
+                            <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2.5 py-1 rounded">Fútbol 7 (Benjamines)</span>
                             <i class="fa-solid fa-child text-interBlue text-xl"></i>
                         </div>
-                        <h4 class="text-xl font-black text-white uppercase italic mb-1">Benjamín y Alevín</h4>
-                        <p class="text-xs text-gray-300 mb-4 flex items-center"><i class="fa-solid fa-map-pin text-red-500 mr-1.5 text-sm"></i> Polideportivo La Elipa</p>
+                        <h4 class="text-xl font-black text-white uppercase italic mb-1">Benjamines</h4>
+                        <p class="text-xs text-gray-300 mb-4 flex items-center"><i class="fa-solid fa-map-pin text-red-500 mr-1.5 text-sm"></i> Campo Wilfred Agbonavbare</p>
                         
                         <div class="bg-black/70 border border-gray-800 p-3.5 rounded-xl mb-4">
-                            <span class="text-[10px] text-gray-400 uppercase font-bold block mb-1">Horario de entrenamientos:</span>
-                            <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-clock text-interBlue mr-1"></i> Miércoles y Viernes de 16:30 a 17:30</span>
+                            <span class="text-[10px] text-gray-400 uppercase font-bold block mb-1">Sede fija:</span>
+                            <span class="text-xs font-black text-amber-400">Instalación municipal Wilfred Agbonavbare</span>
                         </div>
                     </div>
-
-                    <a href="https://maps.google.com/?q=Polideportivo+La+Elipa+Madrid" target="_blank" rel="noopener noreferrer" class="w-full bg-interBlue/20 hover:bg-interBlue text-interBlue hover:text-white border border-interBlue/50 text-xs font-black uppercase py-2.5 px-4 rounded-xl text-center transition flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-location-arrow"></i>
-                        <span>Cómo llegar (Google Maps)</span>
-                    </a>
                 </div>
 
                 <div class="bg-gradient-to-b from-gray-900 to-black border-2 border-interBlue/40 hover:border-interBlue rounded-2xl p-6 shadow-xl flex flex-col justify-between transition duration-300">
                     <div>
                         <div class="flex items-center justify-between mb-3">
-                            <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2.5 py-1 rounded">Fútbol 11</span>
+                            <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2.5 py-1 rounded">Fútbol 7 (Alevines)</span>
                             <i class="fa-solid fa-user-ninja text-interBlue text-xl"></i>
                         </div>
-                        <h4 class="text-xl font-black text-white uppercase italic mb-1">Infantil y Cadete</h4>
-                        <p class="text-xs text-gray-300 mb-4 flex items-center"><i class="fa-solid fa-map-pin text-red-500 mr-1.5 text-sm"></i> Polideportivo de Moratalaz</p>
+                        <h4 class="text-xl font-black text-white uppercase italic mb-1">Alevines</h4>
+                        <p class="text-xs text-gray-300 mb-4 flex items-center"><i class="fa-solid fa-map-pin text-red-500 mr-1.5 text-sm"></i> Campo de las Trece Rosas</p>
                         
                         <div class="bg-black/70 border border-gray-800 p-3.5 rounded-xl mb-4">
-                            <span class="text-[10px] text-gray-400 uppercase font-bold block mb-1">Horario de entrenamientos:</span>
-                            <span class="text-xs font-black text-amber-400"><i class="fa-solid fa-clock text-interBlue mr-1"></i> Miércoles y Viernes de 16:00 a 17:30</span>
+                            <span class="text-[10px] text-gray-400 uppercase font-bold block mb-1">Sede fija:</span>
+                            <span class="text-xs font-black text-amber-400">Cementerio de la Almudena (Trece Rosas)</span>
                         </div>
                     </div>
-
-                    <a href="https://maps.google.com/?q=Polideportivo+Moratalaz+Madrid" target="_blank" rel="noopener noreferrer" class="w-full bg-interBlue/20 hover:bg-interBlue text-interBlue hover:text-white border border-interBlue/50 text-xs font-black uppercase py-2.5 px-4 rounded-xl text-center transition flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-location-arrow"></i>
-                        <span>Cómo llegar (Google Maps)</span>
-                    </a>
                 </div>
             </div>
         </div>
@@ -869,7 +828,6 @@ if (mobileMenuBtn && mobileMenu) {
     });
 }
 
-// CONTROL DE APERTURA / CIERRE DEL CALENDARIO BENJAMÍN B
 const btnToggleBenjamin = document.getElementById('btn-toggle-benjamin');
 const btnCerrarCalendario = document.getElementById('btn-cerrar-calendario');
 const calendarioBenjaminB = document.getElementById('calendario-benjamin-b');
@@ -933,7 +891,7 @@ const carouselItems = [
     { src: 'images/galeria/foto7.jpg', alt: 'Fotografía Inter de Moratalaz' },
     { src: 'images/galeria/foto8.jpg', alt: 'Fotografía Inter de Moratalaz' },
     { src: 'images/galeria/foto9.jpg', alt: 'Fotografía Inter de Moratalaz' },
-    { src: 'images/galery/foto10.jpg', alt: 'Fotografía Inter de Moratalaz' }
+    { src: 'images/galeria/foto10.jpg', alt: 'Fotografía Inter de Moratalaz' }
 ];
 
 let currentIndex = 0;
@@ -981,7 +939,7 @@ function updateCarousel() {
 
 document.getElementById('next-btn')?.addEventListener('click', () => {
     if (carouselItems.length === 0) return;
-    currentIndex = (carouselItems.length + 1) % carouselItems.length;
+    currentIndex = (currentIndex + 1) % carouselItems.length;
     updateCarousel();
 });
 
