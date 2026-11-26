@@ -42,6 +42,37 @@
         .sponsor-card:nth-child(2) {
             animation-delay: 2s;
         }
+
+        /* Animaciones para el cartel y catálogo de merchandising */
+        @keyframes floatMerch {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-7px); }
+        }
+        @keyframes shimmerSweep {
+            0% { transform: translateX(-140%) skewX(-20deg); }
+            60%, 100% { transform: translateX(260%) skewX(-20deg); }
+        }
+        @keyframes borderPulseBlue {
+            0%, 100% { box-shadow: 0 0 24px rgba(0, 82, 204, 0.35), 0 0 0 1px rgba(59, 130, 246, 0.35); }
+            50% { box-shadow: 0 0 38px rgba(59, 130, 246, 0.6), 0 0 0 2px rgba(245, 158, 11, 0.45); }
+        }
+        .merch-float {
+            animation: floatMerch 4.5s ease-in-out infinite;
+        }
+        .merch-card-glow {
+            animation: borderPulseBlue 3.8s ease-in-out infinite;
+        }
+        .shimmer-layer::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 55%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.14), transparent);
+            animation: shimmerSweep 4.5s ease-in-out infinite;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body class="bg-interDark text-gray-100 font-sans antialiased overflow-x-hidden relative">
@@ -56,7 +87,7 @@
     <!-- BARRA DE ANUNCIO SUPERIOR -->
     <div class="bg-gradient-to-r from-gray-900 via-zinc-800 to-gray-900 text-amber-400 text-center py-2.5 px-4 text-xs font-black tracking-widest uppercase relative z-45 shadow-md flex items-center justify-center gap-3 border-b border-gray-800">
         <i class="fa-solid fa-star text-white animate-pulse"></i>
-        <span>¡NUEVA JORNADA • PREPARADOS PARA EL FIN DE SEMANA!</span>
+        <span>¡JORNADA SÁBADO 28 • TODOS AL CAMPO Y NUEVO MERCHANDISING!</span>
         <i class="fa-solid fa-futbol text-white"></i>
     </div>
 
@@ -76,8 +107,8 @@
 
                 <div class="hidden lg:flex items-center space-x-6 text-xs font-black uppercase tracking-wider">
                     <a href="#inicio" class="text-interBlue hover:text-white transition">Inicio</a>
-                    <a href="#cronicas-seccion" class="text-green-400 hover:text-green-300 transition flex items-center"><i class="fa-solid fa-trophy mr-1"></i> Crónicas</a>
                     <a href="#proximos-partidos" class="text-amber-400 hover:text-amber-300 transition flex items-center animate-pulse"><i class="fa-solid fa-calendar-days mr-1"></i> Próximos Partidos</a>
+                    <a href="#merchandising" class="text-blue-400 hover:text-amber-300 transition flex items-center"><i class="fa-solid fa-shirt mr-1"></i> Merchandising</a>
                     <a href="#clasificaciones" class="hover:text-interBlue transition">Clasificaciones</a>
                     <a href="#horarios" class="hover:text-interBlue transition">Horarios</a>
                     <a href="plantillas.html" class="text-white hover:text-white transition flex items-center"><i class="fa-solid fa-users mr-1.5"></i> Plantillas</a>
@@ -97,8 +128,8 @@
 
         <div id="mobile-menu" class="hidden lg:hidden bg-black/95 border-t border-gray-900 px-4 py-6 space-y-4 text-xs font-black uppercase tracking-wider">
             <a href="#inicio" class="block text-interBlue hover:text-white py-2 border-b border-gray-900">Inicio</a>
-            <a href="#cronicas-seccion" class="block text-green-400 hover:text-green-300 py-2 border-b border-gray-900"><i class="fa-solid fa-trophy mr-2"></i> Crónicas y Resultados</a>
             <a href="#proximos-partidos" class="block text-amber-400 hover:text-amber-300 py-2 border-b border-gray-900"><i class="fa-solid fa-calendar-days mr-2"></i> Próximos Partidos</a>
+            <a href="#merchandising" class="block text-blue-400 hover:text-amber-300 py-2 border-b border-gray-900"><i class="fa-solid fa-shirt mr-2"></i> Merchandising Oficial</a>
             <a href="#clasificaciones" class="block text-gray-300 hover:text-interBlue py-2 border-b border-gray-900">Clasificaciones Oficiales</a>
             <a href="#horarios" class="block text-gray-300 hover:text-interBlue py-2 border-b border-gray-900">Horarios</a>
             <a href="plantillas.html" class="block text-white hover:text-white py-2 border-b border-gray-900"><i class="fa-solid fa-users mr-2"></i> Plantillas Oficiales</a>
@@ -131,9 +162,9 @@
                     <i class="fa-solid fa-calendar-days"></i>
                     <span>Próximos Partidos</span>
                 </a>
-                <a href="#cronicas-seccion" class="bg-interBlue hover:bg-blue-700 text-white px-7 py-3.5 rounded-xl shadow-neon-blue transition transform hover:-translate-y-1 flex items-center space-x-2">
-                    <i class="fa-solid fa-trophy"></i>
-                    <span>Ver Crónicas</span>
+                <a href="#merchandising" class="bg-interBlue hover:bg-blue-700 text-white px-7 py-3.5 rounded-xl shadow-neon-blue transition transform hover:-translate-y-1 flex items-center space-x-2">
+                    <i class="fa-solid fa-shirt"></i>
+                    <span>Merchandising</span>
                 </a>
             </div>
         </div>
@@ -141,127 +172,20 @@
 
     <div class="h-4 inter-stripes shadow-inner relative z-20"></div>
 
-    <!-- SECCIÓN 1: CRÓNICAS Y RESULTADOS (JORNADA ANTERIOR) -->
-    <section id="cronicas-seccion" class="bg-gradient-to-b from-black via-green-950/20 to-black py-16 relative z-10 border-b border-gray-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="bg-green-500/10 text-green-400 border border-green-500/30 font-black text-xs uppercase px-4 py-1.5 rounded-full tracking-widest inline-block mb-3 shadow-[0_0_20px_rgba(34,197,94,0.3)]">
-                    <i class="fa-solid fa-trophy mr-1"></i> RESULTADOS Y RESÚMENES
-                </span>
-                <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight italic uppercase">
-                    CRÓNICAS DE LA JORNADA ANTERIOR
-                </h2>
-                <p class="text-gray-400 text-xs sm:text-sm mt-3">Repaso a los marcadores y encuentros del fin de semana pasado</p>
-            </div>
-
-            <div class="space-y-10">
-                
-                <!-- INFANTIL: GOLEADA 16-1 -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-gradient-to-br from-gray-900/90 via-black to-gray-900/90 border-2 border-green-500/50 p-6 sm:p-8 rounded-3xl shadow-[0_0_30px_rgba(34,197,94,0.25)] backdrop-blur-md">
-                    <div class="lg:col-span-7 space-y-5">
-                        <div class="flex flex-wrap items-center gap-3">
-                            <span class="bg-interBlue text-white text-xs font-black px-3.5 py-1.5 rounded-md uppercase tracking-wider shadow-neon-blue">INFANTIL • FÚTBOL 11</span>
-                            <span class="bg-green-500 text-black text-xs font-black px-3.5 py-1.5 rounded-md uppercase tracking-wider"><i class="fa-solid fa-arrow-up mr-1"></i> VICTORIA APLASTANTE</span>
-                        </div>
-
-                        <h3 class="text-2xl sm:text-3xl font-black text-white italic uppercase tracking-tight">
-                            EXHIBICIÓN INFANTIL • <span class="text-green-400">16 - 1</span>
-                        </h3>
-
-                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-medium">
-                            ¡Exhibición total de nuestro equipo Infantil! Los chicos firmaron un partido inolvidable con un marcador contundente de <strong>16-1</strong>, desplegando un juego ofensivo brillante, precisión en los metros finales y una seriedad defensiva impecable. ¡Enhorabuena por este partidazo histórico! ⚽🔥
-                        </p>
-                    </div>
-
-                    <div class="lg:col-span-5 flex flex-col items-center justify-center">
-                        <div class="w-full bg-gradient-to-b from-green-950/40 via-black to-gray-900 border-2 border-green-500/40 p-8 rounded-2xl text-center shadow-xl space-y-4">
-                            <div class="w-16 h-16 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center mx-auto text-3xl border border-green-500/40 shadow-[0_0_20px_rgba(34,197,94,0.4)]">
-                                <i class="fa-solid fa-hands-clapping"></i>
-                            </div>
-                            <h4 class="text-xl font-black text-white italic uppercase">¡Festival de Goles!</h4>
-                            <p class="text-xs text-gray-300">Dominio absoluto de principio a fin sobre el terreno de juego.</p>
-                            <span class="inline-block bg-green-500 text-black text-xs font-black px-4 py-2 rounded-xl uppercase tracking-wider shadow-lg">¡Tres puntos de oro!</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- BENJAMÍN B: VICTORIA -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-gradient-to-br from-gray-900/90 via-black to-gray-900/90 border-2 border-amber-500/50 p-6 sm:p-8 rounded-3xl shadow-neon-gold backdrop-blur-md">
-                    <div class="lg:col-span-7 space-y-5">
-                        <div class="flex flex-wrap items-center gap-3">
-                            <span class="bg-amber-500 text-black text-xs font-black px-3.5 py-1.5 rounded-md uppercase tracking-wider shadow-neon-gold">BENJAMÍN B • FÚTBOL 7</span>
-                            <span class="bg-amber-500/20 text-amber-400 border border-amber-500/40 text-xs font-black px-3.5 py-1.5 rounded-md uppercase tracking-wider">VICTORIA TRABAJADA</span>
-                        </div>
-
-                        <h3 class="text-2xl sm:text-3xl font-black text-white italic uppercase tracking-tight">
-                            ¡GRAN VICTORIA DEL <span class="text-amber-400">BENJAMÍN B</span>!
-                        </h3>
-
-                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-medium">
-                            Nuestros pequeños campeones demostraron casta, esfuerzo y mucha ilusión para llevarse una fantástica victoria. Cada fin de semana se ve el gran crecimiento y la alegría con la que defienden el escudo del <strong>Inter de Moratalaz</strong> en el Wilfred Agbonavbare. ¡A seguir en esta línea! ⚽💪
-                        </p>
-                    </div>
-
-                    <div class="lg:col-span-5 flex flex-col items-center justify-center">
-                        <div class="w-full bg-gradient-to-b from-amber-950/30 via-black to-gray-900 border-2 border-amber-500/30 p-8 rounded-2xl text-center shadow-xl space-y-4">
-                            <div class="w-16 h-16 bg-amber-500/20 text-amber-400 rounded-full flex items-center justify-center mx-auto text-3xl border border-amber-500/40 shadow-neon-gold">
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <h4 class="text-xl font-black text-white italic uppercase">¡Alegría en el Barrio!</h4>
-                            <p class="text-xs text-gray-300">Trabajo en equipo y diversión asegurada sobre el césped.</p>
-                            <span class="inline-block bg-amber-500 text-black text-xs font-black px-4 py-2 rounded-xl uppercase tracking-wider shadow-neon-gold">¡Enhorabuena equipo!</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- BENJAMÍN A: SUSPENDIDO -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-gradient-to-br from-gray-900/90 via-black to-gray-900/90 border-2 border-zinc-700 p-6 sm:p-8 rounded-3xl shadow-xl backdrop-blur-md">
-                    <div class="lg:col-span-7 space-y-5">
-                        <div class="flex flex-wrap items-center gap-3">
-                            <span class="bg-interBlue text-white text-xs font-black px-3.5 py-1.5 rounded-md uppercase tracking-wider shadow-neon-blue">BENJAMÍN A • FÚTBOL 7</span>
-                            <span class="bg-red-500/20 text-red-400 border border-red-500/40 text-xs font-black px-3.5 py-1.5 rounded-md uppercase tracking-wider">PARTIDO SUSPENDIDO</span>
-                        </div>
-
-                        <h3 class="text-2xl sm:text-3xl font-black text-white italic uppercase tracking-tight">
-                            BENJAMÍN A • <span class="text-red-400">SUSPENDIDO</span>
-                        </h3>
-
-                        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-medium">
-                            El encuentro del Benjamín A tuvo que ser suspendido debido a las adversas condiciones climatológicas (lluvia) y a la incomparecencia arbitral. ¡Pronto volverán a saltar al terreno de campo con las pilas cargadas! 🌧️⚽
-                        </p>
-                    </div>
-
-                    <div class="lg:col-span-5 flex flex-col items-center justify-center">
-                        <div class="w-full bg-gradient-to-b from-zinc-950 via-black to-gray-900 border-2 border-zinc-700 p-8 rounded-2xl text-center shadow-xl space-y-4">
-                            <div class="w-16 h-16 bg-zinc-800 text-red-400 rounded-full flex items-center justify-center mx-auto text-3xl border border-zinc-700">
-                                <i class="fa-solid fa-cloud-rain"></i>
-                            </div>
-                            <h4 class="text-xl font-black text-white italic uppercase">Aplazado por Lluvia</h4>
-                            <p class="text-xs text-gray-300">La climatología impidió que se disputara el choque oficial.</p>
-                            <span class="inline-block bg-zinc-800 text-gray-300 text-xs font-black px-4 py-2 rounded-xl uppercase tracking-wider border border-zinc-700">¡A por el siguiente!</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SECCIÓN 2: PRÓXIMOS PARTIDOS (FIN DE SEMANA DEL 21 DE NOVIEMBRE) -->
+    <!-- SECCIÓN PRÓXIMOS PARTIDOS (SÁBADO 28 DE NOVIEMBRE) -->
     <section id="proximos-partidos" class="bg-gradient-to-b from-black via-zinc-950 to-black py-20 px-4 border-b border-gray-800 relative z-10 overflow-hidden">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-interBlue/10 rounded-full blur-[160px] pointer-events-none"></div>
 
         <div class="max-w-6xl mx-auto relative z-10 space-y-16">
             <div class="text-center max-w-3xl mx-auto">
                 <span class="bg-amber-500 text-black font-black text-xs uppercase px-5 py-2 rounded-full tracking-widest inline-block mb-3 shadow-neon-gold animate-bounce">
-                    <i class="fa-solid fa-calendar-days mr-1.5"></i> FIN DE SEMANA DEL 21 DE NOVIEMBRE
+                    <i class="fa-solid fa-calendar-days mr-1.5"></i> SÁBADO 28 DE NOVIEMBRE DE 2026
                 </span>
                 <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight italic uppercase">
                     🔥 PRÓXIMOS PARTIDOS Y CONVOCATORIAS
                 </h2>
                 <p class="text-gray-300 text-sm sm:text-base font-medium mt-3">
-                    Recuerda: la citación oficial es siempre <strong class="text-amber-400">45 minutos antes</strong> de la hora del encuentro.
+                    Revisa bien las horas de partido y de citación para llegar a tiempo y concentrados.
                 </p>
                 <div class="h-1 w-32 bg-amber-500 mx-auto mt-4 shadow-neon-gold"></div>
             </div>
@@ -274,29 +198,29 @@
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="bg-amber-500 text-black text-xs font-black px-3 py-1 rounded-md uppercase tracking-wider shadow-neon-gold">BENJAMÍN B</span>
-                            <span class="text-[11px] font-black text-amber-400 uppercase">Sábado 21</span>
+                            <span class="text-[11px] font-black text-amber-400 uppercase">SÁBADO 28 • J.3</span>
                         </div>
                         <h3 class="text-xl font-black text-white italic uppercase tracking-tight mb-4">
-                            VS. WILFRED
+                            VS. INTER DE MORATALAZ A
                         </h3>
                         
                         <div class="space-y-2.5 text-xs text-gray-300 font-medium mb-6">
                             <div class="bg-black/80 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
                                 <span class="text-gray-400"><i class="fa-solid fa-clock text-amber-400 mr-1.5"></i> Horario partido:</span>
-                                <span class="text-amber-400 font-bold">11:00</span>
+                                <span class="text-amber-400 font-bold">10:00</span>
                             </div>
                             <div class="bg-black/80 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
                                 <span class="text-gray-400"><i class="fa-solid fa-stopwatch text-interBlue mr-1.5"></i> Citación (-45 min):</span>
-                                <span class="text-white font-bold">10:15</span>
+                                <span class="text-white font-bold">09:15</span>
                             </div>
                             <div class="bg-black/80 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
-                                <span class="text-gray-400"><i class="fa-solid fa-map-pin text-red-500 mr-1.5"></i> Campo:</span>
+                                <span class="text-gray-400"><i class="fa-solid fa-map-pin text-red-500 mr-1.5"></i> Estadio:</span>
                                 <span class="text-gray-200 font-bold">Wilfred Agbonavbare</span>
                             </div>
                         </div>
                     </div>
                     <div class="bg-black/80 border border-gray-800 p-3 rounded-xl text-center">
-                        <p class="text-[11px] font-black text-amber-400 uppercase tracking-wider">¡A por todas en casa!</p>
+                        <p class="text-[11px] font-black text-amber-400 uppercase tracking-wider">¡A por todas en el Wilfred!</p>
                     </div>
                 </div>
 
@@ -305,20 +229,20 @@
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="bg-interBlue text-white text-xs font-black px-3 py-1 rounded-md uppercase tracking-wider shadow-neon-blue">ALEVÍN</span>
-                            <span class="text-[11px] font-black text-blue-400 uppercase">Sábado 21</span>
+                            <span class="text-[11px] font-black text-blue-400 uppercase">SÁBADO 28</span>
                         </div>
                         <h3 class="text-xl font-black text-white italic uppercase tracking-tight mb-4">
-                            VS. C.D.E INNOVA MORATALAZ 'A'
+                            VS C.D.E INNOVA MORATALAZ 'B'
                         </h3>
                         
                         <div class="space-y-2.5 text-xs text-gray-300 font-medium mb-6">
                             <div class="bg-black/80 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
                                 <span class="text-gray-400"><i class="fa-solid fa-clock text-blue-400 mr-1.5"></i> Horario partido:</span>
-                                <span class="text-blue-400 font-bold">10:00</span>
+                                <span class="text-blue-400 font-bold">09:00</span>
                             </div>
                             <div class="bg-black/80 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
-                                <span class="text-gray-400"><i class="fa-solid fa-stopwatch text-interBlue mr-1.5"></i> Citación (-45 min):</span>
-                                <span class="text-white font-bold">09:15</span>
+                                <span class="text-gray-400"><i class="fa-solid fa-stopwatch text-interBlue mr-1.5"></i> Citación:</span>
+                                <span class="text-amber-400 font-bold">08:30 (llegar puntuales)</span>
                             </div>
                             <div class="bg-black/80 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
                                 <span class="text-gray-400"><i class="fa-solid fa-map-pin text-red-500 mr-1.5"></i> Campo:</span>
@@ -327,7 +251,7 @@
                         </div>
                     </div>
                     <div class="bg-black/80 border border-gray-800 p-3 rounded-xl text-center">
-                        <p class="text-[11px] font-black text-interBlue uppercase tracking-wider">¡A darlo todo en el campo!</p>
+                        <p class="text-[11px] font-black text-interBlue uppercase tracking-wider">¡Puntualidad a las 08:30!</p>
                     </div>
                 </div>
 
@@ -336,35 +260,196 @@
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="bg-interBlue text-white text-xs font-black px-3 py-1 rounded-md uppercase tracking-wider shadow-neon-blue">INFANTIL</span>
-                            <span class="text-[11px] font-black text-blue-400 uppercase">Sábado 21</span>
+                            <span class="text-[11px] font-black text-blue-400 uppercase">SÁBADO 28 • J.8</span>
                         </div>
-                        <h3 class="text-xl font-black text-white italic uppercase tracking-tight mb-4">
-                            VS. C.D. ASOC RETIRO SUR D
+                        <h3 class="text-xl font-black text-white italic uppercase tracking-tight mb-1">
+                            VS. C.D.E INNOVA MORATALAZ 'C'
                         </h3>
+                        <p class="text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-4">
+                            2.ª Infantil • Grupo 23 • Jornada 8
+                        </p>
                         
                         <div class="space-y-2.5 text-xs text-gray-300 font-medium mb-6">
                             <div class="bg-black/80 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
                                 <span class="text-gray-400"><i class="fa-solid fa-clock text-blue-400 mr-1.5"></i> Horario partido:</span>
-                                <span class="text-blue-400 font-bold">19:15</span>
+                                <span class="text-blue-400 font-bold">12:00</span>
                             </div>
                             <div class="bg-black/80 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
                                 <span class="text-gray-400"><i class="fa-solid fa-stopwatch text-interBlue mr-1.5"></i> Citación (-45 min):</span>
-                                <span class="text-white font-bold">18:30</span>
+                                <span class="text-white font-bold">11:15</span>
                             </div>
                             <div class="bg-black/80 p-3 rounded-xl border border-gray-800 flex items-center justify-between">
-                                <span class="text-gray-400"><i class="fa-solid fa-map-pin text-red-500 mr-1.5"></i> Sede:</span>
+                                <span class="text-gray-400"><i class="fa-solid fa-map-pin text-red-500 mr-1.5"></i> Campo:</span>
                                 <span class="text-gray-200 font-bold">Trece Rosas</span>
                             </div>
                         </div>
                     </div>
                     <div class="bg-black/80 border border-gray-800 p-3 rounded-xl text-center">
-                        <p class="text-[11px] font-black text-interBlue uppercase tracking-wider">¡A mantener la racha goleadora!</p>
+                        <p class="text-[11px] font-black text-interBlue uppercase tracking-wider">¡A por los tres puntos en Trece Rosas!</p>
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
+
+    <div class="h-4 inter-stripes relative z-20"></div>
+
+    <!-- SECCIÓN MERCHANDISING OFICIAL (CARTEL INTERACTIVO + CATÁLOGO ANIMADO) -->
+    <section id="merchandising" class="bg-gradient-to-b from-black via-blue-950/20 to-interDark py-20 px-4 border-b border-gray-800 relative z-10 overflow-hidden">
+        <div class="absolute -top-24 right-0 w-[520px] h-[520px] bg-interBlue/20 rounded-full blur-[150px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[420px] h-[420px] bg-amber-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="bg-interBlue/20 text-blue-300 border border-blue-400/40 font-black text-xs uppercase px-4 py-1.5 rounded-full tracking-widest inline-block mb-3 shadow-neon-blue">
+                    <i class="fa-solid fa-bag-shopping text-amber-400 mr-1.5"></i> JUNTOS SOMOS MÁS • VENTA OFICIAL
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight italic uppercase">
+                    MERCHANDISING <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-amber-400">INTER DE MORATALAZ</span>
+                </h2>
+                <p class="text-gray-300 text-xs sm:text-sm mt-3 font-medium">
+                    Viste los colores del club dentro y fuera del campo con nuestro catálogo oficial de invierno, balones y bufandas.
+                </p>
+                <div class="h-1 w-28 bg-gradient-to-r from-interBlue via-amber-400 to-interBlue mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                <!-- COLUMNA IZQUIERDA: CARTEL OFICIAL CON ANIMACIÓN Y ZOOM -->
+                <div class="lg:col-span-5 flex flex-col items-center">
+                    <div class="w-full max-w-md merch-float">
+                        <div class="relative rounded-3xl overflow-hidden border-2 border-blue-400/60 bg-gradient-to-b from-gray-900 via-black to-blue-950/60 p-3 merch-card-glow shimmer-layer group cursor-pointer" onclick="abrirModalCartel()">
+                            <div class="relative rounded-2xl overflow-hidden bg-black">
+                                <img src="images/carteles/merchandising.jpeg" alt="Catálogo de venta oficial Club Inter de Moratalaz" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute top-3 left-3 bg-black/80 backdrop-blur-sm border border-amber-400/50 text-amber-400 text-[10px] font-black uppercase px-3 py-1 rounded-full tracking-wider">
+                                    <i class="fa-solid fa-sparkles mr-1"></i> Cartel Oficial
+                                </div>
+                                <div class="absolute bottom-3 inset-x-3 bg-black/85 backdrop-blur-md border border-blue-400/40 text-white py-2.5 px-4 rounded-xl flex items-center justify-between text-xs font-black uppercase tracking-wider transition group-hover:bg-interBlue group-hover:border-white">
+                                    <span><i class="fa-solid fa-magnifying-glass-plus mr-1.5 text-amber-400 group-hover:text-white"></i> Ampliar Cartel</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-gray-400 mt-4 text-center">
+                        Haz clic sobre el cartel para verlo a pantalla completa.
+                    </p>
+                </div>
+
+                <!-- COLUMNA DERECHA: TARJETAS INTERACTIVAS DE PRECIOS Y ARTÍCULOS -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- SUDADERA -->
+                        <div class="bg-gray-900/90 border border-blue-500/40 hover:border-amber-400 rounded-2xl p-5 transition-all duration-300 transform hover:-translate-y-1.5 hover:shadow-neon-blue flex items-center justify-between group">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-xl bg-interBlue/20 border border-blue-400/40 flex items-center justify-center text-blue-400 text-xl group-hover:scale-110 group-hover:text-amber-400 transition">
+                                    <i class="fa-solid fa-shirt"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-blue-400 block">Entrenamiento</span>
+                                    <h3 class="text-base font-black text-white italic uppercase">Sudadera</h3>
+                                </div>
+                            </div>
+                            <span class="bg-amber-500 text-black font-black text-base px-3.5 py-1.5 rounded-xl shadow-neon-gold">20 €</span>
+                        </div>
+
+                        <!-- CHUBASQUERO -->
+                        <div class="bg-gray-900/90 border border-blue-500/40 hover:border-amber-400 rounded-2xl p-5 transition-all duration-300 transform hover:-translate-y-1.5 hover:shadow-neon-blue flex items-center justify-between group">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-xl bg-interBlue/20 border border-blue-400/40 flex items-center justify-center text-blue-400 text-xl group-hover:scale-110 group-hover:text-amber-400 transition">
+                                    <i class="fa-solid fa-cloud-showers-heavy"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-blue-400 block">Lluvia y Grada</span>
+                                    <h3 class="text-base font-black text-white italic uppercase">Chubasquero</h3>
+                                </div>
+                            </div>
+                            <span class="bg-amber-500 text-black font-black text-base px-3.5 py-1.5 rounded-xl shadow-neon-gold">18 €</span>
+                        </div>
+
+                        <!-- ABRIGO -->
+                        <div class="bg-gray-900/90 border border-blue-500/40 hover:border-amber-400 rounded-2xl p-5 transition-all duration-300 transform hover:-translate-y-1.5 hover:shadow-neon-blue flex items-center justify-between group">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-xl bg-interBlue/20 border border-blue-400/40 flex items-center justify-center text-blue-400 text-xl group-hover:scale-110 group-hover:text-amber-400 transition">
+                                    <i class="fa-solid fa-snowflake"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-blue-400 block">Invierno</span>
+                                    <h3 class="text-base font-black text-white italic uppercase">Abrigo</h3>
+                                </div>
+                            </div>
+                            <span class="bg-amber-500 text-black font-black text-base px-3.5 py-1.5 rounded-xl shadow-neon-gold">45 €</span>
+                        </div>
+
+                        <!-- PARKA -->
+                        <div class="bg-gray-900/90 border border-blue-500/40 hover:border-amber-400 rounded-2xl p-5 transition-all duration-300 transform hover:-translate-y-1.5 hover:shadow-neon-blue flex items-center justify-between group">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-xl bg-interBlue/20 border border-blue-400/40 flex items-center justify-center text-blue-400 text-xl group-hover:scale-110 group-hover:text-amber-400 transition">
+                                    <i class="fa-solid fa-vest-patches"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-blue-400 block">Invierno</span>
+                                    <h3 class="text-base font-black text-white italic uppercase">Parka</h3>
+                                </div>
+                            </div>
+                            <span class="bg-amber-500 text-black font-black text-base px-3.5 py-1.5 rounded-xl shadow-neon-gold">40 €</span>
+                        </div>
+                    </div>
+
+                    <!-- BALONES OFICIALES RFFM -->
+                    <div class="bg-gradient-to-r from-gray-900 via-blue-950/40 to-gray-900 border-2 border-interBlue/60 rounded-2xl p-6 shadow-neon-blue flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <div class="space-y-1.5">
+                            <div class="flex items-center gap-2">
+                                <span class="bg-amber-500 text-black text-[10px] font-black uppercase px-2.5 py-0.5 rounded-md">RFFM TALLA 4 Y 5</span>
+                                <span class="text-xs font-black text-amber-400 uppercase tracking-wider">Balones Oficiales</span>
+                            </div>
+                            <h4 class="text-lg font-black text-white italic uppercase">Balones Karma Kromex</h4>
+                            <p class="text-xs text-gray-300">
+                                Añade el escudo del club por <strong class="text-amber-400">+2,50 €</strong> adicionales.
+                            </p>
+                        </div>
+                        <div class="bg-black/80 border border-amber-400/50 px-5 py-3 rounded-2xl text-center flex-shrink-0">
+                            <span class="text-2xl font-black text-amber-400 block leading-none">30 €</span>
+                            <span class="text-[10px] text-gray-300 font-bold uppercase">+2,50 € con escudo</span>
+                        </div>
+                    </div>
+
+                    <!-- BUFANDA INTER -->
+                    <div class="bg-gradient-to-r from-interBlue/30 via-gray-900 to-interBlue/30 border-2 border-amber-400/60 rounded-2xl p-6 shadow-neon-gold flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-400/50 flex items-center justify-center text-amber-400 text-2xl animate-pulse">
+                                <i class="fa-solid fa-fire-flame-curved"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg sm:text-xl font-black text-white italic uppercase">¡Anima al Inter con tu Bufanda!</h4>
+                                <p class="text-xs text-gray-300">Bufanda oficial del club para llevar en cada grada.</p>
+                            </div>
+                        </div>
+                        <span class="bg-amber-500 hover:bg-amber-400 text-black font-black text-xl px-5 py-2.5 rounded-xl shadow-neon-gold transition transform hover:scale-105">
+                            8 €
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL PARA VER EL CARTEL DE MERCHANDISING AMPLIADO -->
+    <div id="modal-cartel" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4" onclick="cerrarModalCartel(event)">
+        <div class="relative max-w-2xl w-full bg-gray-950 border-2 border-blue-400/60 rounded-3xl p-4 shadow-neon-blue" onclick="event.stopPropagation()">
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-gray-800">
+                <span class="text-xs sm:text-sm font-black text-amber-400 uppercase italic tracking-wider">
+                    <i class="fa-solid fa-shirt mr-1.5"></i> Catálogo Oficial • Club Inter de Moratalaz
+                </span>
+                <button onclick="cerrarModalCartel()" class="bg-gray-800 hover:bg-red-600 text-white w-9 h-9 rounded-xl flex items-center justify-center transition" aria-label="Cerrar cartel">
+                    <i class="fa-solid fa-xmark text-base"></i>
+                </button>
+            </div>
+            <div class="max-h-[78vh] overflow-y-auto rounded-2xl bg-black">
+                <img src="images/carteles/merchandising.jpeg" alt="Catálogo completo de venta Club Inter de Moratalaz" class="w-full h-auto object-contain mx-auto">
+            </div>
+        </div>
+    </div>
 
     <!-- SECCIÓN DE CLASIFICACIONES -->
     <section id="clasificaciones" class="bg-gradient-to-b from-black via-gray-950 to-interDark py-16 relative z-10 border-b border-gray-800">
@@ -966,6 +1051,26 @@ if (mobileMenuBtn && mobileMenu) {
     });
 }
 
+function abrirModalCartel() {
+    const modal = document.getElementById('modal-cartel');
+    if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+}
+
+function cerrarModalCartel() {
+    const modal = document.getElementById('modal-cartel');
+    if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') cerrarModalCartel();
+});
+
 const btnToggleBenjamin = document.getElementById('btn-toggle-benjamin');
 const btnCerrarCalendario = document.getElementById('btn-cerrar-calendario');
 const calendarioBenjaminB = document.getElementById('calendario-benjamin-b');
@@ -1029,7 +1134,7 @@ const carouselItems = [
     { src: 'images/galeria/foto7.jpg', alt: 'Fotografía Inter de Moratalaz' },
     { src: 'images/galeria/foto8.jpg', alt: 'Fotografía Inter de Moratalaz' },
     { src: 'images/galeria/foto9.jpg', alt: 'Fotografía Inter de Moratalaz' },
-    { src: 'images/galery/foto10.jpg', alt: 'Fotografía Inter de Moratalaz' }
+    { src: 'images/galeria/foto10.jpg', alt: 'Fotografía Inter de Moratalaz' }
 ];
 
 let currentIndex = 0;
